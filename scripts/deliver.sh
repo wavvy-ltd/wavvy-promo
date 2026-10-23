@@ -1,11 +1,21 @@
 #!/bin/bash
 # Render the promo and normalise it for social (−15 LUFS integrated, −1 dBTP true peak).
-# Usage: scripts/deliver.sh [out-basename]   → <out>.mp4 (raw render) and <out>-social.mp4
+# Usage: scripts/deliver.sh [out-basename] [composition.html] [raw]
+#   → <out>.mp4 (raw render) and <out>-social.mp4. The second arg renders an alternative root
+#   (e.g. variants/sfx-only.html); "raw" as the third arg skips loudness normalisation, which
+#   is wrong for a sparse effects-only track.
 set -euo pipefail
 cd "$(dirname "$0")/.."
 OUT=${1:-wavvy-promo-60s}
+COMP=${2:-index.html}
+MODE=${3:-social}
 
-npx --yes hyperframes@0.8.186 render --quality delivery --output "$OUT.mp4"
+npx --yes hyperframes@0.8.186 render -c "./$COMP" --quality delivery --output "$OUT.mp4"
+if [ "$MODE" = "raw" ]; then
+  npx --yes hyperframes@0.8.186 audio "$OUT.mp4" --json | python3 -c '
+import json,sys; d=json.load(sys.stdin)["items"][0]; print("delivered (raw):", d["duration"], "s", d["loudness"])'
+  exit 0
+fi
 
 # two-pass loudnorm with linear gain only (no dynamic processing), video stream copied
 MEASURED=$(ffmpeg -v info -i "$OUT.mp4" -af loudnorm=I=-15:TP=-1:LRA=9:print_format=json -f null - 2>&1 | sed -n '/^{/,/^}/p')

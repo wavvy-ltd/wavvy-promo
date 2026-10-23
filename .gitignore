@@ -14,3 +14,6 @@ assets/audio/music60_matched.wav
 assets/audio/vo_13.wav
 
 .DS_Store
+
+# resolver ledger copies (the used sounds live in assets/sfx)
+.media/
