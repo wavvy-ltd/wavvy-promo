@@ -23,8 +23,8 @@
   </div>
   <script>
     const tl = gsap.timeline({ paused: true });
-    tl.set("#insights-total", { opacity: 0, y: 260 }, 0);
-    tl.set("#insights-cats", { opacity: 0, y: 260 }, 0);
+    gsap.set("#insights-total", { opacity: 0, y: 260 });
+    gsap.set("#insights-cats", { opacity: 0, y: 260 });
     // arriving out of the zoom-through: slightly large, settles; the chart holds
     tl.fromTo("#insights-cam", { scale: 1.18, x: 0, y: 0, filter: "blur(6px)", transformOrigin: "50% 50%" }, { scale: 1, filter: "blur(0px)", duration: 0.45, ease: "expo.out" }, 0);
     // scroll down to the Total Expenses card

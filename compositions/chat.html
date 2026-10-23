@@ -22,7 +22,7 @@
   </div>
   <script>
     const tl = gsap.timeline({ paused: true });
-    tl.set("#chat-a", { opacity: 0 }, 0);
+    gsap.set("#chat-a", { opacity: 0 });
     // whip in from the right over the Budgets scene
     tl.fromTo("#chat-cam", { x: 1100, filter: "blur(10px)" }, { x: 0, filter: "blur(0px)", duration: 0.4, ease: "expo.out" }, 0);
     // punch in on the question and "Aisha is typing…", and wait for her

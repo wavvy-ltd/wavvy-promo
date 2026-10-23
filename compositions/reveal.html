@@ -31,8 +31,8 @@
   </div>
   <script>
     const tl = gsap.timeline({ paused: true });
-    tl.set("#reveal-s2", { opacity: 0, x: 760 }, 0);
-    tl.set("#reveal-s3", { opacity: 0, x: 760 }, 0);
+    gsap.set("#reveal-s2", { opacity: 0, x: 760 });
+    gsap.set("#reveal-s3", { opacity: 0, x: 760 });
     // the green that filled the frame drains to the app's dark ground
     tl.fromTo("#reveal-green", { opacity: 1 }, { opacity: 0, duration: 0.3, ease: "power2.inOut" }, 0);
     // the phone rises onto the stage and settles

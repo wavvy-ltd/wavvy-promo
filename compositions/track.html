@@ -35,10 +35,10 @@
   </div>
   <script>
     const tl = gsap.timeline({ paused: true });
-    tl.set("#track-import", { opacity: 0 }, 0);
-    tl.set("#track-done", { opacity: 0, scale: 1.06, transformOrigin: "50% 30%" }, 0);
-    tl.set("#track-home", { opacity: 0, y: 120 }, 0);
-    tl.set("#track-txns", { opacity: 0, y: 260 }, 0);
+    gsap.set("#track-import", { opacity: 0 });
+    gsap.set("#track-done", { opacity: 0, scale: 1.06, transformOrigin: "50% 30%" });
+    gsap.set("#track-home", { opacity: 0, y: 120 });
+    gsap.set("#track-txns", { opacity: 0, y: 260 });
     // a real M-Pesa SMS arrives from the top edge, holds so it can be read…
     tl.fromTo("#track-sms", { y: -420, opacity: 0 }, { y: 0, opacity: 1, duration: 0.45, ease: "expo.out" }, 0.3);
     // …and drops into the phone
