@@ -1,0 +1,35 @@
+<template>
+  <style>
+    @font-face { font-family: "Wavvy Montserrat"; font-weight: 600; src: url("assets/fonts/Montserrat-SemiBold.ttf"); }
+    #root { position: absolute; inset: 0; background: transparent; font-family: "Wavvy Montserrat", Montserrat, sans-serif; overflow: hidden; }
+    #chat-stage { position: absolute; inset: 0; }
+    .phone { position: absolute; left: 160px; top: 330px; width: 760px; height: 1528px; border-radius: 64px; background: #1c1c22; padding: 14px; box-shadow: 0 30px 80px rgba(0, 0, 0, 0.55); border: 1px solid #2a2a33; }
+    .phone .screen { width: 732px; height: 1500px; border-radius: 52px; overflow: hidden; background: #0f0f13; position: relative; }
+    .phone .screen img { position: absolute; left: 0; top: -66px; width: 732px; height: auto; }
+    #chat-cam { position: absolute; inset: 0; }
+  </style>
+  <div id="root" data-composition-id="chat" data-width="1080" data-height="1920">
+    <div id="chat-stage" class="clip" data-start="0" data-duration="11.2" data-layout-allow-overflow>
+      <div id="chat-cam">
+        <div class="phone" id="chat-phone">
+          <div class="screen">
+            <img id="chat-q" src="assets/screens/chat_q.png" alt="Question sent to Aisha, typing" />
+            <img id="chat-a" src="assets/screens/chat_a.png" alt="Aisha answers" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.set("#chat-a", { opacity: 0 }, 0);
+    // whip in from the right over the Budgets scene
+    tl.fromTo("#chat-cam", { x: 1100, filter: "blur(10px)" }, { x: 0, filter: "blur(0px)", duration: 0.4, ease: "expo.out" }, 0);
+    // punch in on the question and "Aisha is typing…", and wait for her
+    tl.to("#chat-cam", { scale: 1.5, y: -380, duration: 0.6, ease: "power2.inOut", transformOrigin: "50% 50%" }, 1.2);
+    // the answer arrives; reframe so the whole answer is readable above the caption
+    tl.to("#chat-a", { opacity: 1, duration: 0.2 }, 4.2);
+    tl.to("#chat-cam", { scale: 1.5, y: -560, duration: 0.6, ease: "power2.inOut" }, 4.2);
+    window.__timelines["chat"] = tl;
+  </script>
+</template>

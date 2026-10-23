@@ -1,0 +1,41 @@
+<template>
+  <style>
+    @font-face { font-family: "Wavvy Montserrat"; font-weight: 600; src: url("assets/fonts/Montserrat-SemiBold.ttf"); }
+    #root { position: absolute; inset: 0; background: #0f0f13; font-family: "Wavvy Montserrat", Montserrat, sans-serif; overflow: hidden; }
+    #insights-stage { position: absolute; inset: 0; }
+    .phone { position: absolute; left: 160px; top: 330px; width: 760px; height: 1528px; border-radius: 64px; background: #1c1c22; padding: 14px; box-shadow: 0 30px 80px rgba(0, 0, 0, 0.55); border: 1px solid #2a2a33; }
+    .phone .screen { width: 732px; height: 1500px; border-radius: 52px; overflow: hidden; background: #0f0f13; position: relative; }
+    .phone .screen img { position: absolute; left: 0; top: -66px; width: 732px; height: auto; }
+    #insights-cam { position: absolute; inset: 0; }
+  </style>
+  <div id="root" data-composition-id="insights" data-width="1080" data-height="1920">
+    <div id="insights-stage" class="clip" data-start="0" data-duration="11" data-layout-allow-overflow>
+      <div id="insights-cam">
+        <div class="phone" id="insights-phone">
+          <div class="screen">
+            <img id="insights-screen" src="assets/screens/insights.png" alt="Insights: money flow chart" />
+            <img id="insights-total" src="assets/screens/insights_total.png" alt="Insights: total expenses KES 47.0K" />
+            <img id="insights-cats" src="assets/screens/insights2.png" alt="Insights: spending by category" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.set("#insights-total", { opacity: 0, y: 260 }, 0);
+    tl.set("#insights-cats", { opacity: 0, y: 260 }, 0);
+    // arriving out of the zoom-through: slightly large, settles; the chart holds
+    tl.fromTo("#insights-cam", { scale: 1.18, x: 0, y: 0, filter: "blur(6px)", transformOrigin: "50% 50%" }, { scale: 1, filter: "blur(0px)", duration: 0.45, ease: "expo.out" }, 0);
+    // scroll down to the Total Expenses card
+    tl.to("#insights-screen", { y: -260, opacity: 0, duration: 0.45, ease: "power2.inOut" }, 2.6);
+    tl.to("#insights-total", { y: 0, opacity: 1, duration: 0.45, ease: "power2.inOut" }, 2.6);
+    // punch in on the real total: KES 47.0K, and hold
+    tl.to("#insights-cam", { scale: 1.7, y: -380, duration: 0.6, ease: "power2.inOut", transformOrigin: "50% 50%" }, 3.3);
+    // pull back and scroll on to the category breakdown
+    tl.to("#insights-cam", { scale: 1, y: 0, duration: 0.55, ease: "power2.inOut" }, 6.5);
+    tl.to("#insights-total", { y: -260, opacity: 0, duration: 0.45, ease: "power2.inOut" }, 7.1);
+    tl.to("#insights-cats", { y: 0, opacity: 1, duration: 0.45, ease: "power2.inOut" }, 7.1);
+    window.__timelines["insights"] = tl;
+  </script>
+</template>

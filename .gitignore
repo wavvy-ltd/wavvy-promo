@@ -1,0 +1,17 @@
+# HyperFrames artefacts (snapshots, history, proxies)
+.hyperframes/
+node_modules/
+
+# renders: keep only the delivered file
+*.mp4
+!wavvy-promo-60s-social.mp4
+
+# intermediate audio from the bed-building steps
+assets/audio/music.wav
+assets/audio/music_raw.wav
+assets/audio/music60_raw.wav
+assets/audio/music60_loop.wav
+assets/audio/music60_matched.wav
+assets/audio/vo_13.wav
+
+.DS_Store

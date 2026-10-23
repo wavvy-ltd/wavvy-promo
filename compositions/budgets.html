@@ -1,0 +1,46 @@
+<template>
+  <style>
+    @font-face { font-family: "Wavvy Montserrat"; font-weight: 600; src: url("assets/fonts/Montserrat-SemiBold.ttf"); }
+    #root { position: absolute; inset: 0; background: transparent; font-family: "Wavvy Montserrat", Montserrat, sans-serif; overflow: hidden; }
+    #budgets-stage { position: absolute; inset: 0; }
+    .phone { position: absolute; left: 160px; top: 330px; width: 760px; height: 1528px; border-radius: 64px; background: #1c1c22; padding: 14px; box-shadow: 0 30px 80px rgba(0, 0, 0, 0.55); border: 1px solid #2a2a33; }
+    .phone .screen { width: 732px; height: 1500px; border-radius: 52px; overflow: hidden; background: #0f0f13; position: relative; }
+    .phone .screen img { position: absolute; left: 0; top: -66px; width: 732px; height: auto; }
+    #budgets-cam { position: absolute; inset: 0; }
+  </style>
+  <div id="root" data-composition-id="budgets" data-width="1080" data-height="1920">
+    <div id="budgets-stage" class="clip" data-start="0" data-duration="10.4" data-layout-allow-overflow>
+      <div id="budgets-cam">
+        <div class="phone" id="budgets-phone">
+          <div class="screen">
+            <img id="budgets-screen" src="assets/screens/budgets.png" alt="Budgets: 8.5K of 10.5K, 81% spent" />
+            <img id="budgets-list" src="assets/screens/budgets_list.png" alt="Budget list: Transport, Food & Dining, Shopping" />
+            <img id="budgets-notif" src="assets/screens/budget_notification.png" alt="Restaurant Budget alert notification" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.set("#budgets-list", { opacity: 0, y: 260 }, 0);
+    tl.set("#budgets-notif", { opacity: 0, y: -200 }, 0);
+    // whip in from below over the Insights scene, then hold the full screen
+    tl.fromTo("#budgets-cam", { y: 900, filter: "blur(10px)" }, { y: 0, filter: "blur(0px)", duration: 0.4, ease: "expo.out" }, 0);
+    // punch in on the whole budget summary card: spent, left, and the 81% ring
+    tl.to("#budgets-cam", { scale: 1.5, x: 0, y: -100, duration: 0.5, ease: "power2.inOut", transformOrigin: "50% 50%" }, 1.2);
+    // "…get alerts before you overspend": the real notification shade drops in
+    tl.to("#budgets-cam", { scale: 1, x: 0, y: 0, duration: 0.4, ease: "power2.inOut" }, 2.2);
+    tl.to("#budgets-notif", { opacity: 1, y: 0, duration: 0.4, ease: "expo.out" }, 2.5);
+    tl.to("#budgets-cam", { scale: 1.4, x: 0, y: 300, duration: 0.5, ease: "power2.inOut" }, 2.9);
+    // pull back…
+    tl.to("#budgets-cam", { scale: 1, x: 0, y: 0, duration: 0.45, ease: "power2.inOut" }, 4.7);
+    tl.to("#budgets-notif", { opacity: 0, y: -200, duration: 0.35, ease: "power2.in" }, 4.8);
+    // …and scroll to the budget list: Transport, Food & Dining, Shopping ("Restaurants, shopping, transport")
+    tl.to("#budgets-screen", { y: -260, opacity: 0, duration: 0.45, ease: "power2.inOut" }, 5.2);
+    tl.to("#budgets-list", { y: 0, opacity: 1, duration: 0.45, ease: "power2.inOut" }, 5.2);
+    // punch in on the three rows and hold
+    tl.to("#budgets-cam", { scale: 1.45, x: 0, y: -400, duration: 0.6, ease: "power2.inOut" }, 5.9);
+    window.__timelines["budgets"] = tl;
+  </script>
+</template>

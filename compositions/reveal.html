@@ -1,0 +1,50 @@
+<template>
+  <style>
+    @font-face { font-family: "Wavvy Montserrat"; font-weight: 600; src: url("assets/fonts/Montserrat-SemiBold.ttf"); }
+    @font-face { font-family: "Wavvy Montserrat"; font-weight: 900; src: url("assets/fonts/Montserrat-Black.ttf"); }
+    #root { position: absolute; inset: 0; background: #0f0f13; font-family: "Wavvy Montserrat", Montserrat, sans-serif; overflow: hidden; }
+    #reveal-stage { position: absolute; inset: 0; }
+    #reveal-green { position: absolute; inset: 0; background: #5c6bc0; }
+    .phone { position: absolute; left: 160px; top: 330px; width: 760px; height: 1528px; border-radius: 64px; background: #1c1c22; padding: 14px; box-shadow: 0 30px 80px rgba(0, 0, 0, 0.55); border: 1px solid #2a2a33; }
+    .phone .screen { width: 732px; height: 1500px; border-radius: 52px; overflow: hidden; background: #0f0f13; position: relative; }
+    .phone .screen img { position: absolute; left: 0; top: -66px; width: 732px; height: auto; }
+    #reveal-brand { position: absolute; left: 0; right: 0; top: 150px; height: 140px; display: flex; align-items: center; justify-content: center; gap: 28px; }
+    #reveal-tile { width: 120px; height: 120px; border-radius: 30px; background: #fff; display: flex; align-items: center; justify-content: center; }
+    #reveal-tile img { width: 104px; height: 104px; }
+    #reveal-word { color: #fff; font-weight: 900; font-size: 84px; letter-spacing: -0.03em; }
+  </style>
+  <div id="root" data-composition-id="reveal" data-width="1080" data-height="1920">
+    <div id="reveal-stage" class="clip" data-start="0" data-duration="5" data-layout-allow-overflow>
+      <div class="phone" id="reveal-phone">
+        <div class="screen">
+          <img id="reveal-s1" src="assets/screens/onboarding_1.png" alt="Welcome to Wavvy Wallet" />
+          <img id="reveal-s2" src="assets/screens/onboarding_2.png" alt="Smarter expense tracking" />
+          <img id="reveal-s3" src="assets/screens/onboarding_3.png" alt="What people are saying" />
+        </div>
+      </div>
+      <div id="reveal-brand">
+        <div id="reveal-tile"><img src="assets/brand/wavvy-wallet-logo.png" alt="Wavvy Wallet mark" /></div>
+        <div id="reveal-word">Wavvy Wallet</div>
+      </div>
+      <div id="reveal-green"></div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.set("#reveal-s2", { opacity: 0, x: 760 }, 0);
+    tl.set("#reveal-s3", { opacity: 0, x: 760 }, 0);
+    // the green that filled the frame drains to the app's dark ground
+    tl.fromTo("#reveal-green", { opacity: 1 }, { opacity: 0, duration: 0.3, ease: "power2.inOut" }, 0);
+    // the phone rises onto the stage and settles
+    tl.fromTo("#reveal-phone", { y: 1000, scale: 0.9, transformOrigin: "50% 100%" }, { y: 0, scale: 1, duration: 0.8, ease: "expo.out" }, 0.05);
+    // "Meet Wavvy Wallet": the mark lands on the word, the wordmark right behind it
+    tl.fromTo("#reveal-tile", { scale: 0, rotate: -12 }, { scale: 1, rotate: 0, duration: 0.5, ease: "back.out(1.6)" }, 0.15);
+    tl.fromTo("#reveal-word", { opacity: 0, filter: "blur(8px)", x: -20 }, { opacity: 1, filter: "blur(0px)", x: 0, duration: 0.3, ease: "power4.out" }, 0.2);
+    // the onboarding pages swipe through like a real first run
+    tl.to("#reveal-s1", { x: -760, duration: 0.45, ease: "power2.inOut" }, 2.2);
+    tl.to("#reveal-s2", { x: 0, opacity: 1, duration: 0.45, ease: "power2.inOut" }, 2.2);
+    tl.to("#reveal-s2", { x: -760, duration: 0.45, ease: "power2.inOut" }, 3.6);
+    tl.to("#reveal-s3", { x: 0, opacity: 1, duration: 0.45, ease: "power2.inOut" }, 3.6);
+    window.__timelines["reveal"] = tl;
+  </script>
+</template>
