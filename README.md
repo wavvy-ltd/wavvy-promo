@@ -9,12 +9,17 @@ Every screen is the real app captured on an emulator; voiceover is Kokoro, music
 - `assets/screens/` — app screenshots · `assets/brand/` — logo and store badges · `assets/fonts/` — Montserrat (the app font) · `assets/audio/` — voice lines and the music bed
 - `scripts/` — `seed_sms.sh` (inject M-Pesa SMS into the emulator), `music.py` / `music_long.py` (MusicGen beds)
 - `SPEC.md`, `REVIEW.md` — the director's brief and the review note
-- `wavvy-promo-60s-social.mp4` — the delivered render (−15 LUFS / −1 dBTP)
 
-## Work on it
+Renders are not tracked; they are reproducible from this repo.
+
+## Build the video
+```bash
+scripts/deliver.sh          # → wavvy-promo-60s.mp4 (raw) and wavvy-promo-60s-social.mp4 (−15 LUFS / −1 dBTP)
+```
+Needs Node 22+, FFmpeg, and network for the GSAP CDN script. Other commands:
 ```bash
 npm run dev      # Studio preview
 npm run check    # lint + runtime + layout + motion + contrast
-npm run render   # render to MP4
+npm run render   # raw render only
 ```
 Voice lines: `npx hyperframes tts "<line>" -v af_heart -o assets/audio/vo_NN.wav` (needs `pip install kokoro-onnx soundfile`).

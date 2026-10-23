@@ -2,9 +2,8 @@
 .hyperframes/
 node_modules/
 
-# renders: keep only the delivered file
+# renders are reproducible: scripts/deliver.sh
 *.mp4
-!wavvy-promo-60s-social.mp4
 
 # intermediate audio from the bed-building steps
 assets/audio/music.wav
