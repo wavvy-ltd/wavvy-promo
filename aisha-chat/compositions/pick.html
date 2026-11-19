@@ -1,0 +1,47 @@
+<template>
+  <style>
+    @font-face { font-family: "Nunito"; font-weight: 200 1000; src: url("assets/fonts/Nunito.ttf"); }
+    #root { position: absolute; inset: 0; background: #F4F7F6; font-family: var(--font-display, "Nunito", sans-serif); overflow: hidden; }
+    #pick-stage { position: absolute; inset: 0; }
+    #pick-glow { position: absolute; left: 540px; top: 640px; width: 1500px; height: 1500px; margin: -750px 0 0 -750px; border-radius: 50%; background: radial-gradient(circle, #376C502a 0%, #376C5000 60%); }
+    #pick-title { position: absolute; left: 0; right: 0; top: 300px; display: flex; flex-direction: column; align-items: center; transform-origin: 50% 0%; }
+    #pick-title .tile { width: 200px; height: 200px; border-radius: 52px; background: #fff; display: flex; align-items: center; justify-content: center; box-shadow: 0 24px 60px rgba(17,17,17,.14); }
+    #pick-title .tile img { width: 176px; height: 176px; }
+    #pick-title .tile.round { border-radius: 50%; overflow: hidden; } #pick-title .tile.round img { width: 200px; height: 200px; }
+    #pick-title .k { margin-top: 56px; color: #376C50; font-weight: 800; font-size: 64px; letter-spacing: .01em; }
+    #pick-title .n { margin-top: 4px; color: #111111; font-weight: 900; font-size: 128px; letter-spacing: -.03em; line-height: 1.02; }
+    .mrow { position: absolute; left: 80px; width: 920px; height: 136px; background: #fff; border-radius: 30px; box-shadow: 0 10px 30px rgba(17,17,17,.08); border: 2px solid #376C501f; display: flex; align-items: center; gap: 26px; padding: 0 30px; box-sizing: border-box; }
+    .mrow .bd { flex: none; width: 84px; height: 84px; border-radius: 50%; background: #376C50; color: #fff; font-weight: 900; font-size: 50px; line-height: 84px; text-align: center; }
+    .mrow .ic { flex: none; width: 76px; height: 76px; border-radius: 22px; background: #376C5014; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+    .mrow .ic img { width: 76px; height: 76px; object-fit: contain; background: #fff; }
+    .mrow .ic svg { width: 46px; height: 46px; fill: #376C50; }
+    .mrow .tx { color: #111111; font-weight: 800; font-size: 54px; white-space: nowrap; }
+    .mrow .tx small { display: block; color: #5C6670; font-weight: 700; font-size: 32px; margin-top: 2px; }
+
+  </style>
+  <div id="root" data-composition-id="pick" data-width="1080" data-height="1920">
+    <div id="pick-stage" class="clip" data-start="0" data-duration="3.31" data-layout-allow-overflow>
+      <div id="pick-glow"></div>
+      <div id="pick-title"><div class="tile round"><img src="assets/brand/aisha.png" alt="Wavvy Wallet" /></div><div class="k">Meet</div><div class="n">Aisha</div></div>
+      <div class="mrow" id="pick-r0" style="top: 640px"><div class="bd" id="pick-b0">1</div><div class="ic"><svg viewBox="0 0 24 24"><path d="M5 9.2h3V19H5zM10.6 5h2.8v14h-2.8zm5.6 8H19v6h-2.8z"/></svg></div><div class="tx">Ask about spending<small>Totals and top costs in seconds</small></div></div>
+      <div class="mrow" id="pick-r1" style="top: 798px"><div class="bd" id="pick-b1">2</div><div class="ic"><svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg></div><div class="tx">Find any payment<small>By name, with dates and fees</small></div></div>
+      <div class="mrow" id="pick-r2" style="top: 956px"><div class="bd" id="pick-b2">3</div><div class="ic"><svg viewBox="0 0 24 24"><path d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z"/></svg></div><div class="tx">Tag by chatting<small>Say what a payment was for</small></div></div>
+      <div class="mrow" id="pick-r3" style="top: 1114px"><div class="bd" id="pick-b3">4</div><div class="ic"><svg viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg></div><div class="tx">Add cash spending<small>Cash counts too</small></div></div>
+      <div class="mrow" id="pick-r4" style="top: 1272px"><div class="bd" id="pick-b4">5</div><div class="ic"><svg viewBox="0 0 24 24"><path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg></div><div class="tx">Plan a trip<small>Split it, track every shilling</small></div></div>
+      <div class="mrow" id="pick-r5" style="top: 1430px"><div class="bd" id="pick-b5">6</div><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 14c1.66 0 2.99-1.34 2.99-3L15 5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5.3-3c0 3-2.54 5.1-5.3 5.1S6.7 14 6.7 11H5c0 3.41 2.72 6.23 6 6.72V21h2v-3.28c3.28-.48 6-3.3 6-6.72h-1.7z"/></svg></div><div class="tx">Themes and voice<small>Change colours, or just speak</small></div></div>
+
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    gsap.set("#pick-title", { scale: 0.6, y: -170 });
+    tl.fromTo(".mrow", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out", stagger: 0.025, immediateRender: false }, 0);
+    tl.fromTo("#pick-r1, #pick-r2, #pick-r3, #pick-r4, #pick-r5", { opacity: 1 }, { opacity: 0.28, duration: 0.3, immediateRender: false }, 1.35);
+    tl.fromTo("#pick-r0", { scale: 1, boxShadow: "0 10px 30px rgba(17,17,17,.08)" }, { scale: 1.05, boxShadow: "0 0 0 8px #376C5055, 0 20px 50px rgba(17,17,17,.14)", duration: 0.35, ease: "back.out(2)", immediateRender: false }, 1.35);
+    tl.fromTo("#pick-r1, #pick-r2, #pick-r3, #pick-r4, #pick-r5", { opacity: 0.28 }, { opacity: 0, duration: 0.3, immediateRender: false }, 2.69);
+    tl.fromTo("#pick-title, #pick-r0 .ic, #pick-r0 .tx", { opacity: 1 }, { opacity: 0, duration: 0.3, immediateRender: false }, 2.69);
+    tl.fromTo("#pick-r0", { backgroundColor: "rgba(255,255,255,1)", borderColor: "#376C501f", boxShadow: "0 0 0 8px #376C5055, 0 20px 50px rgba(17,17,17,.14)" }, { backgroundColor: "rgba(255,255,255,0)", borderColor: "#376C5000", boxShadow: "0 0 0 0px #376C5000, 0 0px 0px rgba(17,17,17,0)", duration: 0.3, immediateRender: false }, 2.69);
+    tl.fromTo("#pick-b0", { x: 0, y: 0, scale: 1 }, { x: 369.5, y: -117.1, scale: 2.608, duration: 0.6, ease: "power3.inOut", immediateRender: false }, 2.69);
+    window.__timelines["pick"] = tl;
+  </script>
+</template>

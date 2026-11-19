@@ -17,3 +17,7 @@ assets/audio/vo_13.wav
 
 # resolver ledger copies (the used sounds live in assets/sfx)
 .media/
+
+node_modules
+work-*/
+.*.hf-transaction-*/

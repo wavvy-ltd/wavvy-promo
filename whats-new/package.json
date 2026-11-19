@@ -1,0 +1,15 @@
+{
+  "name": "hyperframes-app-promo-template",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "npx --yes hyperframes@0.8.186 preview",
+    "check": "npx --yes hyperframes@0.8.186 check",
+    "render": "npx --yes hyperframes@0.8.186 render",
+    "publish": "npx --yes hyperframes@0.8.186 publish",
+    "build": "python3 scripts/build.py",
+    "placeholders": "python3 scripts/placeholders.py",
+    "tts": "bash scripts/tts.sh",
+    "deliver": "bash scripts/deliver.sh"
+  }
+}

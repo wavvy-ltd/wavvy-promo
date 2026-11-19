@@ -1,0 +1,142 @@
+{
+ "i1": {
+  "text": "Meet Aisha, the money assistant inside Wavvy Wallet.",
+  "duration": 4.0,
+  "seed": 7
+ },
+ "i2": {
+  "text": "Ask her anything, in plain words. Here are six things she can do for you.",
+  "duration": 5.32,
+  "seed": 7
+ },
+ "h1": {
+  "text": "To find her, open Wavvy Wallet, and tap Chat at the bottom.",
+  "duration": 4.32,
+  "seed": 7
+ },
+ "h2": {
+  "text": "The first time, read the short note, then tap, Continue to chat.",
+  "duration": 4.74,
+  "seed": 7
+ },
+ "i4": {
+  "text": "Let's start with number one.",
+  "duration": 1.94,
+  "seed": 7
+ },
+ "c1q": {
+  "text": "Number one. Ask Aisha about your spending.",
+  "duration": 3.12,
+  "seed": 7
+ },
+ "c1a": {
+  "text": "Type a question, like, how much did I spend this month? Then tap send.",
+  "duration": 6.14,
+  "seed": 7
+ },
+ "c1b": {
+  "text": "Aisha adds it all up in seconds, and shows how much is still untagged.",
+  "duration": 4.62,
+  "seed": 7
+ },
+ "c1c": {
+  "text": "Ask where most of your money goes, and she names your biggest costs.",
+  "duration": 3.66,
+  "seed": 7
+ },
+ "c2q": {
+  "text": "Number two. Find any payment, fast.",
+  "duration": 3.5,
+  "seed": 7
+ },
+ "c2a": {
+  "text": "Ask about anyone you pay. Show me my payments to Mary Wanjiku.",
+  "duration": 5.02,
+  "seed": 7
+ },
+ "c2b": {
+  "text": "She finds every payment, with the dates and fees, and even spots a pattern.",
+  "duration": 5.1,
+  "seed": 7
+ },
+ "c3q": {
+  "text": "Number three. Tag payments, just by chatting.",
+  "duration": 3.76,
+  "seed": 7
+ },
+ "c3a": {
+  "text": "Tell her what a payment was for. Tag the Kings Court payment as rent.",
+  "duration": 5.04,
+  "seed": 7
+ },
+ "c3b": {
+  "text": "Aisha always asks before she changes anything. Tap, Allow Once.",
+  "duration": 5.06,
+  "seed": 7
+ },
+ "c3c": {
+  "text": "Done. Your rent is tagged, and she offers to do it every month.",
+  "duration": 4.36,
+  "seed": 7
+ },
+ "c4q": {
+  "text": "Number four. Cash spending counts too.",
+  "duration": 3.34,
+  "seed": 7
+ },
+ "c4a": {
+  "text": "Paid with cash? Just tell her. I paid two hundred and fifty shillings cash for lunch.",
+  "duration": 6.28,
+  "seed": 7
+ },
+ "c4b": {
+  "text": "Allow it, and the cash payment is added to your list.",
+  "duration": 3.68,
+  "seed": 7
+ },
+ "c5q": {
+  "text": "Number five. Plan ahead with Aisha.",
+  "duration": 3.08,
+  "seed": 7
+ },
+ "c5a": {
+  "text": "Ask her to plan a weekend trip to Diani, with twenty thousand shillings.",
+  "duration": 4.86,
+  "seed": 7
+ },
+ "c5b": {
+  "text": "She splits it into transport, a place to stay, food, activities, and a little extra, and checks it against your usual spending.",
+  "duration": 8.72,
+  "seed": 7
+ },
+ "c5c": {
+  "text": "Say yes, and she creates a trip category, so you can track every shilling.",
+  "duration": 4.88,
+  "seed": 7
+ },
+ "c6q": {
+  "text": "And number six. Aisha can change the app, and listen too.",
+  "duration": 4.64,
+  "seed": 11
+ },
+ "c6a": {
+  "text": "Ask for a purple theme, and the whole app changes colour.",
+  "duration": 3.6,
+  "seed": 7
+ },
+ "c6b": {
+  "text": "Ask for green again, and it's back.",
+  "duration": 2.28,
+  "seed": 7
+ },
+ "c6c": {
+  "text": "Rather talk than type? Tap the microphone, and just speak.",
+  "duration": 3.98,
+  "seed": 7
+ },
+ "o1": {
+  "text": "Aisha is in beta, so double check anything important. Open Wavvy Wallet, tap Chat, and say hello.",
+  "duration": 7.44,
+  "seed": 7
+ }
+}

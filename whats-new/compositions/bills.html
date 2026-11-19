@@ -1,0 +1,95 @@
+<template>
+  <style>
+    @font-face { font-family: "Nunito"; font-weight: 200 1000; src: url("assets/fonts/Nunito.ttf"); }
+    #root { position: absolute; inset: 0; background: #F4F7F6; font-family: var(--font-display, "Nunito", sans-serif); overflow: hidden; }
+    #bills-stage { position: absolute; inset: 0; }
+    .phone { position: absolute; left: 160px; top: 330px; width: 760px; height: 1528px; border-radius: 64px; background: #111111; padding: 14px; box-shadow: 0 30px 80px rgba(0,0,0,.55); border: 1px solid #2A2F2C; }
+    .phone .screen { width: 732px; height: 1500px; border-radius: 52px; overflow: hidden; background: #F4F7F6; position: relative; }
+    .phone .screen img { position: absolute; left: 0; top: -66px; width: 732px; height: auto; }
+    #bills-cam { position: absolute; inset: 0; }
+    #bills-zoom { position: absolute; inset: 0; }
+    .card { position: relative; width: 900px; background: #FFFFFF; border: 1.5px solid #376C5033; border-radius: 16px; box-shadow: 0 4px 10px rgba(0,0,0,.05); padding: 26px 32px; display: flex; align-items: center; gap: 24px; color: #111111; }
+    .card .icon { flex: none; width: 88px; height: 88px; border-radius: 44px; background: #376C5029; display: flex; align-items: center; justify-content: center; }
+    .card .icon img { width: 56px; height: 56px; }
+    .card .text { min-width: 0; }
+    .card .title { font-weight: 600; font-size: 36px; line-height: 1.3; }
+    .card .meta { color: #376C50; font-weight: 700; font-size: 28px; letter-spacing: .04em; margin-top: 8px; }
+    #bills-card { position: absolute; left: 90px; top: 120px; width: 900px; }
+    #bills-bar { position: absolute; left: 36px; height: 8px; width: 0; background: #376C50; border-radius: 4px; }
+    #bills-ov { position: absolute; left: 0; top: -66px; width: 732px; height: auto; }
+    .mk { position: absolute; left: 0; top: 0; width: 732px; height: 1500px; overflow: visible; pointer-events: none; }
+    .pen { position: absolute; left: 0; top: 0; width: 1px; height: 1px; filter: drop-shadow(0 6px 8px rgba(0,0,0,.35)); }
+    .tap { position: absolute; width: 120px; height: 120px; margin: -60px 0 0 -60px; border-radius: 50%; border: 7px solid #376C50; background: #376C5040; box-shadow: 0 0 0 14px #376C5026, 0 0 40px #4fc385; }
+    #bills-label { position: absolute; left: 0; right: 0; top: 150px; display: flex; justify-content: center; }
+    #bills-label .chip { display: inline-flex; align-items: center; gap: 18px; background: #FFFFFF; color: #111111; font-weight: 800; font-size: 46px; padding: 18px 36px 18px 18px; border-radius: 999px; box-shadow: 0 10px 30px rgba(0,0,0,.08); border: 2px solid #376C5022; }
+    #bills-label .n { background: #376C50; color: #fff; font-size: 34px; font-weight: 900; padding: 10px 20px; border-radius: 999px; }
+
+  </style>
+  <div id="root" data-composition-id="bills" data-width="1080" data-height="1920">
+    <div id="bills-stage" class="clip" data-start="0" data-duration="17.72" data-layout-allow-overflow>
+      <div id="bills-cam">
+       <div id="bills-zoom">
+        <div class="phone" id="bills-phone"><div class="screen">
+            <img id="bills-s0" src="assets/screens/g_home.png" alt="g_home" />
+            <img id="bills-s1" src="assets/screens/g_drawer.png" alt="g_drawer" />
+            <img id="bills-s2" src="assets/screens/rem_form.png" alt="rem_form" />
+            <img id="bills-s3" src="assets/screens/rem_list.png" alt="rem_list" />
+            <img id="bills-s4" src="assets/screens/notif_1.png" alt="notif_1" />
+            <svg class="mk" id="bills-mk0"><path class="p1" d="M40.2 687.2 L47.5 679.3 L55.6 671.5 L64.2 664.0 L73.4 656.8 L83.3 649.7 L93.6 642.9 L104.5 636.4 L115.9 630.0 L127.9 623.9 L140.3 618.1 L153.3 612.5 L166.7 607.2 L180.7 602.2 L195.2 597.4 L210.2 593.0 L225.7 588.9 L241.7 585.2 L258.1 581.8 L275.0 578.9 L292.3 576.4 L309.9 574.4 L327.8 572.8 L346.0 571.7 L364.3 571.2 L382.8 571.1 L401.2 571.6 L419.6 572.7 L437.9 574.2 L456.0 576.3 L473.7 578.9 L491.2 582.0 L508.1 585.6 L524.6 589.7 L540.6 594.1 L555.9 599.0 L570.7 604.3 L584.7 609.9 L598.1 615.8 L610.8 622.0 L622.8 628.5 L634.1 635.3 L644.7 642.2 L654.6 649.4 L663.9 656.7 L672.5 664.2 L680.4 671.8 L687.7 679.6 L694.3 687.6 L700.3 695.6 L705.6 703.9 L710.3 712.2 L714.3 720.7 L717.5 729.2 L720.1 738.0 L721.9 746.8 L722.9 755.7 L723.0 764.7 L722.3 773.7 L720.7 782.9 L718.1 792.0 L714.5 801.1 L709.9 810.2 L704.3 819.2 L697.7 828.1 L690.0 836.9 L681.3 845.4 L671.6 853.7 L660.9 861.8 L649.3 869.5 L636.7 876.9 L623.3 883.9 L609.2 890.5 L594.3 896.7 L578.7 902.4 L562.6 907.6 L546.0 912.4 L528.9 916.6 L511.5 920.4 L493.8 923.7 L475.9 926.5 L457.9 928.8 L439.7 930.7 L421.4 932.1 L403.2 933.0 L384.9 933.6 L366.7 933.7 L348.5 933.4 L330.4 932.7 L312.4 931.7 L294.5 930.2 L276.7 928.4 L259.1 926.2 L241.6 923.5 L224.3 920.5 L207.2 917.1 L190.3 913.3 L173.7 909.0 L157.4 904.4 L141.5 899.2 L126.1 893.7 L111.1 887.7 L96.7 881.3 L82.9 874.4 L69.8 867.1 L57.5 859.4 L46.1 851.4 L35.5 843.0 L25.9 834.2 L17.3 825.2 L9.8 815.9 L3.4 806.4 L-1.9 796.7 L-6.0 787.0 L-9.0 777.1 L-10.8 767.2 L-11.5 757.3 L-11.1 747.4 L-9.6 737.7 L-7.0 728.0 L-3.5 718.5 L1.0 709.2 L6.5 700.0 L12.7 691.1 L19.8 682.4 L27.7 673.9 L36.2 665.7 L45.5 657.7 L55.3 650.0 L65.8 642.5 L76.9 635.3 L88.6 628.3 L100.8 621.6 L113.6 615.2 L127.0 609.0 L140.9 603.1 L155.3 597.5 L170.3 592.2 L185.9 587.2 L201.9 582.6 L218.5 578.3" fill="none" stroke="#E4572E" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1987.5" stroke-dashoffset="1987.5"/><path class="p2" d="M40.2 687.2 L47.5 679.3 L55.6 671.5 L64.2 664.0 L73.4 656.8 L83.3 649.7 L93.6 642.9 L104.5 636.4 L115.9 630.0 L127.9 623.9 L140.3 618.1 L153.3 612.5 L166.7 607.2 L180.7 602.2 L195.2 597.4 L210.2 593.0 L225.7 588.9 L241.7 585.2 L258.1 581.8 L275.0 578.9 L292.3 576.4 L309.9 574.4 L327.8 572.8 L346.0 571.7 L364.3 571.2 L382.8 571.1 L401.2 571.6 L419.6 572.7 L437.9 574.2 L456.0 576.3 L473.7 578.9 L491.2 582.0 L508.1 585.6 L524.6 589.7 L540.6 594.1 L555.9 599.0 L570.7 604.3 L584.7 609.9 L598.1 615.8 L610.8 622.0 L622.8 628.5 L634.1 635.3 L644.7 642.2 L654.6 649.4 L663.9 656.7 L672.5 664.2 L680.4 671.8 L687.7 679.6 L694.3 687.6 L700.3 695.6 L705.6 703.9 L710.3 712.2 L714.3 720.7 L717.5 729.2 L720.1 738.0 L721.9 746.8 L722.9 755.7 L723.0 764.7 L722.3 773.7 L720.7 782.9 L718.1 792.0 L714.5 801.1 L709.9 810.2 L704.3 819.2 L697.7 828.1 L690.0 836.9 L681.3 845.4 L671.6 853.7 L660.9 861.8 L649.3 869.5 L636.7 876.9 L623.3 883.9 L609.2 890.5 L594.3 896.7 L578.7 902.4 L562.6 907.6 L546.0 912.4 L528.9 916.6 L511.5 920.4 L493.8 923.7 L475.9 926.5 L457.9 928.8 L439.7 930.7 L421.4 932.1 L403.2 933.0 L384.9 933.6 L366.7 933.7 L348.5 933.4 L330.4 932.7 L312.4 931.7 L294.5 930.2 L276.7 928.4 L259.1 926.2 L241.6 923.5 L224.3 920.5 L207.2 917.1 L190.3 913.3 L173.7 909.0 L157.4 904.4 L141.5 899.2 L126.1 893.7 L111.1 887.7 L96.7 881.3 L82.9 874.4 L69.8 867.1 L57.5 859.4 L46.1 851.4 L35.5 843.0 L25.9 834.2 L17.3 825.2 L9.8 815.9 L3.4 806.4 L-1.9 796.7 L-6.0 787.0 L-9.0 777.1 L-10.8 767.2 L-11.5 757.3 L-11.1 747.4 L-9.6 737.7 L-7.0 728.0 L-3.5 718.5 L1.0 709.2 L6.5 700.0 L12.7 691.1 L19.8 682.4 L27.7 673.9 L36.2 665.7 L45.5 657.7 L55.3 650.0 L65.8 642.5 L76.9 635.3 L88.6 628.3 L100.8 621.6 L113.6 615.2 L127.0 609.0 L140.9 603.1 L155.3 597.5 L170.3 592.2 L185.9 587.2 L201.9 582.6 L218.5 578.3" fill="none" stroke="#E4572E" stroke-opacity=".45" stroke-width="3" stroke-linecap="round" transform="translate(2.5 -2)" stroke-dasharray="1987.5" stroke-dashoffset="1987.5"/></svg>
+            <svg class="mk" id="bills-mk1"><path class="p1" d="M53.6 871.9 L58.5 868.8 L64.2 865.6 L70.8 862.6 L78.2 859.5 L86.5 856.5 L95.8 853.6 L105.9 850.8 L116.8 848.1 L128.6 845.5 L141.2 843.0 L154.6 840.7 L168.7 838.5 L183.4 836.4 L198.7 834.6 L214.5 832.9 L230.8 831.4 L247.4 830.1 L264.4 829.0 L281.5 828.1 L298.9 827.4 L316.3 826.8 L333.7 826.5 L351.1 826.3 L368.5 826.3 L385.7 826.4 L402.9 826.7 L419.8 827.2 L436.5 827.8 L453.1 828.6 L469.4 829.5 L485.4 830.5 L501.3 831.7 L516.8 833.0 L532.1 834.4 L547.1 836.0 L561.9 837.7 L576.3 839.5 L590.3 841.4 L603.9 843.5 L617.2 845.8 L629.9 848.1 L642.1 850.6 L653.8 853.3 L664.8 856.1 L675.1 859.0 L684.6 862.1 L693.3 865.2 L701.2 868.5 L708.0 871.9 L713.9 875.3 L718.8 878.9 L722.6 882.5 L725.3 886.1 L726.9 889.8 L727.3 893.5 L726.7 897.2 L724.9 900.8 L722.1 904.5 L718.2 908.0 L713.4 911.5 L707.5 914.9 L700.7 918.3 L693.1 921.5 L684.7 924.6 L675.5 927.7 L665.6 930.6 L655.1 933.4 L644.0 936.0 L632.3 938.6 L620.2 941.0 L607.5 943.3 L594.4 945.5 L580.8 947.6 L566.9 949.6 L552.5 951.4 L537.7 953.1 L522.6 954.7 L507.1 956.2 L491.2 957.6 L474.9 958.8 L458.3 959.9 L441.3 960.8 L424.1 961.5 L406.5 962.1 L388.7 962.6 L370.7 962.8 L352.6 962.9 L334.4 962.7 L316.1 962.4 L297.9 961.9 L279.8 961.1 L261.9 960.2 L244.2 959.1 L226.9 957.7 L210.0 956.2 L193.6 954.5 L177.8 952.6 L162.5 950.5 L148.0 948.3 L134.2 945.9 L121.1 943.4 L108.8 940.8 L97.3 938.0 L86.7 935.2 L76.8 932.3 L67.8 929.3 L59.6 926.2 L52.2 923.1 L45.6 920.0 L39.7 916.8 L34.6 913.6 L30.2 910.3 L26.6 907.1 L23.6 903.8 L21.4 900.4 L19.8 897.1 L18.9 893.8 L18.7 890.4 L19.3 887.0 L20.6 883.7 L22.6 880.3 L25.5 876.9 L29.2 873.5 L33.7 870.2 L39.0 866.8 L45.3 863.5 L52.5 860.2 L60.6 857.0 L69.6 853.9 L79.6 850.8 L90.5 847.8 L102.3 844.9 L114.9 842.2 L128.4 839.6 L142.7 837.1 L157.8 834.8 L173.5 832.7 L189.8 830.7 L206.6 829.0 L224.0 827.4" fill="none" stroke="#E4572E" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1665.1" stroke-dashoffset="1665.1"/><path class="p2" d="M53.6 871.9 L58.5 868.8 L64.2 865.6 L70.8 862.6 L78.2 859.5 L86.5 856.5 L95.8 853.6 L105.9 850.8 L116.8 848.1 L128.6 845.5 L141.2 843.0 L154.6 840.7 L168.7 838.5 L183.4 836.4 L198.7 834.6 L214.5 832.9 L230.8 831.4 L247.4 830.1 L264.4 829.0 L281.5 828.1 L298.9 827.4 L316.3 826.8 L333.7 826.5 L351.1 826.3 L368.5 826.3 L385.7 826.4 L402.9 826.7 L419.8 827.2 L436.5 827.8 L453.1 828.6 L469.4 829.5 L485.4 830.5 L501.3 831.7 L516.8 833.0 L532.1 834.4 L547.1 836.0 L561.9 837.7 L576.3 839.5 L590.3 841.4 L603.9 843.5 L617.2 845.8 L629.9 848.1 L642.1 850.6 L653.8 853.3 L664.8 856.1 L675.1 859.0 L684.6 862.1 L693.3 865.2 L701.2 868.5 L708.0 871.9 L713.9 875.3 L718.8 878.9 L722.6 882.5 L725.3 886.1 L726.9 889.8 L727.3 893.5 L726.7 897.2 L724.9 900.8 L722.1 904.5 L718.2 908.0 L713.4 911.5 L707.5 914.9 L700.7 918.3 L693.1 921.5 L684.7 924.6 L675.5 927.7 L665.6 930.6 L655.1 933.4 L644.0 936.0 L632.3 938.6 L620.2 941.0 L607.5 943.3 L594.4 945.5 L580.8 947.6 L566.9 949.6 L552.5 951.4 L537.7 953.1 L522.6 954.7 L507.1 956.2 L491.2 957.6 L474.9 958.8 L458.3 959.9 L441.3 960.8 L424.1 961.5 L406.5 962.1 L388.7 962.6 L370.7 962.8 L352.6 962.9 L334.4 962.7 L316.1 962.4 L297.9 961.9 L279.8 961.1 L261.9 960.2 L244.2 959.1 L226.9 957.7 L210.0 956.2 L193.6 954.5 L177.8 952.6 L162.5 950.5 L148.0 948.3 L134.2 945.9 L121.1 943.4 L108.8 940.8 L97.3 938.0 L86.7 935.2 L76.8 932.3 L67.8 929.3 L59.6 926.2 L52.2 923.1 L45.6 920.0 L39.7 916.8 L34.6 913.6 L30.2 910.3 L26.6 907.1 L23.6 903.8 L21.4 900.4 L19.8 897.1 L18.9 893.8 L18.7 890.4 L19.3 887.0 L20.6 883.7 L22.6 880.3 L25.5 876.9 L29.2 873.5 L33.7 870.2 L39.0 866.8 L45.3 863.5 L52.5 860.2 L60.6 857.0 L69.6 853.9 L79.6 850.8 L90.5 847.8 L102.3 844.9 L114.9 842.2 L128.4 839.6 L142.7 837.1 L157.8 834.8 L173.5 832.7 L189.8 830.7 L206.6 829.0 L224.0 827.4" fill="none" stroke="#E4572E" stroke-opacity=".45" stroke-width="3" stroke-linecap="round" transform="translate(2.5 -2)" stroke-dasharray="1665.1" stroke-dashoffset="1665.1"/></svg>
+            <div class="tap" id="bills-tap0" style="left: 49px; top: 89px"></div>
+            <div class="tap" id="bills-tap1" style="left: 211px; top: 367px"></div>
+            <div class="tap" id="bills-tap2" style="left: 364px; top: 1414px"></div>
+        </div></div>
+       </div>
+      </div>      <div id="bills-label"><div class="chip"><span class="n">5</span><span>Bill reminders</span></div></div>
+
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    gsap.set("#bills-s1", { opacity: 0, y: 260 });
+    gsap.set("#bills-s2", { opacity: 0, y: 260 });
+    gsap.set("#bills-s3", { opacity: 0, y: 260 });
+    gsap.set("#bills-s4", { opacity: 0, y: 260 });
+    gsap.set("#bills-tap0", { opacity: 0, scale: 0.3 });
+    tl.fromTo("#bills-tap0", { opacity: 0, scale: 0.3 }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2)", immediateRender: false }, 0.55);
+    tl.to("#bills-tap0", { scale: 1.14, duration: 0.22, ease: "sine.inOut", yoyo: true, repeat: 1 }, 0.85);
+    tl.to("#bills-tap0", { scale: 0.78, duration: 0.08, ease: "power2.in" }, 1.35);
+    tl.to("#bills-tap0", { scale: 1.9, opacity: 0, duration: 0.42, ease: "power2.out" }, 1.43);
+    gsap.set("#bills-s1", { y: 0 });
+    tl.to("#bills-s0", { opacity: 0, duration: 0.1 }, 1.65);
+    tl.to("#bills-s1", { opacity: 1, duration: 0.18, ease: "power2.out" }, 1.65);
+    gsap.set("#bills-tap1", { opacity: 0, scale: 0.3 });
+    tl.fromTo("#bills-tap1", { opacity: 0, scale: 0.3 }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2)", immediateRender: false }, 2.15);
+    tl.to("#bills-tap1", { scale: 1.14, duration: 0.22, ease: "sine.inOut", yoyo: true, repeat: 1 }, 2.45);
+    tl.to("#bills-tap1", { scale: 0.78, duration: 0.08, ease: "power2.in" }, 2.95);
+    tl.to("#bills-tap1", { scale: 1.9, opacity: 0, duration: 0.42, ease: "power2.out" }, 3.03);
+    gsap.set("#bills-s2", { y: 120 });
+    tl.to("#bills-s1", { opacity: 0, duration: 0.1 }, 4.38);
+    tl.to("#bills-s2", { opacity: 1, y: 0, duration: 0.3, ease: "expo.out" }, 4.38);
+    tl.to("#bills-cam", { scale: 1.3, x: 0, y: -329, duration: 0.6, ease: "power2.inOut", transformOrigin: "50% 50%" }, 4.88);
+    tl.to("#bills-cam", { scale: 1, x: 0, y: 0, duration: 0.35, ease: "power2.inOut" }, 7.48);
+    gsap.set("#bills-tap2", { opacity: 0, scale: 0.3 });
+    tl.fromTo("#bills-tap2", { opacity: 0, scale: 0.3 }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2)", immediateRender: false }, 7.48);
+    tl.to("#bills-tap2", { scale: 1.14, duration: 0.12, ease: "sine.inOut", yoyo: true, repeat: 1 }, 7.78);
+    tl.to("#bills-tap2", { scale: 0.78, duration: 0.08, ease: "power2.in" }, 8.08);
+    tl.to("#bills-tap2", { scale: 1.9, opacity: 0, duration: 0.42, ease: "power2.out" }, 8.16);
+    gsap.set("#bills-s3", { y: 0, scale: 1.06, transformOrigin: "50% 30%" });
+    tl.to("#bills-s2", { opacity: 0, duration: 0.1 }, 8.81);
+    tl.to("#bills-s3", { opacity: 1, scale: 1, duration: 0.25, ease: "expo.out" }, 8.81);
+    tl.to("#bills-cam", { scale: 1.35, x: 0, y: -430, duration: 0.6, ease: "power2.inOut", transformOrigin: "50% 50%" }, 9.21);
+    tl.fromTo("#bills-mk0 path", { strokeDashoffset: 1987.5 }, { strokeDashoffset: 0, duration: 0.75, ease: "none", immediateRender: false }, 9.51);
+    tl.fromTo("#bills-mk0", { opacity: 1 }, { opacity: 0, duration: 0.25, immediateRender: false }, 12.26);
+    tl.to("#bills-cam", { scale: 1, x: 0, y: 0, duration: 0.3, ease: "power2.inOut" }, 12.26);
+    gsap.set("#bills-s4", { y: 120 });
+    tl.to("#bills-s3", { opacity: 0, duration: 0.1 }, 12.56);
+    tl.to("#bills-s4", { opacity: 1, y: 0, duration: 0.3, ease: "expo.out" }, 12.56);
+    tl.to("#bills-cam", { scale: 1.45, x: 0, y: -426, duration: 0.6, ease: "power2.inOut", transformOrigin: "50% 50%" }, 13.06);
+    tl.fromTo("#bills-mk1 path", { strokeDashoffset: 1665.1 }, { strokeDashoffset: 0, duration: 0.75, ease: "none", immediateRender: false }, 13.76);
+    tl.fromTo("#bills-mk1", { opacity: 1 }, { opacity: 0, duration: 0.25, immediateRender: false }, 17.01);
+    tl.to("#bills-cam", { scale: 1.55, x: 0, y: -519, duration: 1.6, ease: "power2.inOut", transformOrigin: "50% 50%" }, 14.96);
+    tl.fromTo("#bills-label .chip", { y: -40, opacity: 0, scale: 0.9 }, { y: 0, opacity: 1, scale: 1, duration: 0.4, ease: "back.out(1.6)" }, 0.15);
+    window.__timelines["bills"] = tl;
+  </script>
+</template>

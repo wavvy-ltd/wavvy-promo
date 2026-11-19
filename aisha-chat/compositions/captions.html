@@ -1,0 +1,40 @@
+<template>
+  <style>
+    @font-face { font-family: "Nunito"; font-weight: 200 1000; src: url("assets/fonts/Nunito.ttf"); }
+    #root { position: absolute; inset: 0; font-family: var(--font-display, "Nunito", sans-serif); pointer-events: none; }
+    .cap { position: absolute; left: 0; right: 0; top: 1700px; text-align: center; }
+    .cap .pill { display: inline-block; background: rgba(255,255,255,.96); color: #111111; font-weight: 700; font-size: 52px; line-height: 1.2; padding: 20px 40px; border-radius: 28px; }
+    .cap .w { display: inline-block; }
+    .cap .hi { color: #376C50; }
+  </style>
+  <div id="root" data-composition-id="captions" data-width="1080" data-height="1920">
+    <div id="cap1" class="clip cap" data-start="11.42" data-duration="4.42" data-layout-allow-caption-zone><div class="pill"><span class="w">Tap</span> <span class="w hi">Chat</span></div></div>
+    <div id="cap2" class="clip cap" data-start="16.19" data-duration="4.84" data-layout-allow-caption-zone><div class="pill"><span class="w">Tap</span> <span class="w hi">Continue</span> <span class="w hi">to</span> <span class="w hi">chat</span></div></div>
+    <div id="cap3" class="clip cap" data-start="29.66" data-duration="6.24" data-layout-allow-caption-zone><div class="pill"><span class="w">Type,</span> <span class="w">then</span> <span class="w">tap</span> <span class="w hi">send</span></div></div>
+    <div id="cap4" class="clip cap" data-start="36.25" data-duration="4.72" data-layout-allow-caption-zone><div class="pill"><span class="w">Totals</span> <span class="w">in</span> <span class="w hi">seconds</span></div></div>
+    <div id="cap5" class="clip cap" data-start="41.32" data-duration="3.76" data-layout-allow-caption-zone><div class="pill"><span class="w">Your</span> <span class="w hi">biggest</span> <span class="w hi">costs</span></div></div>
+    <div id="cap6" class="clip cap" data-start="50.78" data-duration="5.12" data-layout-allow-caption-zone><div class="pill"><span class="w">Ask</span> <span class="w">about</span> <span class="w hi">anyone</span></div></div>
+    <div id="cap7" class="clip cap" data-start="56.25" data-duration="5.2" data-layout-allow-caption-zone><div class="pill"><span class="w">Dates,</span> <span class="w">fees,</span> <span class="w hi">patterns</span></div></div>
+    <div id="cap8" class="clip cap" data-start="67.41" data-duration="5.14" data-layout-allow-caption-zone><div class="pill"><span class="w">Say</span> <span class="w">what</span> <span class="w">it</span> <span class="w">was</span> <span class="w hi">for</span></div></div>
+    <div id="cap9" class="clip cap" data-start="72.9" data-duration="5.16" data-layout-allow-caption-zone><div class="pill"><span class="w">She</span> <span class="w hi">asks</span> <span class="w hi">first</span></div></div>
+    <div id="cap10" class="clip cap" data-start="78.41" data-duration="4.46" data-layout-allow-caption-zone><div class="pill"><span class="w hi">Tagged!</span></div></div>
+    <div id="cap11" class="clip cap" data-start="88.41" data-duration="6.38" data-layout-allow-caption-zone><div class="pill"><span class="w">Just</span> <span class="w hi">tell</span> <span class="w hi">her</span></div></div>
+    <div id="cap12" class="clip cap" data-start="95.14" data-duration="3.78" data-layout-allow-caption-zone><div class="pill"><span class="w">Cash</span> <span class="w">payment</span> <span class="w hi">added</span></div></div>
+    <div id="cap13" class="clip cap" data-start="104.2" data-duration="4.96" data-layout-allow-caption-zone><div class="pill"><span class="w">Plan</span> <span class="w">a</span> <span class="w hi">trip</span></div></div>
+    <div id="cap14" class="clip cap" data-start="109.51" data-duration="8.82" data-layout-allow-caption-zone><div class="pill"><span class="w">Split</span> <span class="w">into</span> <span class="w">a</span> <span class="w hi">plan</span></div></div>
+    <div id="cap15" class="clip cap" data-start="118.68" data-duration="4.98" data-layout-allow-caption-zone><div class="pill"><span class="w">Every</span> <span class="w">shilling</span> <span class="w hi">tracked</span></div></div>
+    <div id="cap16" class="clip cap" data-start="130.5" data-duration="3.7" data-layout-allow-caption-zone><div class="pill"><span class="w">Ask</span> <span class="w">for</span> <span class="w">a</span> <span class="w hi">new</span> <span class="w hi">colour</span></div></div>
+    <div id="cap17" class="clip cap" data-start="134.55" data-duration="2.38" data-layout-allow-caption-zone><div class="pill"><span class="w">Back</span> <span class="w">to</span> <span class="w hi">green</span></div></div>
+    <div id="cap18" class="clip cap" data-start="137.28" data-duration="4.08" data-layout-allow-caption-zone><div class="pill"><span class="w">Tap</span> <span class="w">the</span> <span class="w hi">mic</span> <span class="w">and</span> <span class="w">speak</span></div></div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    const groups = [["#cap1", 11.42, 15.84], ["#cap2", 16.19, 21.03], ["#cap3", 29.66, 35.9], ["#cap4", 36.25, 40.97], ["#cap5", 41.32, 45.08], ["#cap6", 50.78, 55.9], ["#cap7", 56.25, 61.45], ["#cap8", 67.41, 72.55], ["#cap9", 72.9, 78.06], ["#cap10", 78.41, 82.87], ["#cap11", 88.41, 94.79], ["#cap12", 95.14, 98.92], ["#cap13", 104.2, 109.16], ["#cap14", 109.51, 118.33], ["#cap15", 118.68, 123.66], ["#cap16", 130.5, 134.2], ["#cap17", 134.55, 136.93], ["#cap18", 137.28, 141.36]];
+    groups.forEach(([sel, start, end]) => {
+      tl.fromTo(sel + " .pill", { opacity: 0 }, { opacity: 1, duration: 0.1 }, start);
+      tl.fromTo(sel + " .w", { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.13, stagger: 0.067, ease: "power2.out" }, start);
+      tl.to(sel + " .pill", { opacity: 0, duration: 0.12, ease: "power2.in" }, end - 0.14);
+    });
+    window.__timelines["captions"] = tl;
+  </script>
+</template>

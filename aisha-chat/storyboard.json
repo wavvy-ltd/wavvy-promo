@@ -1,0 +1,1268 @@
+{
+  "title": "Wavvy Wallet — Meet Aisha, your money assistant",
+  "brand": {
+    "name": "Wavvy Wallet",
+    "claim": "Know where your money is going.",
+    "font": "Nunito",
+    "font_files": {
+      "200 1000": "assets/fonts/Nunito.ttf"
+    },
+    "colors": {
+      "ground": "#F4F7F6",
+      "surface": "#FFFFFF",
+      "ink": "#111111",
+      "accent": "#376C50",
+      "highlight": "#376C50",
+      "flood": "#376C50",
+      "ink_on_flood": "#FFFFFF",
+      "bezel": "#111111",
+      "bezel_edge": "#2A2F2C",
+      "tap_glow": "#4fc385",
+      "pencil": "#E4572E"
+    },
+    "logo": "assets/brand/logo.png",
+    "badges": [],
+    "phone": {
+      "left": 160,
+      "top": 330,
+      "width": 760,
+      "height": 1528,
+      "radius": 64,
+      "bezel": 14,
+      "crop_top": 66
+    }
+  },
+  "video": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "duration": 151.4,
+    "music": {
+      "src": "assets/audio/music_story.wav",
+      "volume": 0.3,
+      "fade_in": 0.5,
+      "fade_out": 3
+    },
+    "captions": {
+      "top": 1700,
+      "size": 52,
+      "pill": "rgba(255,255,255,.96)"
+    }
+  },
+  "voice": [
+    {
+      "id": "i1",
+      "text": "Meet Aisha, the money assistant inside Wavvy Wallet.",
+      "start": 0.45,
+      "duration": 4.0,
+      "src": "assets/audio/story/i1.wav",
+      "volume": 1.4
+    },
+    {
+      "id": "i2",
+      "text": "Ask her anything, in plain words. Here are six things she can do for you.",
+      "start": 4.9,
+      "duration": 5.32,
+      "src": "assets/audio/story/i2.wav",
+      "volume": 1.4
+    },
+    {
+      "id": "h1",
+      "text": "To find her, open Wavvy Wallet, and tap Chat at the bottom.",
+      "start": 11.37,
+      "duration": 4.32,
+      "src": "assets/audio/story/h1.wav",
+      "volume": 1.4
+    },
+    {
+      "id": "h2",
+      "text": "The first time, read the short note, then tap, Continue to chat.",
+      "start": 16.14,
+      "duration": 4.74,
+      "src": "assets/audio/story/h2.wav",
+      "volume": 1.4
+    },
+    {
+      "id": "i4",
+      "text": "Let's start with number one.",
+      "start": 22.03,
+      "duration": 1.94,
+      "src": "assets/audio/story/i4.wav",
+      "volume": 1.4
+    },
+    {
+      "id": "c1q",
+      "text": "Number one. Ask Aisha about your spending.",
+      "start": 25.34,
+      "duration": 3.12,
+      "src": "assets/audio/story/c1q.wav",
+      "volume": 1.4
+    },
+    {
+      "id": "c1a",
+      "text": "Type a question, like, how much did I spend this month? Then tap send.",
+      "start": 29.61,
+      "duration": 6.14,
+      "src": "assets/audio/story/c1a.wav",
+      "volume": 1.4
+    },
+    {
+      "id": "c1b",
+      "text": "Aisha adds it all up in seconds, and shows how much is still untagged.",
+      "start": 36.2,
+      "duration": 4.62,
+      "src": "assets/audio/story/c1b.wav",
+      "volume": 1.4
+    },
+    {
+      "id": "c1c",
+      "text": "Ask where most of your money goes, and she names your biggest costs.",
+      "start": 41.27,
+      "duration": 3.66,
+      "src": "assets/audio/story/c1c.wav",
+      "volume": 1.4
+    },
+    {
+      "id": "c2q",
+      "text": "Number two. Find any payment, fast.",
+      "start": 46.08,
+      "duration": 3.5,
+      "src": "assets/audio/story/c2q.wav",
+      "volume": 1.4
+    },
+    {
+      "id": "c2a",
+      "text": "Ask about anyone you pay. Show me my payments to Mary Wanjiku.",
+      "start": 50.73,
+      "duration": 5.02,
+      "src": "assets/audio/story/c2a.wav",
+      "volume": 1.4
+    },
+    {
+      "id": "c2b",
+      "text": "She finds every payment, with the dates and fees, and even spots a pattern.",
+      "start": 56.2,
+      "duration": 5.1,
+      "src": "assets/audio/story/c2b.wav",
+      "volume": 1.4
+    },
+    {
+      "id": "c3q",
+      "text": "Number three. Tag payments, just by chatting.",
+      "start": 62.45,
+      "duration": 3.76,
+      "src": "assets/audio/story/c3q.wav",
+      "volume": 1.4
+    },
+    {
+      "id": "c3a",
+      "text": "Tell her what a payment was for. Tag the Kings Court payment as rent.",
+      "start": 67.36,
+      "duration": 5.04,
+      "src": "assets/audio/story/c3a.wav",
+      "volume": 1.4
+    },
+    {
+      "id": "c3b",
+      "text": "Aisha always asks before she changes anything. Tap, Allow Once.",
+      "start": 72.85,
+      "duration": 5.06,
+      "src": "assets/audio/story/c3b.wav",
+      "volume": 1.4
+    },
+    {
+      "id": "c3c",
+      "text": "Done. Your rent is tagged, and she offers to do it every month.",
+      "start": 78.36,
+      "duration": 4.36,
+      "src": "assets/audio/story/c3c.wav",
+      "volume": 1.4
+    },
+    {
+      "id": "c4q",
+      "text": "Number four. Cash spending counts too.",
+      "start": 83.87,
+      "duration": 3.34,
+      "src": "assets/audio/story/c4q.wav",
+      "volume": 1.4
+    },
+    {
+      "id": "c4a",
+      "text": "Paid with cash? Just tell her. I paid two hundred and fifty shillings cash for lunch.",
+      "start": 88.36,
+      "duration": 6.28,
+      "src": "assets/audio/story/c4a.wav",
+      "volume": 1.4
+    },
+    {
+      "id": "c4b",
+      "text": "Allow it, and the cash payment is added to your list.",
+      "start": 95.09,
+      "duration": 3.68,
+      "src": "assets/audio/story/c4b.wav",
+      "volume": 1.4
+    },
+    {
+      "id": "c5q",
+      "text": "Number five. Plan ahead with Aisha.",
+      "start": 99.92,
+      "duration": 3.08,
+      "src": "assets/audio/story/c5q.wav",
+      "volume": 1.4
+    },
+    {
+      "id": "c5a",
+      "text": "Ask her to plan a weekend trip to Diani, with twenty thousand shillings.",
+      "start": 104.15,
+      "duration": 4.86,
+      "src": "assets/audio/story/c5a.wav",
+      "volume": 1.4
+    },
+    {
+      "id": "c5b",
+      "text": "She splits it into transport, a place to stay, food, activities, and a little extra, and checks it against your usual spending.",
+      "start": 109.46,
+      "duration": 8.72,
+      "src": "assets/audio/story/c5b.wav",
+      "volume": 1.4
+    },
+    {
+      "id": "c5c",
+      "text": "Say yes, and she creates a trip category, so you can track every shilling.",
+      "start": 118.63,
+      "duration": 4.88,
+      "src": "assets/audio/story/c5c.wav",
+      "volume": 1.4
+    },
+    {
+      "id": "c6q",
+      "text": "And number six. Aisha can change the app, and listen too.",
+      "start": 124.66,
+      "duration": 4.64,
+      "src": "assets/audio/story/c6q.wav",
+      "volume": 1.4
+    },
+    {
+      "id": "c6a",
+      "text": "Ask for a purple theme, and the whole app changes colour.",
+      "start": 130.45,
+      "duration": 3.6,
+      "src": "assets/audio/story/c6a.wav",
+      "volume": 1.4
+    },
+    {
+      "id": "c6b",
+      "text": "Ask for green again, and it's back.",
+      "start": 134.5,
+      "duration": 2.28,
+      "src": "assets/audio/story/c6b.wav",
+      "volume": 1.4
+    },
+    {
+      "id": "c6c",
+      "text": "Rather talk than type? Tap the microphone, and just speak.",
+      "start": 137.23,
+      "duration": 3.98,
+      "src": "assets/audio/story/c6c.wav",
+      "volume": 1.4
+    },
+    {
+      "id": "o1",
+      "text": "Aisha is in beta, so double check anything important. Open Wavvy Wallet, tap Chat, and say hello.",
+      "start": 142.36,
+      "duration": 7.44,
+      "src": "assets/audio/story/o1.wav",
+      "volume": 1.4
+    }
+  ],
+  "captions": [
+    {
+      "text": "Tap *Chat*",
+      "start": 11.42,
+      "end": 15.84
+    },
+    {
+      "text": "Tap *Continue* *to* *chat*",
+      "start": 16.19,
+      "end": 21.03
+    },
+    {
+      "text": "Type, then tap *send*",
+      "start": 29.66,
+      "end": 35.9
+    },
+    {
+      "text": "Totals in *seconds*",
+      "start": 36.25,
+      "end": 40.97
+    },
+    {
+      "text": "Your *biggest* *costs*",
+      "start": 41.32,
+      "end": 45.08
+    },
+    {
+      "text": "Ask about *anyone*",
+      "start": 50.78,
+      "end": 55.9
+    },
+    {
+      "text": "Dates, fees, *patterns*",
+      "start": 56.25,
+      "end": 61.45
+    },
+    {
+      "text": "Say what it was *for*",
+      "start": 67.41,
+      "end": 72.55
+    },
+    {
+      "text": "She *asks* *first*",
+      "start": 72.9,
+      "end": 78.06
+    },
+    {
+      "text": "*Tagged!*",
+      "start": 78.41,
+      "end": 82.87
+    },
+    {
+      "text": "Just *tell* *her*",
+      "start": 88.41,
+      "end": 94.79
+    },
+    {
+      "text": "Cash payment *added*",
+      "start": 95.14,
+      "end": 98.92
+    },
+    {
+      "text": "Plan a *trip*",
+      "start": 104.2,
+      "end": 109.16
+    },
+    {
+      "text": "Split into a *plan*",
+      "start": 109.51,
+      "end": 118.33
+    },
+    {
+      "text": "Every shilling *tracked*",
+      "start": 118.68,
+      "end": 123.66
+    },
+    {
+      "text": "Ask for a *new* *colour*",
+      "start": 130.5,
+      "end": 134.2
+    },
+    {
+      "text": "Back to *green*",
+      "start": 134.55,
+      "end": 136.93
+    },
+    {
+      "text": "Tap the *mic* and speak",
+      "start": 137.28,
+      "end": 141.36
+    }
+  ],
+  "scenes": [
+    {
+      "id": "intro",
+      "type": "menu",
+      "mode": "build",
+      "rows": [
+        {
+          "name": "Ask about spending",
+          "sub": "Totals and top costs in seconds",
+          "icon": "chart"
+        },
+        {
+          "name": "Find any payment",
+          "sub": "By name, with dates and fees",
+          "icon": "search"
+        },
+        {
+          "name": "Tag by chatting",
+          "sub": "Say what a payment was for",
+          "icon": "tag"
+        },
+        {
+          "name": "Add cash spending",
+          "sub": "Cash counts too",
+          "icon": "add"
+        },
+        {
+          "name": "Plan a trip",
+          "sub": "Split it, track every shilling",
+          "icon": "flight"
+        },
+        {
+          "name": "Themes and voice",
+          "sub": "Change colours, or just speak",
+          "icon": "mic"
+        }
+      ],
+      "kicker": "Meet",
+      "headline": "Aisha",
+      "tile": "assets/brand/aisha.png",
+      "tile_round": true,
+      "start": 0.0,
+      "duration": 10.92,
+      "shrink_at": 4.55,
+      "row_times": [
+        5.15,
+        5.65,
+        6.15,
+        6.65,
+        7.15,
+        7.65
+      ]
+    },
+    {
+      "id": "open",
+      "type": "feature",
+      "transition": "whip-over",
+      "from": "bottom",
+      "screens": [
+        "assets/screens/aisha/home0.png",
+        "assets/screens/aisha/chat0.png",
+        "assets/screens/aisha/chat1.png"
+      ],
+      "start": 10.92,
+      "duration": 10.66,
+      "moves": [
+        {
+          "kind": "punch",
+          "scale": 1.5,
+          "x": -305,
+          "y": -1173,
+          "duration": 0.6,
+          "t": 2.05
+        },
+        {
+          "kind": "tap",
+          "x": 788,
+          "y": 1860,
+          "lead": 0.8,
+          "t": 2.95
+        },
+        {
+          "kind": "reset",
+          "duration": 0.3,
+          "t": 3.35
+        },
+        {
+          "kind": "show",
+          "screen": 1,
+          "rise": true,
+          "t": 3.45
+        },
+        {
+          "kind": "punch",
+          "scale": 1.3,
+          "x": 0,
+          "y": -150,
+          "duration": 0.5,
+          "t": 5.52
+        },
+        {
+          "kind": "mark",
+          "box": [
+            80,
+            780,
+            860,
+            1140
+          ],
+          "hold": 1.6,
+          "t": 5.82
+        },
+        {
+          "kind": "reset",
+          "duration": 0.3,
+          "t": 7.62
+        },
+        {
+          "kind": "tap",
+          "x": 448,
+          "y": 1220,
+          "lead": 0.7,
+          "t": 8.22
+        },
+        {
+          "kind": "show",
+          "screen": 2,
+          "settle": true,
+          "t": 8.62
+        },
+        {
+          "kind": "punch",
+          "scale": 1.25,
+          "x": 51,
+          "y": -571,
+          "duration": 0.5,
+          "t": 9.02
+        }
+      ]
+    },
+    {
+      "id": "pick",
+      "type": "menu",
+      "mode": "pick",
+      "pick": 1,
+      "rows": [
+        {
+          "name": "Ask about spending",
+          "sub": "Totals and top costs in seconds",
+          "icon": "chart"
+        },
+        {
+          "name": "Find any payment",
+          "sub": "By name, with dates and fees",
+          "icon": "search"
+        },
+        {
+          "name": "Tag by chatting",
+          "sub": "Say what a payment was for",
+          "icon": "tag"
+        },
+        {
+          "name": "Add cash spending",
+          "sub": "Cash counts too",
+          "icon": "add"
+        },
+        {
+          "name": "Plan a trip",
+          "sub": "Split it, track every shilling",
+          "icon": "flight"
+        },
+        {
+          "name": "Themes and voice",
+          "sub": "Change colours, or just speak",
+          "icon": "mic"
+        }
+      ],
+      "kicker": "Meet",
+      "headline": "Aisha",
+      "tile": "assets/brand/aisha.png",
+      "tile_round": true,
+      "start": 21.58,
+      "duration": 3.31,
+      "pick_at": 1.35,
+      "fly_at": 2.69
+    },
+    {
+      "id": "ch1",
+      "type": "chapter",
+      "n": 1,
+      "kicker": "AISHA",
+      "steady": true,
+      "title": "Ask about your spending",
+      "question": "Where did my money go?",
+      "start": 24.89,
+      "duration": 4.27
+    },
+    {
+      "id": "spend",
+      "type": "feature",
+      "label": {
+        "n": "1",
+        "text": "Ask about spending",
+        "at": 0.15
+      },
+      "screens": [
+        "assets/screens/aisha/c01_q.png",
+        "assets/screens/aisha/c01_a.png",
+        "assets/screens/aisha/c02_a.png"
+      ],
+      "start": 29.16,
+      "duration": 16.47,
+      "moves": [
+        {
+          "kind": "punch",
+          "scale": 1.35,
+          "x": 22,
+          "y": -1012,
+          "duration": 0.5,
+          "t": 0.75
+        },
+        {
+          "kind": "mark",
+          "box": [
+            70,
+            1806,
+            792,
+            1930
+          ],
+          "hold": 3.0999999999999996,
+          "t": 1.15
+        },
+        {
+          "kind": "tap",
+          "x": 850,
+          "y": 1868,
+          "lead": 0.6,
+          "t": 5.05
+        },
+        {
+          "kind": "show",
+          "screen": 1,
+          "settle": true,
+          "t": 5.4
+        },
+        {
+          "kind": "reset",
+          "duration": 0.35,
+          "t": 5.5
+        },
+        {
+          "kind": "punch",
+          "scale": 1.3,
+          "x": 42,
+          "y": -763,
+          "duration": 0.55,
+          "t": 7.04
+        },
+        {
+          "kind": "mark",
+          "box": [
+            79,
+            1458,
+            709,
+            1788
+          ],
+          "hold": 3.2,
+          "t": 7.54
+        },
+        {
+          "kind": "reset",
+          "duration": 0.3,
+          "t": 11.81
+        },
+        {
+          "kind": "show",
+          "screen": 2,
+          "rise": true,
+          "t": 12.21
+        },
+        {
+          "kind": "punch",
+          "scale": 1.3,
+          "x": 42,
+          "y": -760,
+          "duration": 0.55,
+          "t": 13.01
+        },
+        {
+          "kind": "mark",
+          "box": [
+            79,
+            1327,
+            709,
+            1788
+          ],
+          "hold": 2.8,
+          "t": 13.51
+        }
+      ]
+    },
+    {
+      "id": "ch2",
+      "type": "chapter",
+      "n": 2,
+      "kicker": "AISHA",
+      "title": "Find any payment",
+      "question": "Who did I pay, and when?",
+      "start": 45.63,
+      "duration": 4.65
+    },
+    {
+      "id": "find",
+      "type": "feature",
+      "label": {
+        "n": "2",
+        "text": "Find any payment",
+        "at": 0.15
+      },
+      "screens": [
+        "assets/screens/aisha/c03_q.png",
+        "assets/screens/aisha/c03_a.png"
+      ],
+      "start": 50.28,
+      "duration": 11.72,
+      "moves": [
+        {
+          "kind": "punch",
+          "scale": 1.35,
+          "x": 22,
+          "y": -1012,
+          "duration": 0.5,
+          "t": 0.95
+        },
+        {
+          "kind": "mark",
+          "box": [
+            70,
+            1806,
+            792,
+            1930
+          ],
+          "hold": 2.2,
+          "t": 1.35
+        },
+        {
+          "kind": "tap",
+          "x": 850,
+          "y": 1868,
+          "lead": 0.6,
+          "t": 4.35
+        },
+        {
+          "kind": "show",
+          "screen": 1,
+          "settle": true,
+          "t": 4.7
+        },
+        {
+          "kind": "reset",
+          "duration": 0.35,
+          "t": 4.8
+        },
+        {
+          "kind": "punch",
+          "scale": 1.3,
+          "x": 42,
+          "y": -760,
+          "duration": 0.55,
+          "t": 5.92
+        },
+        {
+          "kind": "mark",
+          "box": [
+            79,
+            1327,
+            709,
+            1788
+          ],
+          "hold": 3.6,
+          "t": 6.42
+        }
+      ]
+    },
+    {
+      "id": "ch3",
+      "type": "chapter",
+      "n": 3,
+      "kicker": "AISHA",
+      "title": "Tag by chatting",
+      "question": "What was that payment for?",
+      "start": 62.0,
+      "duration": 4.91
+    },
+    {
+      "id": "tagc",
+      "type": "feature",
+      "label": {
+        "n": "3",
+        "text": "Tag by chatting",
+        "at": 0.15
+      },
+      "screens": [
+        "assets/screens/aisha/c04_q.png",
+        "assets/screens/aisha/c04_perm.png",
+        "assets/screens/aisha/c04_done.png"
+      ],
+      "start": 66.91,
+      "duration": 16.51,
+      "moves": [
+        {
+          "kind": "punch",
+          "scale": 1.35,
+          "x": 22,
+          "y": -1012,
+          "duration": 0.5,
+          "t": 2.25
+        },
+        {
+          "kind": "mark",
+          "box": [
+            70,
+            1806,
+            792,
+            1930
+          ],
+          "hold": 1.4000000000000006,
+          "t": 2.65
+        },
+        {
+          "kind": "tap",
+          "x": 850,
+          "y": 1868,
+          "lead": 0.6,
+          "t": 4.85
+        },
+        {
+          "kind": "show",
+          "screen": 1,
+          "settle": true,
+          "t": 5.2
+        },
+        {
+          "kind": "reset",
+          "duration": 0.35,
+          "t": 5.3
+        },
+        {
+          "kind": "punch",
+          "scale": 1.3,
+          "x": 0,
+          "y": -763,
+          "duration": 0.5,
+          "t": 6.04
+        },
+        {
+          "kind": "mark",
+          "box": [
+            44,
+            1410,
+            856,
+            1576
+          ],
+          "hold": 1.8,
+          "t": 6.44
+        },
+        {
+          "kind": "tap",
+          "x": 448,
+          "y": 1684,
+          "lead": 0.7,
+          "t": 8.54
+        },
+        {
+          "kind": "reset",
+          "duration": 0.3,
+          "t": 8.94
+        },
+        {
+          "kind": "show",
+          "screen": 2,
+          "settle": true,
+          "t": 11.25
+        },
+        {
+          "kind": "punch",
+          "scale": 1.3,
+          "x": 42,
+          "y": -763,
+          "duration": 0.55,
+          "t": 11.65
+        },
+        {
+          "kind": "mark",
+          "box": [
+            79,
+            1414,
+            709,
+            1788
+          ],
+          "hold": 2.6,
+          "t": 12.15
+        }
+      ]
+    },
+    {
+      "id": "ch4",
+      "type": "chapter",
+      "n": 4,
+      "kicker": "AISHA",
+      "title": "Add cash spending",
+      "question": "Paid with cash?",
+      "start": 83.42,
+      "duration": 4.49
+    },
+    {
+      "id": "cash",
+      "type": "feature",
+      "label": {
+        "n": "4",
+        "text": "Add cash spending",
+        "at": 0.15
+      },
+      "screens": [
+        "assets/screens/aisha/m07_q.png",
+        "assets/screens/aisha/m07_perm.png",
+        "assets/screens/aisha/m07_done.png"
+      ],
+      "start": 87.91,
+      "duration": 11.56,
+      "moves": [
+        {
+          "kind": "punch",
+          "scale": 1.35,
+          "x": 22,
+          "y": -1012,
+          "duration": 0.5,
+          "t": 1.85
+        },
+        {
+          "kind": "mark",
+          "box": [
+            70,
+            1806,
+            792,
+            1930
+          ],
+          "hold": 2.8,
+          "t": 2.25
+        },
+        {
+          "kind": "tap",
+          "x": 850,
+          "y": 1868,
+          "lead": 0.6,
+          "t": 5.85
+        },
+        {
+          "kind": "show",
+          "screen": 1,
+          "settle": true,
+          "t": 6.2
+        },
+        {
+          "kind": "reset",
+          "duration": 0.35,
+          "t": 6.3
+        },
+        {
+          "kind": "tap",
+          "x": 448,
+          "y": 1684,
+          "lead": 0.6,
+          "t": 7.18
+        },
+        {
+          "kind": "show",
+          "screen": 2,
+          "settle": true,
+          "t": 7.58
+        },
+        {
+          "kind": "punch",
+          "scale": 1.3,
+          "x": 42,
+          "y": -763,
+          "duration": 0.55,
+          "t": 7.98
+        },
+        {
+          "kind": "mark",
+          "box": [
+            79,
+            1502,
+            709,
+            1788
+          ],
+          "hold": 2.0,
+          "t": 8.48
+        }
+      ]
+    },
+    {
+      "id": "ch5",
+      "type": "chapter",
+      "n": 5,
+      "kicker": "AISHA",
+      "title": "Plan a trip",
+      "question": "Going away for the weekend?",
+      "start": 99.47,
+      "duration": 4.23
+    },
+    {
+      "id": "trip",
+      "type": "feature",
+      "label": {
+        "n": "5",
+        "text": "Plan a trip",
+        "at": 0.15
+      },
+      "screens": [
+        "assets/screens/aisha/m09_q.png",
+        "assets/screens/aisha/m09_a.png",
+        "assets/screens/aisha/m10_done.png"
+      ],
+      "start": 103.7,
+      "duration": 20.51,
+      "moves": [
+        {
+          "kind": "punch",
+          "scale": 1.35,
+          "x": 22,
+          "y": -1012,
+          "duration": 0.5,
+          "t": 1.05
+        },
+        {
+          "kind": "mark",
+          "box": [
+            70,
+            1806,
+            792,
+            1930
+          ],
+          "hold": 2.6000000000000005,
+          "t": 1.45
+        },
+        {
+          "kind": "tap",
+          "x": 850,
+          "y": 1868,
+          "lead": 0.6,
+          "t": 4.85
+        },
+        {
+          "kind": "show",
+          "screen": 1,
+          "settle": true,
+          "t": 5.2
+        },
+        {
+          "kind": "reset",
+          "duration": 0.35,
+          "t": 5.3
+        },
+        {
+          "kind": "punch",
+          "scale": 1.25,
+          "x": 41,
+          "y": -347,
+          "duration": 0.55,
+          "t": 5.76
+        },
+        {
+          "kind": "mark",
+          "box": [
+            100,
+            1000,
+            700,
+            1400
+          ],
+          "hold": 3.0,
+          "t": 6.26
+        },
+        {
+          "kind": "punch",
+          "scale": 1.25,
+          "x": 41,
+          "y": -693,
+          "duration": 0.6,
+          "t": 10.36
+        },
+        {
+          "kind": "mark",
+          "box": [
+            100,
+            1380,
+            700,
+            1620
+          ],
+          "hold": 2.6,
+          "t": 10.76
+        },
+        {
+          "kind": "reset",
+          "duration": 0.3,
+          "t": 14.63
+        },
+        {
+          "kind": "show",
+          "screen": 2,
+          "rise": true,
+          "t": 15.13
+        },
+        {
+          "kind": "punch",
+          "scale": 1.3,
+          "x": 42,
+          "y": -763,
+          "duration": 0.55,
+          "t": 15.83
+        },
+        {
+          "kind": "mark",
+          "box": [
+            79,
+            1458,
+            709,
+            1788
+          ],
+          "hold": 2.6,
+          "t": 16.33
+        }
+      ]
+    },
+    {
+      "id": "ch6",
+      "type": "chapter",
+      "n": 6,
+      "kicker": "AISHA",
+      "title": "Themes and voice",
+      "question": "Rather talk than type?",
+      "start": 124.21,
+      "duration": 5.79
+    },
+    {
+      "id": "theme",
+      "type": "feature",
+      "label": {
+        "n": "6",
+        "text": "Themes and voice",
+        "at": 0.15
+      },
+      "screens": [
+        "assets/screens/aisha/m11_q.png",
+        "assets/screens/aisha/m11_perm.png",
+        "assets/screens/aisha/m11_done.png",
+        "assets/screens/aisha/m12_done.png",
+        "assets/screens/aisha/m13_mic.png"
+      ],
+      "start": 130.0,
+      "duration": 11.91,
+      "moves": [
+        {
+          "kind": "punch",
+          "scale": 1.35,
+          "x": 22,
+          "y": -1012,
+          "duration": 0.5,
+          "t": 0.65
+        },
+        {
+          "kind": "mark",
+          "box": [
+            70,
+            1806,
+            792,
+            1930
+          ],
+          "hold": 0.8,
+          "t": 1.05
+        },
+        {
+          "kind": "tap",
+          "x": 850,
+          "y": 1868,
+          "lead": 0.6,
+          "t": 1.85
+        },
+        {
+          "kind": "show",
+          "screen": 1,
+          "settle": true,
+          "t": 2.2
+        },
+        {
+          "kind": "reset",
+          "duration": 0.35,
+          "t": 2.3
+        },
+        {
+          "kind": "tap",
+          "x": 448,
+          "y": 1684,
+          "lead": 0.5,
+          "t": 2.45
+        },
+        {
+          "kind": "show",
+          "screen": 2,
+          "settle": true,
+          "t": 2.85
+        },
+        {
+          "kind": "mark",
+          "box": [
+            79,
+            1458,
+            709,
+            1788
+          ],
+          "hold": 1.4,
+          "t": 3.15
+        },
+        {
+          "kind": "show",
+          "screen": 3,
+          "settle": true,
+          "t": 4.7
+        },
+        {
+          "kind": "mark",
+          "box": [
+            79,
+            1650,
+            709,
+            1788
+          ],
+          "hold": 1.4,
+          "t": 5.0
+        },
+        {
+          "kind": "punch",
+          "scale": 1.3,
+          "x": 0,
+          "y": -974,
+          "duration": 0.5,
+          "t": 8.83
+        },
+        {
+          "kind": "tap",
+          "x": 850,
+          "y": 1868,
+          "lead": 0.6,
+          "t": 9.23
+        },
+        {
+          "kind": "show",
+          "screen": 4,
+          "settle": true,
+          "t": 9.63
+        },
+        {
+          "kind": "mark",
+          "box": [
+            20,
+            1688,
+            860,
+            1784
+          ],
+          "hold": 1.8,
+          "t": 9.93
+        }
+      ]
+    },
+    {
+      "id": "endcard",
+      "type": "endcard",
+      "tile_at": 0.35,
+      "name_at": 0.7,
+      "claim_at": 1.3,
+      "badges": [
+        {
+          "src": "assets/brand/app-store.png",
+          "at": 1.9
+        },
+        {
+          "src": "assets/brand/google-play.png",
+          "at": 2.3
+        }
+      ],
+      "start": 141.91,
+      "duration": 9.49
+    }
+  ],
+  "sfx": {
+    "auto": true,
+    "scale": 0.55
+  }
+}

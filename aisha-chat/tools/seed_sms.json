@@ -1,0 +1,72 @@
+{
+ "sms": [
+  [
+   "MPESA",
+   "TK1A2B3C4D Confirmed. Ksh2,450.00 paid to NAIVAS SUPERMARKET. on 2/11/26 at 6:12 PM.New M-PESA balance is Ksh41,550.00. Transaction cost, Ksh0.00. Amount you can transact within the day is 497,550.00."
+  ],
+  [
+   "MPESA",
+   "TK2B3C4D5E Confirmed. Ksh3,200.00 sent to KPLC PREPAID for account 37123456789 on 3/11/26 at 8:05 AM New M-PESA balance is Ksh38,350.00. Transaction cost, Ksh34.00.Amount you can transact within the day is 496,800.00."
+  ],
+  [
+   "MPESA",
+   "TK3C4D5E6F Confirmed. Ksh18,000.00 sent to KINGS COURT APARTMENTS for account HSE 12B on 4/11/26 at 9:30 AM New M-PESA balance is Ksh20,350.00. Transaction cost, Ksh108.00.Amount you can transact within the day is 482,000.00."
+  ],
+  [
+   "MPESA",
+   "TK4D5E6F7G Confirmed. Ksh650.00 paid to JAVA HOUSE KIMATHI. on 5/11/26 at 1:15 PM.New M-PESA balance is Ksh19,700.00. Transaction cost, Ksh0.00. Amount you can transact within the day is 499,350.00."
+  ],
+  [
+   "MPESA",
+   "TK5E6F7G8H Confirmed.You have received Ksh45,000.00 from SISITECH LTD 329299 on 6/11/26 at 10:00 AM New M-PESA balance is Ksh64,700.00. Separate personal and business funds through Pochi la Biashara on *334#."
+  ],
+  [
+   "MPESA",
+   "TK6F7G8H9J Confirmed. Ksh1,500.00 sent to SAFARICOM HOME FIBRE for account 254711000111 on 7/11/26 at 7:45 PM New M-PESA balance is Ksh63,200.00. Transaction cost, Ksh15.00.Amount you can transact within the day is 498,500.00."
+  ],
+  [
+   "MPESA",
+   "TK7G8H9J1K Confirmed. Ksh2,000.00 sent to GRACE MWANGI 0722333444 on 8/11/26 at 11:20 AM. New M-PESA balance is Ksh61,200.00. Transaction cost, Ksh33.00. Amount you can transact within the day is 498,000.00."
+  ],
+  [
+   "MPESA",
+   "TK8H9J1K2L Confirmed. Ksh350.00 paid to UBER KENYA. on 9/11/26 at 8:40 AM.New M-PESA balance is Ksh60,850.00. Transaction cost, Ksh0.00. Amount you can transact within the day is 499,650.00."
+  ],
+  [
+   "MPESA",
+   "TK9J1K2L3M Confirmed. Ksh4,800.00 paid to CARREFOUR TWO RIVERS. on 10/11/26 at 5:55 PM.New M-PESA balance is Ksh56,050.00. Transaction cost, Ksh0.00. Amount you can transact within the day is 495,200.00."
+  ],
+  [
+   "MPESA",
+   "TKA1B2C3D4 Confirmed. Ksh1,200.00 sent to NETFLIX for account 4430 on 11/11/26 at 9:00 PM New M-PESA balance is Ksh54,850.00. Transaction cost, Ksh13.00.Amount you can transact within the day is 498,800.00."
+  ],
+  [
+   "MPESA",
+   "TKB2C3D4E5 Confirmed.You have received Ksh3,500.00 from PETER OTIENO 0733444555 on 12/11/26 at 9:30 AM New M-PESA balance is Ksh58,350.00. Separate personal and business funds through Pochi la Biashara on *334#."
+  ],
+  [
+   "MPESA",
+   "TKC3D4E5F6 Confirmed. Ksh1,250.00 sent to MARY WANJIKU 0722111222 on 13/11/26 at 9:05 AM. New M-PESA balance is Ksh57,100.00. Transaction cost, Ksh23.00. Amount you can transact within the day is 498,750.00."
+  ],
+  [
+   "MPESA",
+   "TKD4E5F6G7 Confirmed. Ksh900.00 paid to CHICKEN INN WESTLANDS. on 14/11/26 at 1:30 PM.New M-PESA balance is Ksh56,200.00. Transaction cost, Ksh0.00. Amount you can transact within the day is 499,100.00."
+  ],
+  [
+   "M-Money",
+   "*164*S*15,000 RWF transferred to Aline Uwase (250788123456) at 2026-11-12 14:20:11 . Fee: 100 RWF. Balance: 85,000RWF."
+  ],
+  [
+   "M-Money",
+   "TxId: 1234567890*S*Your payment of 6,500 RWF to SIMBA SUPERMARKET 112233 was completed at 2026-11-13 18:02:45. Balance: 78,500 RWF. Fee 0 RWF."
+  ],
+  [
+   "M-Money",
+   "You have received 50,000 RWF from Eric Habimana (*********456) at 2026-11-14 09:15:30. Balance: 128,500 RWF. FT Id: 9876543210"
+  ]
+ ],
+ "kcb_paste": [
+  "MPESA",
+  "TKG2KC3BM4 Confirmed. You have transfered Ksh5,000.00 from your KCB M-PESA account on 15/11/26 at 11:20 AM. KCB M-PESA Account balance is Ksh15,000.00. New M-PESA balance is Ksh61,200.00"
+ ]
+}

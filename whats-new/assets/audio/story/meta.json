@@ -1,0 +1,152 @@
+{
+ "i1": {
+  "text": "Wavvy Wallet just got better.",
+  "duration": 2.24,
+  "seed": 7
+ },
+ "c1q": {
+  "text": "Do you save or borrow with KCB M-Pesa? Now those messages can go into Wavvy too.",
+  "duration": 6.2,
+  "seed": 7
+ },
+ "c1a": {
+  "text": "If you've allowed SMS access, there's nothing to do. Your KCB M-Pesa messages come in by themselves.",
+  "duration": 7.36,
+  "seed": 7
+ },
+ "c1b": {
+  "text": "No SMS access? Tap Add Transaction, choose SMS, paste the message, and tap Next.",
+  "duration": 7.1,
+  "seed": 7
+ },
+ "c1c": {
+  "text": "Wavvy reads it. Tap Import, and it's saved.",
+  "duration": 3.08,
+  "seed": 7
+ },
+ "c2q": {
+  "text": "Number two is for iPhone users with MTN MoMo.",
+  "duration": 4.56,
+  "seed": 7
+ },
+ "c2a": {
+  "text": "You can now bring in your MoMo messages, and even your PDF statements.",
+  "duration": 5.04,
+  "seed": 7
+ },
+ "c2b": {
+  "text": "Wavvy sorts them into the right categories for you.",
+  "duration": 3.04,
+  "seed": 7
+ },
+ "c3q": {
+  "text": "Number three. Tagging simply means saying what a payment was for, like food, rent, or family.",
+  "duration": 8.04,
+  "seed": 7
+ },
+ "c3a": {
+  "text": "Tap any transaction that says, tap to tag.",
+  "duration": 3.18,
+  "seed": 7
+ },
+ "c3b": {
+  "text": "If your internet drops, the tag screen tells you straight away. Tagging needs internet, so just reconnect, and carry on.",
+  "duration": 8.0,
+  "seed": 7
+ },
+ "c3c": {
+  "text": "Once you're back online, type what it was for, and pick a tag.",
+  "duration": 4.5,
+  "seed": 7
+ },
+ "c3d": {
+  "text": "Done. The payment is now tagged.",
+  "duration": 2.58,
+  "seed": 7
+ },
+ "c4q": {
+  "text": "Number four. Every time you send money, there's a small fee. Do you know how much they add up to?",
+  "duration": 6.94,
+  "seed": 7
+ },
+ "c4a": {
+  "text": "Open Insights, and find Total Expenses.",
+  "duration": 3.16,
+  "seed": 7
+ },
+ "c4b": {
+  "text": "Swipe that card to the left, and there are your transaction charges for the month.",
+  "duration": 4.46,
+  "seed": 7
+ },
+ "c5q": {
+  "text": "Number five. Never forget rent, internet, or Netflix again.",
+  "duration": 4.84,
+  "seed": 7
+ },
+ "c5a": {
+  "text": "Open the menu. Then choose, Bill Reminders.",
+  "duration": 3.58,
+  "seed": 5
+ },
+ "c5b": {
+  "text": "Add the bill's name, the due date, and how often it repeats.",
+  "duration": 3.98,
+  "seed": 7
+ },
+ "c5c": {
+  "text": "Wavvy reminds you the day before, and on the day.",
+  "duration": 3.2,
+  "seed": 7
+ },
+ "c5d": {
+  "text": "You choose which alerts you get in Settings, under Notifications.",
+  "duration": 4.46,
+  "seed": 21
+ },
+ "c6q": {
+  "text": "And number six. Money in and money out are now easier to tell apart, and Rwandan francs are supported.",
+  "duration": 8.26,
+  "seed": 7
+ },
+ "c6a": {
+  "text": "When you tag a payment, money going out shows a minus, and an up arrow.",
+  "duration": 4.56,
+  "seed": 7
+ },
+ "c6b": {
+  "text": "Money coming in shows a plus, and a down arrow.",
+  "duration": 4.08,
+  "seed": 7
+ },
+ "o1": {
+  "text": "That's what's new. Update Wavvy Wallet today, and know where your money is going.",
+  "duration": 5.2,
+  "seed": 7
+ },
+ "c1n": {
+  "text": "You get a notification, and the payment is already in your list.",
+  "duration": 4.04,
+  "seed": 7
+ },
+ "c6c": {
+  "text": "And when a new MTN MoMo payment comes in, the notification shows it in Rwandan francs.",
+  "duration": 6.68,
+  "seed": 7
+ },
+ "i2": {
+  "text": "Here are six new updates, explained step by step.",
+  "duration": 4.26,
+  "seed": 7
+ },
+ "i3": {
+  "text": "You'll find them in the What's New popup, after you update.",
+  "duration": 3.52,
+  "seed": 7
+ },
+ "i4": {
+  "text": "Let's start with number one.",
+  "duration": 1.94,
+  "seed": 7
+ }
+}
