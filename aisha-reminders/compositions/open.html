@@ -1,0 +1,71 @@
+<template>
+  <style>
+    @font-face { font-family: "Nunito"; font-weight: 200 1000; src: url("assets/fonts/Nunito.ttf"); }
+    #root { position: absolute; inset: 0; background: transparent; font-family: var(--font-display, "Nunito", sans-serif); overflow: hidden; }
+    #open-stage { position: absolute; inset: 0; }
+    .phone { position: absolute; left: 160px; top: 330px; width: 760px; height: 1528px; border-radius: 64px; background: #111111; padding: 14px; box-shadow: 0 30px 80px rgba(0,0,0,.55); border: 1px solid #2A2F2C; }
+    .phone .screen { width: 732px; height: 1500px; border-radius: 52px; overflow: hidden; background: #F4F7F6; position: relative; }
+    .phone .screen img { position: absolute; left: 0; top: -66px; width: 732px; height: auto; }
+    #open-cam { position: absolute; inset: 0; }
+    #open-zoom { position: absolute; inset: 0; }
+    .card { position: relative; width: 900px; background: #FFFFFF; border: 1.5px solid #376C5033; border-radius: 16px; box-shadow: 0 4px 10px rgba(0,0,0,.05); padding: 26px 32px; display: flex; align-items: center; gap: 24px; color: #111111; }
+    .card .icon { flex: none; width: 88px; height: 88px; border-radius: 44px; background: #376C5029; display: flex; align-items: center; justify-content: center; }
+    .card .icon img { width: 56px; height: 56px; }
+    .card .text { min-width: 0; }
+    .card .title { font-weight: 600; font-size: 36px; line-height: 1.3; }
+    .card .meta { color: #376C50; font-weight: 700; font-size: 28px; letter-spacing: .04em; margin-top: 8px; }
+    #open-card { position: absolute; left: 90px; top: 120px; width: 900px; }
+    #open-bar { position: absolute; left: 36px; height: 8px; width: 0; background: #376C50; border-radius: 4px; }
+    #open-ov { position: absolute; left: 0; top: -66px; width: 732px; height: auto; }
+    .mk { position: absolute; left: 0; top: 0; width: 732px; height: 1500px; overflow: visible; pointer-events: none; }
+    .pen { position: absolute; left: 0; top: 0; width: 1px; height: 1px; filter: drop-shadow(0 6px 8px rgba(0,0,0,.35)); }
+    .tap { position: absolute; width: 120px; height: 120px; margin: -60px 0 0 -60px; border-radius: 50%; border: 7px solid #376C50; background: #376C5040; box-shadow: 0 0 0 14px #376C5026, 0 0 40px #4fc385; }
+
+  </style>
+  <div id="root" data-composition-id="open" data-width="1080" data-height="1920">
+    <div id="open-stage" class="clip" data-start="0" data-duration="10.66" data-layout-allow-overflow>
+      <div id="open-cam">
+       <div id="open-zoom">
+        <div class="phone" id="open-phone"><div class="screen">
+            <img id="open-s0" src="assets/screens/aisha/home0.png" alt="home0" />
+            <img id="open-s1" src="assets/screens/aisha/chat0.png" alt="chat0" />
+            <img id="open-s2" src="assets/screens/aisha/chat1.png" alt="chat1" />
+            <svg class="mk" id="open-mk0"><path class="p1" d="M67.2 657.4 L72.9 649.3 L79.7 641.3 L87.4 633.6 L96.0 626.0 L105.5 618.8 L115.8 611.8 L127.0 605.2 L138.8 598.9 L151.4 593.0 L164.5 587.4 L178.1 582.3 L192.3 577.5 L206.8 573.2 L221.7 569.2 L236.8 565.7 L252.3 562.5 L267.9 559.7 L283.7 557.3 L299.7 555.2 L315.7 553.5 L331.9 552.1 L348.1 551.1 L364.4 550.4 L380.8 550.1 L397.2 550.1 L413.6 550.4 L430.0 551.1 L446.5 552.2 L462.9 553.6 L479.2 555.4 L495.4 557.6 L511.5 560.2 L527.5 563.3 L543.1 566.7 L558.5 570.6 L573.6 574.9 L588.2 579.7 L602.3 584.8 L615.8 590.4 L628.8 596.4 L641.0 602.7 L652.4 609.4 L663.1 616.5 L672.9 623.8 L681.8 631.4 L689.7 639.3 L696.7 647.3 L702.7 655.5 L707.7 663.8 L711.7 672.2 L714.7 680.7 L716.8 689.1 L717.9 697.5 L718.2 705.9 L717.6 714.3 L716.1 722.5 L713.8 730.7 L710.8 738.7 L707.1 746.6 L702.7 754.3 L697.6 762.0 L691.9 769.4 L685.6 776.8 L678.7 784.0 L671.2 791.0 L663.1 797.9 L654.4 804.6 L645.1 811.1 L635.2 817.5 L624.8 823.7 L613.7 829.7 L602.0 835.4 L589.6 840.9 L576.7 846.2 L563.1 851.1 L548.9 855.8 L534.2 860.1 L518.9 864.0 L503.1 867.6 L486.9 870.7 L470.2 873.4 L453.2 875.7 L435.9 877.5 L418.4 878.8 L400.7 879.6 L382.9 879.9 L365.2 879.7 L347.5 879.0 L330.0 877.8 L312.7 876.2 L295.6 874.0 L278.9 871.5 L262.6 868.5 L246.8 865.1 L231.3 861.4 L216.4 857.3 L202.0 852.9 L188.1 848.1 L174.8 843.1 L162.0 837.8 L149.7 832.2 L138.0 826.4 L126.9 820.4 L116.2 814.2 L106.1 807.7 L96.6 801.0 L87.6 794.2 L79.2 787.1 L71.3 779.8 L64.1 772.3 L57.5 764.7 L51.6 756.8 L46.4 748.7 L42.0 740.5 L38.4 732.1 L35.6 723.6 L33.7 714.9 L32.7 706.1 L32.7 697.3 L33.7 688.3 L35.7 679.4 L38.7 670.5 L42.9 661.7 L48.1 652.9 L54.3 644.3 L61.6 635.8 L69.9 627.6 L79.1 619.7 L89.3 612.0 L100.4 604.6 L112.3 597.6 L124.9 590.9 L138.3 584.6 L152.2 578.8 L166.8 573.3 L181.8 568.3 L197.2 563.7 L213.1 559.5 L229.2 555.7 L245.6 552.3" fill="none" stroke="#E4572E" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1858.7" stroke-dashoffset="1858.7"/><path class="p2" d="M67.2 657.4 L72.9 649.3 L79.7 641.3 L87.4 633.6 L96.0 626.0 L105.5 618.8 L115.8 611.8 L127.0 605.2 L138.8 598.9 L151.4 593.0 L164.5 587.4 L178.1 582.3 L192.3 577.5 L206.8 573.2 L221.7 569.2 L236.8 565.7 L252.3 562.5 L267.9 559.7 L283.7 557.3 L299.7 555.2 L315.7 553.5 L331.9 552.1 L348.1 551.1 L364.4 550.4 L380.8 550.1 L397.2 550.1 L413.6 550.4 L430.0 551.1 L446.5 552.2 L462.9 553.6 L479.2 555.4 L495.4 557.6 L511.5 560.2 L527.5 563.3 L543.1 566.7 L558.5 570.6 L573.6 574.9 L588.2 579.7 L602.3 584.8 L615.8 590.4 L628.8 596.4 L641.0 602.7 L652.4 609.4 L663.1 616.5 L672.9 623.8 L681.8 631.4 L689.7 639.3 L696.7 647.3 L702.7 655.5 L707.7 663.8 L711.7 672.2 L714.7 680.7 L716.8 689.1 L717.9 697.5 L718.2 705.9 L717.6 714.3 L716.1 722.5 L713.8 730.7 L710.8 738.7 L707.1 746.6 L702.7 754.3 L697.6 762.0 L691.9 769.4 L685.6 776.8 L678.7 784.0 L671.2 791.0 L663.1 797.9 L654.4 804.6 L645.1 811.1 L635.2 817.5 L624.8 823.7 L613.7 829.7 L602.0 835.4 L589.6 840.9 L576.7 846.2 L563.1 851.1 L548.9 855.8 L534.2 860.1 L518.9 864.0 L503.1 867.6 L486.9 870.7 L470.2 873.4 L453.2 875.7 L435.9 877.5 L418.4 878.8 L400.7 879.6 L382.9 879.9 L365.2 879.7 L347.5 879.0 L330.0 877.8 L312.7 876.2 L295.6 874.0 L278.9 871.5 L262.6 868.5 L246.8 865.1 L231.3 861.4 L216.4 857.3 L202.0 852.9 L188.1 848.1 L174.8 843.1 L162.0 837.8 L149.7 832.2 L138.0 826.4 L126.9 820.4 L116.2 814.2 L106.1 807.7 L96.6 801.0 L87.6 794.2 L79.2 787.1 L71.3 779.8 L64.1 772.3 L57.5 764.7 L51.6 756.8 L46.4 748.7 L42.0 740.5 L38.4 732.1 L35.6 723.6 L33.7 714.9 L32.7 706.1 L32.7 697.3 L33.7 688.3 L35.7 679.4 L38.7 670.5 L42.9 661.7 L48.1 652.9 L54.3 644.3 L61.6 635.8 L69.9 627.6 L79.1 619.7 L89.3 612.0 L100.4 604.6 L112.3 597.6 L124.9 590.9 L138.3 584.6 L152.2 578.8 L166.8 573.3 L181.8 568.3 L197.2 563.7 L213.1 559.5 L229.2 555.7 L245.6 552.3" fill="none" stroke="#E4572E" stroke-opacity=".45" stroke-width="3" stroke-linecap="round" transform="translate(2.5 -2)" stroke-dasharray="1858.7" stroke-dashoffset="1858.7"/></svg>
+            <div class="tap" id="open-tap0" style="left: 641px; top: 1447px"></div>
+            <div class="tap" id="open-tap1" style="left: 364px; top: 926px"></div>
+        </div></div>
+       </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    gsap.set("#open-s1", { opacity: 0, y: 260 });
+    gsap.set("#open-s2", { opacity: 0, y: 260 });
+    tl.fromTo("#open-cam", { y: 900, filter: "blur(10px)" }, { y: 0, filter: "blur(0px)", duration: 0.4, ease: "expo.out" }, 0);
+    tl.to("#open-cam", { scale: 1.5, x: -305, y: -1173, duration: 0.6, ease: "power2.inOut", transformOrigin: "50% 50%" }, 2.05);
+    gsap.set("#open-tap0", { opacity: 0, scale: 0.3 });
+    tl.fromTo("#open-tap0", { opacity: 0, scale: 0.3 }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2)", immediateRender: false }, 2.15);
+    tl.to("#open-tap0", { scale: 1.14, duration: 0.22, ease: "sine.inOut", yoyo: true, repeat: 1 }, 2.45);
+    tl.to("#open-tap0", { scale: 0.78, duration: 0.08, ease: "power2.in" }, 2.95);
+    tl.to("#open-tap0", { scale: 1.9, opacity: 0, duration: 0.42, ease: "power2.out" }, 3.03);
+    tl.to("#open-cam", { scale: 1, x: 0, y: 0, duration: 0.3, ease: "power2.inOut" }, 3.35);
+    gsap.set("#open-s1", { y: 120 });
+    tl.to("#open-s0", { opacity: 0, duration: 0.1 }, 3.45);
+    tl.to("#open-s1", { opacity: 1, y: 0, duration: 0.3, ease: "expo.out" }, 3.45);
+    tl.to("#open-cam", { scale: 1.3, x: 0, y: -150, duration: 0.5, ease: "power2.inOut", transformOrigin: "50% 50%" }, 5.52);
+    tl.fromTo("#open-mk0 path", { strokeDashoffset: 1858.7 }, { strokeDashoffset: 0, duration: 0.75, ease: "none", immediateRender: false }, 5.82);
+    tl.fromTo("#open-mk0", { opacity: 1 }, { opacity: 0, duration: 0.25, immediateRender: false }, 8.17);
+    tl.to("#open-cam", { scale: 1, x: 0, y: 0, duration: 0.3, ease: "power2.inOut" }, 7.62);
+    gsap.set("#open-tap1", { opacity: 0, scale: 0.3 });
+    tl.fromTo("#open-tap1", { opacity: 0, scale: 0.3 }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2)", immediateRender: false }, 7.52);
+    tl.to("#open-tap1", { scale: 1.14, duration: 0.17, ease: "sine.inOut", yoyo: true, repeat: 1 }, 7.82);
+    tl.to("#open-tap1", { scale: 0.78, duration: 0.08, ease: "power2.in" }, 8.22);
+    tl.to("#open-tap1", { scale: 1.9, opacity: 0, duration: 0.42, ease: "power2.out" }, 8.3);
+    gsap.set("#open-s2", { y: 0, scale: 1.06, transformOrigin: "50% 30%" });
+    tl.to("#open-s1", { opacity: 0, duration: 0.1 }, 8.62);
+    tl.to("#open-s2", { opacity: 1, scale: 1, duration: 0.25, ease: "expo.out" }, 8.62);
+    tl.to("#open-cam", { scale: 1.25, x: 51, y: -571, duration: 0.5, ease: "power2.inOut", transformOrigin: "50% 50%" }, 9.02);
+    window.__timelines["open"] = tl;
+  </script>
+</template>

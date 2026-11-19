@@ -23,6 +23,10 @@ Renders are attached to the GitHub Release `media-2026-11` (see README).
 ### Aisha chat video (`aisha-chat/`)
 - "could you create a video on the capabilities of the wavvy wallet chat features" (format chosen: mobile 1080x1920)
 
+### Aisha reminders video (`aisha-reminders/`)
+- "pull latest wavvy wallet and branch getting-stared-2 is theates and update the capabilities of Aisha for reminders video and export"
+- Built from `getting-started-2` at 13eb129 ("Let Aisha set tagging and bill reminders for the user."), loaded into the dev app with `flutter attach` + hot restart.
+
 ### "Your Money, Your Move" posters (`posters/money-move/`)
 - "I would like to recreate this image and use wavvy wallet font and colors and for the messages use realistic examples and for the image select one from [shared Google Photos album] and remove the background from those images, use html to design and create a hd image of it plan first"
 - "have one for rwanda"
@@ -119,6 +123,29 @@ App filmed with Settings → Switch Theme → Green. The original 60 s promo (re
 | c6c | Rather talk than type? Tap the microphone, and just speak. | Tap the mic and speak |
 | o1 | Aisha is in beta, so double check anything important. Open Wavvy Wallet, tap Chat, and say hello. | — |
 
+### Aisha reminders lines (`aisha-reminders/tools/story_lines.py`)
+| id | Voice line | Caption |
+|---|---|---|
+| i1 | Aisha can now set your reminders for you. | — |
+| i2 | Here are four ways she helps you stay on top of your money. | — |
+| i4 | Let's start with number one. | — |
+| c1q | A weekly reminder to tag your payments. | — |
+| c1a | Untagged payments pile up. On your home screen, a new card offers a tagging reminder. | A new home card |
+| c1b | Or just ask Aisha. Remind me to tag my transactions every Friday at six p.m. | Just ask Aisha |
+| c1c | Done. Every Friday at six, Wavvy reminds you to tag. | Fridays at 6 PM |
+| c2q | Number two. Never miss a bill. | — |
+| c2a | Tell Aisha about the bill. Remind me to pay rent of eighteen thousand shillings on the fifth of every month. | Tell her the bill |
+| c2b | She doesn't guess. She asks when you'd like to be alerted. | She asks first |
+| c3q | Number three. You choose the alerts. | — |
+| c3a | Answer, two days before, and one day before. | Pick your alerts |
+| c3b | Your rent reminder is saved, with an alert on the due date too. | Rent reminder saved |
+| c4q | And number four. Check and tidy your reminders. | — |
+| c4a | Ask, what bill reminders do I have? Aisha lists them all. | See them all |
+| c4b | She even spots a duplicate rent reminder, and deletes it when you say yes. | Duplicates removed |
+| c4c | Change a time just by asking. Move my Netflix reminder to eight p.m. | Change it by asking |
+| c4d | Everything shows up in Bill Reminders. Your tagging reminder is in Settings, under Notifications. | All in one place |
+| o1 | Open Wavvy Wallet, tap Chat, and let Aisha remind you. | — |
+
 ## 4. Music (MusicGen)
 `scripts/music.py`: `facebook/musicgen-small`, `torch.manual_seed(7)`, ~30 s take, run on CPU (`CUDA_VISIBLE_DEVICES=`) when the GPU is busy;
 `scripts/music_bed.py` loops/crossfades it to the film length (`assets/audio/music_story.wav`). Prompt:
@@ -141,6 +168,20 @@ Every write action was approved on the "Permission Required" sheet with *Allow O
 | 5 | Yes, just create the category for now | Permission: Create Category → Diani Trip created |
 | 6 | Change the theme to purple · Switch it back to green | Permission: Change Theme → theme switched |
 | 6 | (mic button) | "Listening…" bar |
+
+### Aisha reminders chat (new chat, build 13eb129)
+| Question typed | Aisha's reply (abridged) |
+|---|---|
+| Remind me to tag my transactions every Friday at 6pm | Reminder set for every Friday at 6:00 PM |
+| Remind me to pay rent of KES 18,000 on the 5th of every month | Asks which early alerts you want |
+| 2 days before and 1 day before | Rent reminder saved: 5th monthly, 9:00 AM, alerts 2 days and 1 day before (plus due time) |
+| What bill reminders do I have? | Lists 3, spots two rent reminders and offers to delete the older one |
+| Yes, delete the old one | Deleted; 2 left (Rent on the 5th, Netflix on the 28th) |
+| Move my Netflix reminder to 8pm | Netflix now 8:00 PM, alerts unchanged |
+
+Typed-question frames: Marionette screenshots leave the keyboard area blank, so the real Gboard keyboard from an
+`adb screencap` is pasted into it (`aisha-reminders/tools/add_keyboard.py`). The home screenshot's "PRO PLUS (EXPIRED)"
+badge (a dev-account artefact) was painted out with the header colour.
 
 ## 6. Images
 - Poster photo cut-outs: `rembg` with `birefnet-general`, `post_process_mask=True` (`posters/money-move/tools/cutout.py`).

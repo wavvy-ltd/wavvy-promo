@@ -1,0 +1,48 @@
+<template>
+  <style>
+    @font-face { font-family: "Nunito"; font-weight: 200 1000; src: url("assets/fonts/Nunito.ttf"); }
+    #root { position: absolute; inset: 0; background: #F4F7F6; font-family: var(--font-display, "Nunito", sans-serif); overflow: hidden; }
+    #intro-stage { position: absolute; inset: 0; }
+    #intro-glow { position: absolute; left: 540px; top: 640px; width: 1500px; height: 1500px; margin: -750px 0 0 -750px; border-radius: 50%; background: radial-gradient(circle, #376C502a 0%, #376C5000 60%); }
+    #intro-title { position: absolute; left: 0; right: 0; top: 300px; display: flex; flex-direction: column; align-items: center; transform-origin: 50% 0%; }
+    #intro-title .tile { width: 200px; height: 200px; border-radius: 52px; background: #fff; display: flex; align-items: center; justify-content: center; box-shadow: 0 24px 60px rgba(17,17,17,.14); }
+    #intro-title .tile img { width: 176px; height: 176px; }
+    #intro-title .tile.round { border-radius: 50%; overflow: hidden; } #intro-title .tile.round img { width: 200px; height: 200px; }
+    #intro-title .k { margin-top: 56px; color: #376C50; font-weight: 800; font-size: 64px; letter-spacing: .01em; }
+    #intro-title .n { margin-top: 4px; color: #111111; font-weight: 900; font-size: 128px; letter-spacing: -.03em; line-height: 1.02; }
+    .mrow { position: absolute; left: 80px; width: 920px; height: 136px; background: #fff; border-radius: 30px; box-shadow: 0 10px 30px rgba(17,17,17,.08); border: 2px solid #376C501f; display: flex; align-items: center; gap: 26px; padding: 0 30px; box-sizing: border-box; }
+    .mrow .bd { flex: none; width: 84px; height: 84px; border-radius: 50%; background: #376C50; color: #fff; font-weight: 900; font-size: 50px; line-height: 84px; text-align: center; }
+    .mrow .ic { flex: none; width: 76px; height: 76px; border-radius: 22px; background: #376C5014; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+    .mrow .ic img { width: 76px; height: 76px; object-fit: contain; background: #fff; }
+    .mrow .ic svg { width: 46px; height: 46px; fill: #376C50; }
+    .mrow .tx { color: #111111; font-weight: 800; font-size: 54px; white-space: nowrap; }
+    .mrow .tx small { display: block; color: #5C6670; font-weight: 700; font-size: 32px; margin-top: 2px; }
+
+  </style>
+  <div id="root" data-composition-id="intro" data-width="1080" data-height="1920">
+    <div id="intro-stage" class="clip" data-start="0" data-duration="7.76" data-layout-allow-overflow>
+      <div id="intro-glow"></div>
+      <div id="intro-title"><div class="tile round"><img src="assets/brand/aisha.png" alt="Wavvy Wallet" /></div><div class="k">Aisha can now set</div><div class="n">Reminders</div></div>
+      <div class="mrow" id="intro-r0" style="top: 640px"><div class="bd" id="intro-b0">1</div><div class="ic"><svg viewBox="0 0 24 24"><path d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z"/></svg></div><div class="tx">Tagging reminder<small>A weekly nudge to tag</small></div></div>
+      <div class="mrow" id="intro-r1" style="top: 798px"><div class="bd" id="intro-b1">2</div><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/></svg></div><div class="tx">Bill reminders<small>Rent, Wi-Fi, subscriptions</small></div></div>
+      <div class="mrow" id="intro-r2" style="top: 956px"><div class="bd" id="intro-b2">3</div><div class="ic"><svg viewBox="0 0 24 24"><path d="M18 17H6v-2h12v2zm0-4H6v-2h12v2zm0-4H6V7h12v2zM3 22l1.5-1.5L6 22l1.5-1.5L9 22l1.5-1.5L12 22l1.5-1.5L15 22l1.5-1.5L18 22l1.5-1.5L21 22V2l-1.5 1.5L18 2l-1.5 1.5L15 2l-1.5 1.5L12 2l-1.5 1.5L9 2 7.5 3.5 6 2 4.5 3.5 3 2v20z"/></svg></div><div class="tx">Your alerts<small>Days or hours before</small></div></div>
+      <div class="mrow" id="intro-r3" style="top: 1114px"><div class="bd" id="intro-b3">4</div><div class="ic"><svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg></div><div class="tx">Check and tidy<small>List, change, delete</small></div></div>
+
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#intro-title", { scale: 1.1 }, { scale: 1, duration: 0.7, ease: "expo.out", immediateRender: false }, 0);
+    tl.fromTo("#intro-glow", { scale: 0.8 }, { scale: 1.15, duration: 7.76, ease: "sine.inOut", immediateRender: false }, 0);
+    tl.fromTo("#intro-title", { scale: 1, y: 0 }, { scale: 0.6, y: -170, duration: 0.55, ease: "power3.inOut", immediateRender: false }, 2.87);
+    gsap.set("#intro-r0", { opacity: 0, x: 80 });
+    tl.fromTo("#intro-r0", { opacity: 0, x: 80, scale: 0.96 }, { opacity: 1, x: 0, scale: 1, duration: 0.4, ease: "back.out(1.5)", immediateRender: false }, 3.47);
+    gsap.set("#intro-r1", { opacity: 0, x: 80 });
+    tl.fromTo("#intro-r1", { opacity: 0, x: 80, scale: 0.96 }, { opacity: 1, x: 0, scale: 1, duration: 0.4, ease: "back.out(1.5)", immediateRender: false }, 3.97);
+    gsap.set("#intro-r2", { opacity: 0, x: 80 });
+    tl.fromTo("#intro-r2", { opacity: 0, x: 80, scale: 0.96 }, { opacity: 1, x: 0, scale: 1, duration: 0.4, ease: "back.out(1.5)", immediateRender: false }, 4.47);
+    gsap.set("#intro-r3", { opacity: 0, x: 80 });
+    tl.fromTo("#intro-r3", { opacity: 0, x: 80, scale: 0.96 }, { opacity: 1, x: 0, scale: 1, duration: 0.4, ease: "back.out(1.5)", immediateRender: false }, 4.97);
+    window.__timelines["intro"] = tl;
+  </script>
+</template>

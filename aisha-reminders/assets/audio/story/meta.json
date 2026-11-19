@@ -1,0 +1,97 @@
+{
+ "i1": {
+  "text": "Aisha can now set your reminders for you.",
+  "duration": 2.32,
+  "seed": 7
+ },
+ "i2": {
+  "text": "Here are four ways she helps you stay on top of your money.",
+  "duration": 3.84,
+  "seed": 7
+ },
+ "i4": {
+  "text": "Let's start with number one.",
+  "duration": 1.94,
+  "seed": 7
+ },
+ "c1q": {
+  "text": "A weekly reminder to tag your payments.",
+  "duration": 2.68,
+  "seed": 21
+ },
+ "c1a": {
+  "text": "Untagged payments pile up. On your home screen, a new card offers a tagging reminder.",
+  "duration": 5.5,
+  "seed": 7
+ },
+ "c1b": {
+  "text": "Or just ask Aisha. Remind me to tag my transactions every Friday at six p.m.",
+  "duration": 5.84,
+  "seed": 7
+ },
+ "c1c": {
+  "text": "Done. Every Friday at six, Wavvy reminds you to tag.",
+  "duration": 4.26,
+  "seed": 7
+ },
+ "c2q": {
+  "text": "Number two. Never miss a bill.",
+  "duration": 2.76,
+  "seed": 7
+ },
+ "c2a": {
+  "text": "Tell Aisha about the bill. Remind me to pay rent of eighteen thousand shillings on the fifth of every month.",
+  "duration": 7.14,
+  "seed": 7
+ },
+ "c2b": {
+  "text": "She doesn't guess. She asks when you'd like to be alerted.",
+  "duration": 3.8,
+  "seed": 7
+ },
+ "c3q": {
+  "text": "Number three. You choose the alerts.",
+  "duration": 2.94,
+  "seed": 7
+ },
+ "c3a": {
+  "text": "Answer, two days before, and one day before.",
+  "duration": 3.56,
+  "seed": 7
+ },
+ "c3b": {
+  "text": "Your rent reminder is saved, with an alert on the due date too.",
+  "duration": 4.32,
+  "seed": 7
+ },
+ "c4q": {
+  "text": "And number four. Check and tidy your reminders.",
+  "duration": 3.62,
+  "seed": 7
+ },
+ "c4a": {
+  "text": "Ask, what bill reminders do I have? Aisha lists them all.",
+  "duration": 4.7,
+  "seed": 7
+ },
+ "c4b": {
+  "text": "She even spots a duplicate rent reminder, and deletes it when you say yes.",
+  "duration": 4.64,
+  "seed": 7
+ },
+ "c4c": {
+  "text": "Change a time just by asking. Move my Netflix reminder to eight p.m.",
+  "duration": 4.88,
+  "seed": 7
+ },
+ "c4d": {
+  "text": "Everything shows up in Bill Reminders. Your tagging reminder is in Settings, under Notifications.",
+  "duration": 7.2,
+  "seed": 7
+ },
+ "o1": {
+  "text": "Open Wavvy Wallet, tap Chat, and let Aisha remind you.",
+  "duration": 4.32,
+  "seed": 7
+ }
+}

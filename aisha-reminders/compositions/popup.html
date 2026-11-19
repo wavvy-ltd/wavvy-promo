@@ -1,0 +1,44 @@
+<template>
+  <style>
+    @font-face { font-family: "Nunito"; font-weight: 200 1000; src: url("assets/fonts/Nunito.ttf"); }
+    #root { position: absolute; inset: 0; background: transparent; font-family: var(--font-display, "Nunito", sans-serif); overflow: hidden; }
+    #popup-stage { position: absolute; inset: 0; }
+    .phone { position: absolute; left: 160px; top: 330px; width: 760px; height: 1528px; border-radius: 64px; background: #111111; padding: 14px; box-shadow: 0 30px 80px rgba(0,0,0,.55); border: 1px solid #2A2F2C; }
+    .phone .screen { width: 732px; height: 1500px; border-radius: 52px; overflow: hidden; background: #F4F7F6; position: relative; }
+    .phone .screen img { position: absolute; left: 0; top: -66px; width: 732px; height: auto; }
+    #popup-cam { position: absolute; inset: 0; }
+    #popup-zoom { position: absolute; inset: 0; }
+    .card { position: relative; width: 900px; background: #FFFFFF; border: 1.5px solid #376C5033; border-radius: 16px; box-shadow: 0 4px 10px rgba(0,0,0,.05); padding: 26px 32px; display: flex; align-items: center; gap: 24px; color: #111111; }
+    .card .icon { flex: none; width: 88px; height: 88px; border-radius: 44px; background: #376C5029; display: flex; align-items: center; justify-content: center; }
+    .card .icon img { width: 56px; height: 56px; }
+    .card .text { min-width: 0; }
+    .card .title { font-weight: 600; font-size: 36px; line-height: 1.3; }
+    .card .meta { color: #376C50; font-weight: 700; font-size: 28px; letter-spacing: .04em; margin-top: 8px; }
+    #popup-card { position: absolute; left: 90px; top: 120px; width: 900px; }
+    #popup-bar { position: absolute; left: 36px; height: 8px; width: 0; background: #376C50; border-radius: 4px; }
+    #popup-ov { position: absolute; left: 0; top: -66px; width: 732px; height: auto; }
+    .mk { position: absolute; left: 0; top: 0; width: 732px; height: 1500px; overflow: visible; pointer-events: none; }
+    .pen { position: absolute; left: 0; top: 0; width: 1px; height: 1px; filter: drop-shadow(0 6px 8px rgba(0,0,0,.35)); }
+
+  </style>
+  <div id="root" data-composition-id="popup" data-width="1080" data-height="1920">
+    <div id="popup-stage" class="clip" data-start="0" data-duration="4.67" data-layout-allow-overflow>
+      <div id="popup-cam">
+       <div id="popup-zoom">
+        <div class="phone" id="popup-phone"><div class="screen">
+            <img id="popup-s0" src="assets/screens/whatsnew_dialog.png" alt="whatsnew_dialog" />
+            <svg class="mk" id="popup-mk0"><path class="p1" d="M98.9 639.1 L105.0 624.2 L111.7 609.8 L118.9 595.8 L126.6 582.2 L134.8 569.0 L143.4 556.3 L152.4 544.1 L161.9 532.2 L171.9 520.9 L182.2 510.0 L193.0 499.5 L204.2 489.6 L215.9 480.2 L227.9 471.3 L240.4 463.1 L253.3 455.4 L266.6 448.5 L280.3 442.2 L294.4 436.8 L308.7 432.1 L323.4 428.3 L338.3 425.3 L353.4 423.3 L368.7 422.3 L384.0 422.2 L399.4 423.2 L414.7 425.1 L429.9 428.0 L444.9 431.9 L459.7 436.8 L474.2 442.6 L488.4 449.3 L502.1 456.8 L515.4 465.2 L528.1 474.3 L540.4 484.1 L552.1 494.6 L563.2 505.7 L573.8 517.3 L583.8 529.5 L593.2 542.0 L602.0 555.0 L610.3 568.4 L618.0 582.1 L625.1 596.0 L631.7 610.3 L637.8 624.9 L643.3 639.7 L648.3 654.8 L652.7 670.2 L656.6 685.7 L659.9 701.6 L662.6 717.6 L664.8 733.9 L666.2 750.3 L667.1 767.0 L667.2 783.8 L666.6 800.7 L665.2 817.8 L663.1 834.8 L660.1 851.9 L656.3 868.8 L651.6 885.7 L646.1 902.3 L639.7 918.6 L632.5 934.6 L624.4 950.2 L615.5 965.2 L605.8 979.7 L595.4 993.5 L584.2 1006.6 L572.4 1018.9 L560.0 1030.4 L547.1 1041.1 L533.7 1050.9 L519.8 1059.7 L505.6 1067.7 L491.2 1074.8 L476.4 1080.9 L461.5 1086.1 L446.5 1090.4 L431.4 1093.9 L416.2 1096.5 L401.0 1098.3 L385.8 1099.3 L370.6 1099.6 L355.5 1099.0 L340.5 1097.8 L325.5 1095.8 L310.6 1093.1 L295.8 1089.6 L281.1 1085.5 L266.5 1080.6 L252.1 1075.0 L237.9 1068.6 L223.8 1061.4 L210.0 1053.5 L196.5 1044.7 L183.3 1035.2 L170.4 1024.8 L157.9 1013.6 L145.9 1001.6 L134.5 988.8 L123.6 975.2 L113.3 960.8 L103.8 945.8 L95.0 930.1 L87.0 913.7 L79.9 896.9 L73.6 879.5 L68.3 861.8 L63.9 843.7 L60.5 825.4 L58.0 807.0 L56.5 788.5 L55.9 770.0 L56.3 751.6 L57.5 733.3 L59.6 715.3 L62.6 697.6 L66.3 680.1 L70.9 663.1 L76.1 646.4 L82.0 630.1 L88.5 614.3 L95.6 598.9 L103.3 584.0 L111.5 569.6 L120.3 555.6 L129.5 542.1 L139.2 529.1 L149.4 516.6 L160.0 504.5 L171.2 493.0 L182.7 482.0 L194.7 471.5 L207.2 461.6 L220.1 452.3 L233.5 443.6 L247.3 435.7" fill="none" stroke="#E4572E" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="2282.8" stroke-dashoffset="2282.8"/><path class="p2" d="M98.9 639.1 L105.0 624.2 L111.7 609.8 L118.9 595.8 L126.6 582.2 L134.8 569.0 L143.4 556.3 L152.4 544.1 L161.9 532.2 L171.9 520.9 L182.2 510.0 L193.0 499.5 L204.2 489.6 L215.9 480.2 L227.9 471.3 L240.4 463.1 L253.3 455.4 L266.6 448.5 L280.3 442.2 L294.4 436.8 L308.7 432.1 L323.4 428.3 L338.3 425.3 L353.4 423.3 L368.7 422.3 L384.0 422.2 L399.4 423.2 L414.7 425.1 L429.9 428.0 L444.9 431.9 L459.7 436.8 L474.2 442.6 L488.4 449.3 L502.1 456.8 L515.4 465.2 L528.1 474.3 L540.4 484.1 L552.1 494.6 L563.2 505.7 L573.8 517.3 L583.8 529.5 L593.2 542.0 L602.0 555.0 L610.3 568.4 L618.0 582.1 L625.1 596.0 L631.7 610.3 L637.8 624.9 L643.3 639.7 L648.3 654.8 L652.7 670.2 L656.6 685.7 L659.9 701.6 L662.6 717.6 L664.8 733.9 L666.2 750.3 L667.1 767.0 L667.2 783.8 L666.6 800.7 L665.2 817.8 L663.1 834.8 L660.1 851.9 L656.3 868.8 L651.6 885.7 L646.1 902.3 L639.7 918.6 L632.5 934.6 L624.4 950.2 L615.5 965.2 L605.8 979.7 L595.4 993.5 L584.2 1006.6 L572.4 1018.9 L560.0 1030.4 L547.1 1041.1 L533.7 1050.9 L519.8 1059.7 L505.6 1067.7 L491.2 1074.8 L476.4 1080.9 L461.5 1086.1 L446.5 1090.4 L431.4 1093.9 L416.2 1096.5 L401.0 1098.3 L385.8 1099.3 L370.6 1099.6 L355.5 1099.0 L340.5 1097.8 L325.5 1095.8 L310.6 1093.1 L295.8 1089.6 L281.1 1085.5 L266.5 1080.6 L252.1 1075.0 L237.9 1068.6 L223.8 1061.4 L210.0 1053.5 L196.5 1044.7 L183.3 1035.2 L170.4 1024.8 L157.9 1013.6 L145.9 1001.6 L134.5 988.8 L123.6 975.2 L113.3 960.8 L103.8 945.8 L95.0 930.1 L87.0 913.7 L79.9 896.9 L73.6 879.5 L68.3 861.8 L63.9 843.7 L60.5 825.4 L58.0 807.0 L56.5 788.5 L55.9 770.0 L56.3 751.6 L57.5 733.3 L59.6 715.3 L62.6 697.6 L66.3 680.1 L70.9 663.1 L76.1 646.4 L82.0 630.1 L88.5 614.3 L95.6 598.9 L103.3 584.0 L111.5 569.6 L120.3 555.6 L129.5 542.1 L139.2 529.1 L149.4 516.6 L160.0 504.5 L171.2 493.0 L182.7 482.0 L194.7 471.5 L207.2 461.6 L220.1 452.3 L233.5 443.6 L247.3 435.7" fill="none" stroke="#E4572E" stroke-opacity=".45" stroke-width="3" stroke-linecap="round" transform="translate(2.5 -2)" stroke-dasharray="2282.8" stroke-dashoffset="2282.8"/></svg>
+        </div></div>
+       </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#popup-cam", { y: 900, filter: "blur(10px)" }, { y: 0, filter: "blur(0px)", duration: 0.4, ease: "expo.out" }, 0);
+    tl.to("#popup-cam", { scale: 1.5, x: 12, y: -197, duration: 0.7, ease: "power2.inOut", transformOrigin: "50% 50%" }, 0.95);
+    tl.fromTo("#popup-mk0 path", { strokeDashoffset: 2282.8 }, { strokeDashoffset: 0, duration: 0.9, ease: "none", immediateRender: false }, 1.75);
+    tl.fromTo("#popup-mk0", { opacity: 1 }, { opacity: 0, duration: 0.25, immediateRender: false }, 5.25);
+    window.__timelines["popup"] = tl;
+  </script>
+</template>

@@ -1,0 +1,23 @@
+<template>
+  <style>
+{{font_faces}}
+    #root { position: absolute; inset: 0; font-family: var(--font-display, {{font_fallback}}); pointer-events: none; }
+    .cap { position: absolute; left: 0; right: 0; top: {{top}}px; text-align: center; }
+    .cap .pill { display: inline-block; background: {{pill}}; color: {{ink}}; font-weight: 700; font-size: {{size}}px; line-height: 1.2; padding: 20px 40px; border-radius: 28px; }
+    .cap .w { display: inline-block; }
+    .cap .hi { color: {{highlight}}; }
+  </style>
+  <div id="root" data-composition-id="captions" data-width="{{width}}" data-height="{{height}}">
+{{caption_divs}}
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    const groups = {{groups}};
+    groups.forEach(([sel, start, end]) => {
+      tl.fromTo(sel + " .pill", { opacity: 0 }, { opacity: 1, duration: 0.1 }, start);
+      tl.fromTo(sel + " .w", { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.13, stagger: 0.067, ease: "power2.out" }, start);
+      tl.to(sel + " .pill", { opacity: 0, duration: 0.12, ease: "power2.in" }, end - 0.14);
+    });
+    window.__timelines["captions"] = tl;
+  </script>
+</template>

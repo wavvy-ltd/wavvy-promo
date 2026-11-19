@@ -1,0 +1,33 @@
+<template>
+  <style>
+    @font-face { font-family: "Nunito"; font-weight: 200 1000; src: url("assets/fonts/Nunito.ttf"); }
+    #root { position: absolute; inset: 0; font-family: var(--font-display, "Nunito", sans-serif); pointer-events: none; }
+    .cap { position: absolute; left: 0; right: 0; top: 1700px; text-align: center; }
+    .cap .pill { display: inline-block; background: rgba(255,255,255,.96); color: #111111; font-weight: 700; font-size: 52px; line-height: 1.2; padding: 20px 40px; border-radius: 28px; }
+    .cap .w { display: inline-block; }
+    .cap .hi { color: #376C50; }
+  </style>
+  <div id="root" data-composition-id="captions" data-width="1080" data-height="1920">
+    <div id="cap1" class="clip cap" data-start="15.4" data-duration="5.6" data-layout-allow-caption-zone><div class="pill"><span class="w">A</span> <span class="w">new</span> <span class="w hi">home</span> <span class="w">card</span></div></div>
+    <div id="cap2" class="clip cap" data-start="21.35" data-duration="5.94" data-layout-allow-caption-zone><div class="pill"><span class="w">Just</span> <span class="w hi">ask</span> <span class="w hi">Aisha</span></div></div>
+    <div id="cap3" class="clip cap" data-start="27.64" data-duration="4.36" data-layout-allow-caption-zone><div class="pill"><span class="w">Fridays</span> <span class="w">at</span> <span class="w hi">6</span> <span class="w hi">PM</span></div></div>
+    <div id="cap4" class="clip cap" data-start="36.96" data-duration="7.24" data-layout-allow-caption-zone><div class="pill"><span class="w">Tell</span> <span class="w">her</span> <span class="w">the</span> <span class="w hi">bill</span></div></div>
+    <div id="cap5" class="clip cap" data-start="44.55" data-duration="3.9" data-layout-allow-caption-zone><div class="pill"><span class="w">She</span> <span class="w hi">asks</span> <span class="w hi">first</span></div></div>
+    <div id="cap6" class="clip cap" data-start="53.59" data-duration="3.66" data-layout-allow-caption-zone><div class="pill"><span class="w">Pick</span> <span class="w">your</span> <span class="w hi">alerts</span></div></div>
+    <div id="cap7" class="clip cap" data-start="57.6" data-duration="4.42" data-layout-allow-caption-zone><div class="pill"><span class="w">Rent</span> <span class="w">reminder</span> <span class="w hi">saved</span></div></div>
+    <div id="cap8" class="clip cap" data-start="67.84" data-duration="4.8" data-layout-allow-caption-zone><div class="pill"><span class="w">See</span> <span class="w">them</span> <span class="w hi">all</span></div></div>
+    <div id="cap9" class="clip cap" data-start="72.99" data-duration="4.74" data-layout-allow-caption-zone><div class="pill"><span class="w">Duplicates</span> <span class="w hi">removed</span></div></div>
+    <div id="cap10" class="clip cap" data-start="78.08" data-duration="4.98" data-layout-allow-caption-zone><div class="pill"><span class="w">Change</span> <span class="w">it</span> <span class="w">by</span> <span class="w hi">asking</span></div></div>
+    <div id="cap11" class="clip cap" data-start="83.41" data-duration="7.3" data-layout-allow-caption-zone><div class="pill"><span class="w">All</span> <span class="w">in</span> <span class="w hi">one</span> <span class="w hi">place</span></div></div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    const groups = [["#cap1", 15.4, 21.0], ["#cap2", 21.35, 27.29], ["#cap3", 27.64, 32.0], ["#cap4", 36.96, 44.2], ["#cap5", 44.55, 48.45], ["#cap6", 53.59, 57.25], ["#cap7", 57.6, 62.02], ["#cap8", 67.84, 72.64], ["#cap9", 72.99, 77.73], ["#cap10", 78.08, 83.06], ["#cap11", 83.41, 90.71]];
+    groups.forEach(([sel, start, end]) => {
+      tl.fromTo(sel + " .pill", { opacity: 0 }, { opacity: 1, duration: 0.1 }, start);
+      tl.fromTo(sel + " .w", { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.13, stagger: 0.067, ease: "power2.out" }, start);
+      tl.to(sel + " .pill", { opacity: 0, duration: 0.12, ease: "power2.in" }, end - 0.14);
+    });
+    window.__timelines["captions"] = tl;
+  </script>
+</template>

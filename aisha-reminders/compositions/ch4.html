@@ -1,0 +1,36 @@
+<template>
+  <style>
+    @font-face { font-family: "Nunito"; font-weight: 200 1000; src: url("assets/fonts/Nunito.ttf"); }
+    #root { position: absolute; inset: 0; background: #F4F7F6; font-family: var(--font-display, "Nunito", sans-serif); overflow: hidden; }
+    #ch4-stage { position: absolute; inset: 0; }
+    #ch4-wrap { position: absolute; left: 80px; right: 80px; top: 470px; display: flex; flex-direction: column; align-items: center; text-align: center; }
+    #ch4-badge { width: 230px; height: 230px; border-radius: 50%; background: #376C50; color: #fff; font-weight: 900; font-size: 140px; line-height: 230px; box-shadow: 0 24px 60px #376C5055; }
+    #ch4-kick { margin-top: 64px; color: #376C50; font-weight: 800; font-size: 40px; letter-spacing: .14em; }
+    #ch4-title { margin-top: 22px; color: #111111; font-weight: 900; font-size: 96px; line-height: 1.05; letter-spacing: -.02em; }
+    #ch4-q { margin-top: 44px; color: #5C6670; font-weight: 700; font-size: 58px; line-height: 1.2; }
+    #ch4-dots { position: absolute; left: 0; right: 0; top: 1520px; display: flex; justify-content: center; gap: 26px; }
+    #ch4-dots .d { width: 30px; height: 30px; border-radius: 50%; background: #376C5033; }
+    #ch4-dots .d.on { background: #376C50; width: 84px; border-radius: 15px; }
+    #ch4-glow { position: absolute; left: 540px; top: 700px; width: 1400px; height: 1400px; margin: -700px 0 0 -700px; border-radius: 50%; background: radial-gradient(circle, #376C5022 0%, #376C5000 62%); }
+
+  </style>
+  <div id="root" data-composition-id="ch4" data-width="1080" data-height="1920">
+    <div id="ch4-stage" class="clip" data-start="0" data-duration="4.77" data-layout-allow-overflow>
+      <div id="ch4-glow"></div>
+      <div id="ch4-wrap"><div id="ch4-badge">4</div><div id="ch4-kick">REMINDERS · 4 OF 4</div><div id="ch4-title">Check and tidy</div><div id="ch4-q">What&#x27;s coming up?</div></div>
+      <div id="ch4-dots"><div class="d"></div><div class="d"></div><div class="d"></div><div class="d on"></div></div>
+
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#ch4-badge", { scale: 0.4, rotate: -20 }, { scale: 1, rotate: 0, duration: 0.55, ease: "back.out(1.7)" }, 0.05);
+    tl.fromTo("#ch4-kick", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.35, ease: "power3.out" }, 0.3);
+    tl.fromTo("#ch4-title", { y: 50, opacity: 0, filter: "blur(8px)" }, { y: 0, opacity: 1, filter: "blur(0px)", duration: 0.45, ease: "expo.out" }, 0.4);
+    tl.fromTo("#ch4-q", { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.45, ease: "expo.out" }, 0.9);
+    tl.fromTo("#ch4-dots", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 0.5);
+    tl.fromTo("#ch4-glow", { scale: 0.85 }, { scale: 1.12, duration: 4.77, ease: "sine.inOut", immediateRender: false }, 0);
+    tl.fromTo("#ch4-wrap", { scale: 1 }, { scale: 1.04, duration: 3.87, ease: "sine.inOut", immediateRender: false }, 0.9);
+    window.__timelines["ch4"] = tl;
+  </script>
+</template>

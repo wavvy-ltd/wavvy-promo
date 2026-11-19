@@ -1,0 +1,885 @@
+{
+  "title": "Wavvy Wallet — Aisha sets your reminders",
+  "brand": {
+    "name": "Wavvy Wallet",
+    "claim": "Know where your money is going.",
+    "font": "Nunito",
+    "font_files": {
+      "200 1000": "assets/fonts/Nunito.ttf"
+    },
+    "colors": {
+      "ground": "#F4F7F6",
+      "surface": "#FFFFFF",
+      "ink": "#111111",
+      "accent": "#376C50",
+      "highlight": "#376C50",
+      "flood": "#376C50",
+      "ink_on_flood": "#FFFFFF",
+      "bezel": "#111111",
+      "bezel_edge": "#2A2F2C",
+      "tap_glow": "#4fc385",
+      "pencil": "#E4572E"
+    },
+    "logo": "assets/brand/logo.png",
+    "badges": [],
+    "phone": {
+      "left": 160,
+      "top": 330,
+      "width": 760,
+      "height": 1528,
+      "radius": 64,
+      "bezel": 14,
+      "crop_top": 66
+    }
+  },
+  "video": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "duration": 97.63,
+    "music": {
+      "src": "assets/audio/music_story.wav",
+      "volume": 0.3,
+      "fade_in": 0.5,
+      "fade_out": 3
+    },
+    "captions": {
+      "top": 1700,
+      "size": 52,
+      "pill": "rgba(255,255,255,.96)"
+    }
+  },
+  "voice": [
+    {
+      "id": "i1",
+      "text": "Aisha can now set your reminders for you.",
+      "start": 0.45,
+      "duration": 2.32,
+      "src": "assets/audio/story/i1.wav",
+      "volume": 1.4
+    },
+    {
+      "id": "i2",
+      "text": "Here are four ways she helps you stay on top of your money.",
+      "start": 3.22,
+      "duration": 3.84,
+      "src": "assets/audio/story/i2.wav",
+      "volume": 1.4
+    },
+    {
+      "id": "i4",
+      "text": "Let's start with number one.",
+      "start": 8.21,
+      "duration": 1.94,
+      "src": "assets/audio/story/i4.wav",
+      "volume": 1.4
+    },
+    {
+      "id": "c1q",
+      "text": "A weekly reminder to tag your payments.",
+      "start": 11.52,
+      "duration": 2.68,
+      "src": "assets/audio/story/c1q.wav",
+      "volume": 1.4
+    },
+    {
+      "id": "c1a",
+      "text": "Untagged payments pile up. On your home screen, a new card offers a tagging reminder.",
+      "start": 15.35,
+      "duration": 5.5,
+      "src": "assets/audio/story/c1a.wav",
+      "volume": 1.4
+    },
+    {
+      "id": "c1b",
+      "text": "Or just ask Aisha. Remind me to tag my transactions every Friday at six p.m.",
+      "start": 21.3,
+      "duration": 5.84,
+      "src": "assets/audio/story/c1b.wav",
+      "volume": 1.4
+    },
+    {
+      "id": "c1c",
+      "text": "Done. Every Friday at six, Wavvy reminds you to tag.",
+      "start": 27.59,
+      "duration": 4.26,
+      "src": "assets/audio/story/c1c.wav",
+      "volume": 1.4
+    },
+    {
+      "id": "c2q",
+      "text": "Number two. Never miss a bill.",
+      "start": 33.0,
+      "duration": 2.76,
+      "src": "assets/audio/story/c2q.wav",
+      "volume": 1.4
+    },
+    {
+      "id": "c2a",
+      "text": "Tell Aisha about the bill. Remind me to pay rent of eighteen thousand shillings on the fifth of every month.",
+      "start": 36.91,
+      "duration": 7.14,
+      "src": "assets/audio/story/c2a.wav",
+      "volume": 1.4
+    },
+    {
+      "id": "c2b",
+      "text": "She doesn't guess. She asks when you'd like to be alerted.",
+      "start": 44.5,
+      "duration": 3.8,
+      "src": "assets/audio/story/c2b.wav",
+      "volume": 1.4
+    },
+    {
+      "id": "c3q",
+      "text": "Number three. You choose the alerts.",
+      "start": 49.45,
+      "duration": 2.94,
+      "src": "assets/audio/story/c3q.wav",
+      "volume": 1.4
+    },
+    {
+      "id": "c3a",
+      "text": "Answer, two days before, and one day before.",
+      "start": 53.54,
+      "duration": 3.56,
+      "src": "assets/audio/story/c3a.wav",
+      "volume": 1.4
+    },
+    {
+      "id": "c3b",
+      "text": "Your rent reminder is saved, with an alert on the due date too.",
+      "start": 57.55,
+      "duration": 4.32,
+      "src": "assets/audio/story/c3b.wav",
+      "volume": 1.4
+    },
+    {
+      "id": "c4q",
+      "text": "And number four. Check and tidy your reminders.",
+      "start": 63.02,
+      "duration": 3.62,
+      "src": "assets/audio/story/c4q.wav",
+      "volume": 1.4
+    },
+    {
+      "id": "c4a",
+      "text": "Ask, what bill reminders do I have? Aisha lists them all.",
+      "start": 67.79,
+      "duration": 4.7,
+      "src": "assets/audio/story/c4a.wav",
+      "volume": 1.4
+    },
+    {
+      "id": "c4b",
+      "text": "She even spots a duplicate rent reminder, and deletes it when you say yes.",
+      "start": 72.94,
+      "duration": 4.64,
+      "src": "assets/audio/story/c4b.wav",
+      "volume": 1.4
+    },
+    {
+      "id": "c4c",
+      "text": "Change a time just by asking. Move my Netflix reminder to eight p.m.",
+      "start": 78.03,
+      "duration": 4.88,
+      "src": "assets/audio/story/c4c.wav",
+      "volume": 1.4
+    },
+    {
+      "id": "c4d",
+      "text": "Everything shows up in Bill Reminders. Your tagging reminder is in Settings, under Notifications.",
+      "start": 83.36,
+      "duration": 7.2,
+      "src": "assets/audio/story/c4d.wav",
+      "volume": 1.4
+    },
+    {
+      "id": "o1",
+      "text": "Open Wavvy Wallet, tap Chat, and let Aisha remind you.",
+      "start": 91.71,
+      "duration": 4.32,
+      "src": "assets/audio/story/o1.wav",
+      "volume": 1.4
+    }
+  ],
+  "captions": [
+    {
+      "text": "A new *home* card",
+      "start": 15.4,
+      "end": 21.0
+    },
+    {
+      "text": "Just *ask* *Aisha*",
+      "start": 21.35,
+      "end": 27.29
+    },
+    {
+      "text": "Fridays at *6* *PM*",
+      "start": 27.64,
+      "end": 32.0
+    },
+    {
+      "text": "Tell her the *bill*",
+      "start": 36.96,
+      "end": 44.2
+    },
+    {
+      "text": "She *asks* *first*",
+      "start": 44.55,
+      "end": 48.45
+    },
+    {
+      "text": "Pick your *alerts*",
+      "start": 53.59,
+      "end": 57.25
+    },
+    {
+      "text": "Rent reminder *saved*",
+      "start": 57.6,
+      "end": 62.02
+    },
+    {
+      "text": "See them *all*",
+      "start": 67.84,
+      "end": 72.64
+    },
+    {
+      "text": "Duplicates *removed*",
+      "start": 72.99,
+      "end": 77.73
+    },
+    {
+      "text": "Change it by *asking*",
+      "start": 78.08,
+      "end": 83.06
+    },
+    {
+      "text": "All in *one* *place*",
+      "start": 83.41,
+      "end": 90.71
+    }
+  ],
+  "scenes": [
+    {
+      "id": "intro",
+      "type": "menu",
+      "mode": "build",
+      "rows": [
+        {
+          "name": "Tagging reminder",
+          "sub": "A weekly nudge to tag",
+          "icon": "tag"
+        },
+        {
+          "name": "Bill reminders",
+          "sub": "Rent, Wi-Fi, subscriptions",
+          "icon": "bell"
+        },
+        {
+          "name": "Your alerts",
+          "sub": "Days or hours before",
+          "icon": "receipt"
+        },
+        {
+          "name": "Check and tidy",
+          "sub": "List, change, delete",
+          "icon": "search"
+        }
+      ],
+      "kicker": "Aisha can now set",
+      "headline": "Reminders",
+      "tile": "assets/brand/aisha.png",
+      "tile_round": true,
+      "start": 0.0,
+      "duration": 7.76,
+      "shrink_at": 2.87,
+      "row_times": [
+        3.47,
+        3.97,
+        4.47,
+        4.97
+      ]
+    },
+    {
+      "id": "pick",
+      "type": "menu",
+      "mode": "pick",
+      "pick": 1,
+      "rows": [
+        {
+          "name": "Tagging reminder",
+          "sub": "A weekly nudge to tag",
+          "icon": "tag"
+        },
+        {
+          "name": "Bill reminders",
+          "sub": "Rent, Wi-Fi, subscriptions",
+          "icon": "bell"
+        },
+        {
+          "name": "Your alerts",
+          "sub": "Days or hours before",
+          "icon": "receipt"
+        },
+        {
+          "name": "Check and tidy",
+          "sub": "List, change, delete",
+          "icon": "search"
+        }
+      ],
+      "kicker": "Aisha can now set",
+      "headline": "Reminders",
+      "tile": "assets/brand/aisha.png",
+      "tile_round": true,
+      "start": 7.76,
+      "duration": 3.31,
+      "pick_at": 1.35,
+      "fly_at": 2.69
+    },
+    {
+      "id": "ch1",
+      "type": "chapter",
+      "n": 1,
+      "of": 4,
+      "kicker": "REMINDERS",
+      "steady": true,
+      "title": "Tagging reminder",
+      "question": "Payments piling up untagged?",
+      "start": 11.07,
+      "duration": 3.83
+    },
+    {
+      "id": "tagrem",
+      "type": "feature",
+      "label": {
+        "n": "1",
+        "text": "Tagging reminder",
+        "at": 0.15
+      },
+      "screens": [
+        "assets/screens/rem/r_home.png",
+        "assets/screens/rem/r01_q.png",
+        "assets/screens/rem/r01_a.png"
+      ],
+      "start": 14.9,
+      "duration": 17.65,
+      "moves": [
+        {
+          "kind": "punch",
+          "scale": 1.55,
+          "x": 0,
+          "y": 465,
+          "duration": 0.6,
+          "t": 2.05
+        },
+        {
+          "kind": "mark",
+          "box": [
+            34,
+            300,
+            866,
+            562
+          ],
+          "hold": 2.6,
+          "t": 2.75
+        },
+        {
+          "kind": "reset",
+          "duration": 0.3,
+          "t": 6.1
+        },
+        {
+          "kind": "show",
+          "screen": 1,
+          "rise": true,
+          "t": 6.4
+        },
+        {
+          "kind": "punch",
+          "scale": 1.35,
+          "x": 22,
+          "y": -322,
+          "duration": 0.5,
+          "t": 7.6
+        },
+        {
+          "kind": "mark",
+          "box": [
+            70,
+            1028,
+            792,
+            1236
+          ],
+          "hold": 2.8,
+          "t": 8.0
+        },
+        {
+          "kind": "tap",
+          "x": 850,
+          "y": 1132.0,
+          "lead": 0.6,
+          "t": 11.6
+        },
+        {
+          "kind": "show",
+          "screen": 2,
+          "settle": true,
+          "t": 11.95
+        },
+        {
+          "kind": "reset",
+          "duration": 0.35,
+          "t": 12.05
+        },
+        {
+          "kind": "punch",
+          "scale": 1.3,
+          "x": 42,
+          "y": -763,
+          "duration": 0.55,
+          "t": 12.79
+        },
+        {
+          "kind": "mark",
+          "box": [
+            79,
+            1607,
+            709,
+            1788
+          ],
+          "hold": 2.8,
+          "t": 13.29
+        }
+      ]
+    },
+    {
+      "id": "ch2",
+      "type": "chapter",
+      "n": 2,
+      "of": 4,
+      "kicker": "REMINDERS",
+      "title": "Bill reminders",
+      "question": "Ever paid rent late?",
+      "start": 32.55,
+      "duration": 3.91
+    },
+    {
+      "id": "bill",
+      "type": "feature",
+      "label": {
+        "n": "2",
+        "text": "Bill reminders",
+        "at": 0.15
+      },
+      "screens": [
+        "assets/screens/rem/r02_q.png",
+        "assets/screens/rem/r02_a.png"
+      ],
+      "start": 36.46,
+      "duration": 12.54,
+      "moves": [
+        {
+          "kind": "punch",
+          "scale": 1.35,
+          "x": 22,
+          "y": -322,
+          "duration": 0.5,
+          "t": 2.05
+        },
+        {
+          "kind": "mark",
+          "box": [
+            70,
+            1028,
+            792,
+            1236
+          ],
+          "hold": 3.6000000000000005,
+          "t": 2.45
+        },
+        {
+          "kind": "tap",
+          "x": 850,
+          "y": 1132.0,
+          "lead": 0.6,
+          "t": 6.85
+        },
+        {
+          "kind": "show",
+          "screen": 1,
+          "settle": true,
+          "t": 7.2
+        },
+        {
+          "kind": "reset",
+          "duration": 0.35,
+          "t": 7.3
+        },
+        {
+          "kind": "punch",
+          "scale": 1.3,
+          "x": 42,
+          "y": -763,
+          "duration": 0.55,
+          "t": 8.04
+        },
+        {
+          "kind": "mark",
+          "box": [
+            79,
+            1563,
+            709,
+            1788
+          ],
+          "hold": 3.2,
+          "t": 8.54
+        }
+      ]
+    },
+    {
+      "id": "ch3",
+      "type": "chapter",
+      "n": 3,
+      "of": 4,
+      "kicker": "REMINDERS",
+      "title": "You choose the alerts",
+      "question": "A day before? Two?",
+      "start": 49.0,
+      "duration": 4.09
+    },
+    {
+      "id": "alerts",
+      "type": "feature",
+      "label": {
+        "n": "3",
+        "text": "Your alerts",
+        "at": 0.15
+      },
+      "screens": [
+        "assets/screens/rem/r03_q.png",
+        "assets/screens/rem/r03_a.png"
+      ],
+      "start": 53.09,
+      "duration": 9.48,
+      "moves": [
+        {
+          "kind": "punch",
+          "scale": 1.35,
+          "x": 22,
+          "y": -380,
+          "duration": 0.5,
+          "t": 0.75
+        },
+        {
+          "kind": "mark",
+          "box": [
+            70,
+            1133,
+            792,
+            1236
+          ],
+          "hold": 1.1000000000000003,
+          "t": 1.15
+        },
+        {
+          "kind": "tap",
+          "x": 850,
+          "y": 1184.5,
+          "lead": 0.6,
+          "t": 3.05
+        },
+        {
+          "kind": "show",
+          "screen": 1,
+          "settle": true,
+          "t": 3.4
+        },
+        {
+          "kind": "reset",
+          "duration": 0.35,
+          "t": 3.5
+        },
+        {
+          "kind": "punch",
+          "scale": 1.3,
+          "x": 42,
+          "y": -763,
+          "duration": 0.55,
+          "t": 4.46
+        },
+        {
+          "kind": "mark",
+          "box": [
+            79,
+            1563,
+            709,
+            1788
+          ],
+          "hold": 3.4,
+          "t": 4.96
+        }
+      ]
+    },
+    {
+      "id": "ch4",
+      "type": "chapter",
+      "n": 4,
+      "of": 4,
+      "kicker": "REMINDERS",
+      "title": "Check and tidy",
+      "question": "What's coming up?",
+      "start": 62.57,
+      "duration": 4.77
+    },
+    {
+      "id": "tidy",
+      "type": "feature",
+      "label": {
+        "n": "4",
+        "text": "Check and tidy",
+        "at": 0.15
+      },
+      "screens": [
+        "assets/screens/rem/r04_q.png",
+        "assets/screens/rem/r04_a.png",
+        "assets/screens/rem/r05_a.png",
+        "assets/screens/rem/r06_q.png",
+        "assets/screens/rem/r06_a.png",
+        "assets/screens/rem/r_bills.png",
+        "assets/screens/rem/r_notif.png"
+      ],
+      "start": 67.34,
+      "duration": 23.92,
+      "moves": [
+        {
+          "kind": "punch",
+          "scale": 1.35,
+          "x": 22,
+          "y": -380,
+          "duration": 0.5,
+          "t": 0.75
+        },
+        {
+          "kind": "mark",
+          "box": [
+            70,
+            1133,
+            792,
+            1236
+          ],
+          "hold": 0.9000000000000001,
+          "t": 1.15
+        },
+        {
+          "kind": "tap",
+          "x": 850,
+          "y": 1184.5,
+          "lead": 0.6,
+          "t": 2.85
+        },
+        {
+          "kind": "show",
+          "screen": 1,
+          "settle": true,
+          "t": 3.2
+        },
+        {
+          "kind": "reset",
+          "duration": 0.35,
+          "t": 3.3
+        },
+        {
+          "kind": "punch",
+          "scale": 1.2,
+          "x": 39,
+          "y": -587,
+          "duration": 0.5,
+          "t": 3.35
+        },
+        {
+          "kind": "mark",
+          "box": [
+            79,
+            1099,
+            709,
+            1788
+          ],
+          "hold": 1.4,
+          "t": 3.65
+        },
+        {
+          "kind": "reset",
+          "duration": 0.3,
+          "t": 5.3
+        },
+        {
+          "kind": "show",
+          "screen": 2,
+          "rise": true,
+          "t": 5.7
+        },
+        {
+          "kind": "punch",
+          "scale": 1.3,
+          "x": 42,
+          "y": -763,
+          "duration": 0.55,
+          "t": 7.2
+        },
+        {
+          "kind": "mark",
+          "box": [
+            79,
+            1607,
+            709,
+            1788
+          ],
+          "hold": 2.6,
+          "t": 7.7
+        },
+        {
+          "kind": "reset",
+          "duration": 0.3,
+          "t": 10.39
+        },
+        {
+          "kind": "show",
+          "screen": 3,
+          "t": 10.69
+        },
+        {
+          "kind": "punch",
+          "scale": 1.35,
+          "x": 22,
+          "y": -351,
+          "duration": 0.5,
+          "t": 12.09
+        },
+        {
+          "kind": "mark",
+          "box": [
+            70,
+            1081,
+            792,
+            1236
+          ],
+          "hold": 1.8000000000000005,
+          "t": 12.49
+        },
+        {
+          "kind": "tap",
+          "x": 850,
+          "y": 1158.5,
+          "lead": 0.6,
+          "t": 15.09
+        },
+        {
+          "kind": "show",
+          "screen": 4,
+          "settle": true,
+          "t": 15.44
+        },
+        {
+          "kind": "reset",
+          "duration": 0.35,
+          "t": 15.54
+        },
+        {
+          "kind": "mark",
+          "box": [
+            79,
+            1607,
+            709,
+            1788
+          ],
+          "hold": 1.2,
+          "t": 15.59
+        },
+        {
+          "kind": "reset",
+          "duration": 0.3,
+          "t": 15.82
+        },
+        {
+          "kind": "show",
+          "screen": 5,
+          "rise": true,
+          "t": 16.12
+        },
+        {
+          "kind": "punch",
+          "scale": 1.3,
+          "x": 0,
+          "y": 83,
+          "duration": 0.5,
+          "t": 16.62
+        },
+        {
+          "kind": "mark",
+          "box": [
+            40,
+            380,
+            860,
+            1110
+          ],
+          "hold": 2.2,
+          "t": 16.92
+        },
+        {
+          "kind": "reset",
+          "duration": 0.3,
+          "t": 19.32
+        },
+        {
+          "kind": "show",
+          "screen": 6,
+          "settle": true,
+          "t": 19.62
+        },
+        {
+          "kind": "punch",
+          "scale": 1.35,
+          "x": 0,
+          "y": -902,
+          "duration": 0.5,
+          "t": 20.02
+        },
+        {
+          "kind": "mark",
+          "box": [
+            40,
+            1610,
+            860,
+            1720
+          ],
+          "hold": 2.2,
+          "t": 20.32
+        }
+      ]
+    },
+    {
+      "id": "endcard",
+      "type": "endcard",
+      "tile_at": 0.35,
+      "name_at": 0.7,
+      "claim_at": 1.3,
+      "badges": [
+        {
+          "src": "assets/brand/app-store.png",
+          "at": 1.9
+        },
+        {
+          "src": "assets/brand/google-play.png",
+          "at": 2.3
+        }
+      ],
+      "start": 91.26,
+      "duration": 6.37
+    }
+  ],
+  "sfx": {
+    "auto": true,
+    "scale": 0.55
+  }
+}

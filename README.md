@@ -14,6 +14,7 @@ Every app screen is the real app captured on an emulator; voice and music are ge
 | What's New, step-by-step story v1–v6 (v6 = latest) | `whats-new/` (`tools/make_story.py`) | 1080×1920, 2:48 | release: `wavvy-whats-new-story[-vN]-social.mp4` · [contact sheet](gallery/wavvy-whats-new-story-v6-social.jpg) |
 | What's New, one video per update (6 parts) | cut from the story | 1080×1920 | release: `wavvy-whats-new-N-*.mp4` |
 | Meet Aisha: chat capabilities | `aisha-chat/` | 1080×1920, 2:31 | release: `wavvy-aisha-chat-social.mp4` · [contact sheet](gallery/wavvy-aisha-chat-social.jpg) |
+| Aisha reminders: tagging + bill reminders by chat (build 13eb129) | `aisha-reminders/` | 1080×1920, 1:38 | release: `wavvy-aisha-reminders-social.mp4` · [contact sheet](gallery/wavvy-aisha-reminders-social.jpg) |
 | "Your Money, Your Move" poster: Kenya / Rwanda / East Africa | `posters/money-move/` | 2160×2700 PNG | [ke](gallery/wavvy-poster-ke.png) · [rw](gallery/wavvy-poster-rw.png) · [ea](gallery/wavvy-poster-ea.png) |
 | What's New poster (hands holding a card) | `posters/whats-new/` | 2640×3260 PNG | [png](gallery/wavvy-whats-new-poster.png) |
 
