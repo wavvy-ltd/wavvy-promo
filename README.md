@@ -15,6 +15,7 @@ Every app screen is the real app captured on an emulator; voice and music are ge
 | What's New, one video per update (6 parts) | cut from the story | 1080×1920 | release: `wavvy-whats-new-N-*.mp4` |
 | Meet Aisha: chat capabilities | `aisha-chat/` | 1080×1920, 2:31 | release: `wavvy-aisha-chat-social.mp4` · [contact sheet](gallery/wavvy-aisha-chat-social.jpg) |
 | Aisha reminders: tagging + bill reminders by chat (build 13eb129) | `aisha-reminders/` | 1080×1920, 1:38 | release: `wavvy-aisha-reminders-social.mp4` · [contact sheet](gallery/wavvy-aisha-reminders-social.jpg) |
+| Kigali social posts: feed, story, wide, square, 3-slide Summit carousel + captions | `kigali-social/` | 1080×1350 · 1080×1920 · 1200×675 · 1080×1080 | [posts](kigali-social/posts/) · [captions](kigali-social/CAPTIONS.md) |
 | Kigali landing-page photo shoot: shot list, crop guides, mock-up | `kigali-shoot/` | A4 PDF + 1440 px mock-up | [shot list](kigali-shoot/wavvy-kigali-shotlist.pdf) · [mock-up](gallery/kigali-shoot-mockup.png) |
 | "Your Money, Your Move" poster: Kenya / Rwanda / East Africa | `posters/money-move/` | 2160×2700 PNG | [ke](gallery/wavvy-poster-ke.png) · [rw](gallery/wavvy-poster-rw.png) · [ea](gallery/wavvy-poster-ea.png) |
 | What's New poster (hands holding a card) | `posters/whats-new/` | 2640×3260 PNG | [png](gallery/wavvy-whats-new-poster.png) |

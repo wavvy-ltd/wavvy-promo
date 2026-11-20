@@ -39,6 +39,10 @@ Renders are attached to the GitHub Release `media-2026-11` (see README).
 - "create a what's new for wavvy wallet make sure to use wavvy wallet font and theme keep the hands"
 - "do everything and send use your suggestions for anything"
 
+### Kigali social posts (`kigali-social/`)
+- "could you create social media posts from the shared images" — 26 photos (Sony DSC01545–01569, 18 Nov 2026): Africa Fintech Summit + a man on his phone in front of the Kigali Convention Centre.
+- Picks: DSC01567 (feed), 01568 (story), 01559 (wide), 01553 (square), 01551/01545/01547 (carousel). `tools/prep.py` crops and grades them (deep-shadow lift on the backlit portraits, slight warmth in the darks, sky kept); `tools/build.py` renders the posts. Original photos are not committed (public repo).
+
 ### Kigali landing-page photo shoot (`kigali-shoot/`)
 - "checkout wavvy wallet landing from a desktop view, I would like to take images for the Landing page in Kigali, come up with ideas for framing and locations for wavvy wallet"
 - "yeah do that" (one-page shot list with crop guides, and a mock-up with sample Kigali photos) · "all your suggestions"
