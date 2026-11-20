@@ -39,6 +39,12 @@ Renders are attached to the GitHub Release `media-2026-11` (see README).
 - "create a what's new for wavvy wallet make sure to use wavvy wallet font and theme keep the hands"
 - "do everything and send use your suggestions for anything"
 
+### Kigali landing-page photo shoot (`kigali-shoot/`)
+- "checkout wavvy wallet landing from a desktop view, I would like to take images for the Landing page in Kigali, come up with ideas for framing and locations for wavvy wallet"
+- "yeah do that" (one-page shot list with crop guides, and a mock-up with sample Kigali photos) · "all your suggestions"
+- Slots measured on wavvywallet.com at 1440 px: hero background (16:10), How it works visuals (≈1:1, right 40 % under the phone), audience icons (56 px circles), Financial Freedom card (≈2.3:1), Featured Story image (649×678).
+- Sample photos: Wikimedia Commons search (Unsplash and Pexels block automated access); credits in `kigali-shoot/CREDITS.txt`.
+
 ## 2. Theme
 From wavvywallet.com (repo wavvy-ltd/wavvy-landing, `landing-next` CSS vars): primary #376C50, secondary #4FC385,
 grounds #F4F7F6 / #FFFFFF / #FAFAFA, ink #111111, muted #5C5C5C, deep green #113629. Font: Nunito (200–1000).

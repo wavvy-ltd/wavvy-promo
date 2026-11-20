@@ -1,0 +1,125 @@
+<!doctype html><html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:Nunito;src:url('fonts/Nunito.ttf');font-weight:200 1000}
+@page{size:A4 landscape;margin:0}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Nunito,sans-serif;color:#111;font-size:9.6px;line-height:1.3}
+.page{width:297mm;height:210mm;padding:9mm 11mm;page-break-after:always;position:relative;overflow:hidden}
+h1{font-size:23px;font-weight:900;letter-spacing:-.01em}
+h1 span{color:#376C50}
+.sub{color:#5C5C5C;font-weight:600;margin:2px 0 9px}
+h2{font-size:12.5px;font-weight:900;color:#376C50;margin-bottom:4px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:4.5mm 6mm}
+.card{border:1px solid rgba(17,17,17,.1);border-radius:10px;padding:8px 9px;background:#FAFAFA}
+.frame{position:relative;background:#cfd8d3;border-radius:5px;overflow:hidden;margin:4px 0 6px;border:1.5px solid #376C50}
+.z{position:absolute;display:flex;align-items:center;justify-content:center;text-align:center;font-weight:800;font-size:8.5px;line-height:1.1;padding:2px}
+.txt{background:rgba(17,17,17,.72);color:#fff}
+.ui{background:repeating-linear-gradient(45deg,rgba(255,255,255,.75) 0 5px,rgba(255,255,255,.45) 5px 10px);color:#376C50;border:1px dashed #376C50}
+.subj{background:rgba(79,195,133,.55);color:#0E1F17;border:2px solid #376C50;border-radius:4px}
+.safe{border:1.5px dashed #E4572E;color:#E4572E;background:transparent}
+.fade{background:linear-gradient(transparent,rgba(255,255,255,.95));color:#5C5C5C}
+.spec{font-weight:800;font-size:9.5px;color:#376C50}
+ul{padding-left:12px} li{margin:1px 0}
+.k{font-weight:800}
+.legend{display:flex;gap:12px;font-size:9px;font-weight:700;margin:2px 0 8px;color:#5C5C5C}
+.legend i{display:inline-block;width:12px;height:9px;margin-right:4px;vertical-align:-1px;border-radius:2px}
+.foot{position:absolute;left:12mm;right:12mm;bottom:7mm;font-size:8px;color:#5C5C5C}
+.mock{width:100%;border-radius:8px;border:1px solid rgba(17,17,17,.12)}
+.two{display:grid;grid-template-columns:1.25fr 1fr;gap:8mm}
+table{border-collapse:collapse;width:100%}
+td,th{border-bottom:1px solid rgba(17,17,17,.1);padding:4px 5px;vertical-align:top;text-align:left}
+th{font-weight:900;color:#376C50;font-size:9.5px}
+.pill{display:inline-block;background:#376C50;color:#fff;border-radius:99px;font-weight:800;font-size:8.5px;padding:1px 7px;margin-right:3px}
+</style></head><body>
+
+<!-- PAGE 1: crop guides -->
+<div class="page">
+ <h1>Wavvy Wallet × Kigali — <span>photo shot list</span></h1>
+ <p class="sub" style="margin-bottom:6px">For the wavvywallet.com landing page (desktop 1440 px). Every frame below is drawn to the slot's real shape. Shoot RAW, at least 24 MP; deliver sRGB JPEG.</p>
+ <div class="legend"><span><i style="background:rgba(17,17,17,.72)"></i>Headline / text sits here: keep calm and dark or plain</span><span><i style="background:rgba(255,255,255,.7);border:1px dashed #376C50"></i>App mockup covers this</span><span><i style="background:rgba(79,195,133,.55);border:2px solid #376C50"></i>Put the person here</span><span><i style="border:1.5px dashed #E4572E"></i>Face/phone must stay inside (safe crop)</span></div>
+ <div class="grid">
+  <div class="card">
+   <h2>A · Hero (top of page) — 1 hero + 1 alternate</h2>
+   <div class="frame" style="aspect-ratio:16/10;width:70%">
+     <div class="z txt" style="left:0;top:0;width:40%;height:100%">HEADLINE<br>“Know where your money is going.”</div>
+     <div class="z subj" style="left:40%;top:14%;width:22%;height:86%">PERSON<br>looking at phone</div>
+     <div class="z ui" style="left:63%;top:8%;width:33%;height:80%">PHONE MOCKUP</div>
+     <div class="z fade" style="left:0;bottom:0;width:100%;height:12%">fades to white</div>
+   </div>
+   <p class="spec">Landscape 16:10 · min 2880×1800 px · also shoot a 4:5 vertical of the same moment for phones</p>
+   <ul><li>Subject in the middle third, facing/looking right; leave the left third dark and simple.</li><li>Headroom above, calm floor below. Eye level or slightly low angle.</li><li><span class="k">Where:</span> Rebero / Kigali Heights terrace at golden hour; Convention Centre dome soft in the background; Imbuga City Walk.</li></ul>
+  </div>
+  <div class="card">
+   <h2>B · How it works — 3–4 photos (Understand · Manage · Decide)</h2>
+   <div class="frame" style="aspect-ratio:1/1.03;width:44%">
+     <div class="z subj" style="left:10%;top:12%;width:55%;height:75%">HANDS +<br>PHONE</div>
+     <div class="z ui" style="left:58%;top:6%;width:42%;height:94%">PHONE<br>overlaps</div>
+     <div class="z safe" style="left:6%;top:6%;width:50%;height:88%"></div>
+   </div>
+   <p class="spec">Near-square 1:1 · min 1400×1440 px · right 40 % is covered by the app phone</p>
+   <ul><li><span class="k">Understand:</span> MoMo payment arriving — vendor's hands, phone, produce behind (Kimironko Market).</li><li><span class="k">Manage:</span> setting a budget — young professional in a café (Question Coffee, Kiyovu).</li><li><span class="k">Decide:</span> phone in one hand, francs in the other at a Nyamirambo shop counter.</li></ul>
+  </div>
+  <div class="card">
+   <h2>C · Who it's for — 4 portraits</h2>
+   <div style="display:flex;gap:8px;align-items:center;margin:6px 0 8px">
+    <div class="frame" style="aspect-ratio:4/5;width:26%;margin:0"><div class="z subj" style="left:20%;top:10%;width:60%;height:55%;border-radius:50%">FACE<br>centre</div><div class="z safe" style="left:12%;top:4%;width:76%;height:70%;border-radius:50%"></div></div>
+    <div style="font-size:9px;color:#5C5C5C">Shown as a 56 px circle on desktop, so the face must survive a tight round crop. Plain, uncluttered background; same light for all four.</div>
+   </div>
+   <p class="spec">Portrait 4:5 · min 1200×1500 px · face centred, eyes at upper third</p>
+   <ul><li><span class="k">Freelancers & creatives:</span> artist at Inema Arts Center / designer at Norrsken House.</li><li><span class="k">Students:</span> University of Rwanda or CMU-Africa campus.</li><li><span class="k">Young professionals:</span> near Kigali Heights / KCC with laptop bag.</li><li><span class="k">Small business:</span> Kimironko boutique owner, or a moto rider at a stage.</li></ul>
+  </div>
+  <div class="card">
+   <h2>D · “Financial Freedom and Inclusion” card</h2>
+   <div class="frame" style="aspect-ratio:2.3/1;width:80%">
+     <div class="z txt" style="left:0;top:0;width:45%;height:100%;background:rgba(250,250,250,.92);color:#111">MISSION TEXT<br>(white wash)</div>
+     <div class="z ui" style="left:45%;top:5%;width:22%;height:90%">PHONE</div>
+     <div class="z subj" style="left:70%;top:15%;width:27%;height:75%">PEOPLE /<br>MARKET</div>
+   </div>
+   <p class="spec">Wide 2.3:1 · min 2500×1090 px · subject in the right third, left half quiet and light</p>
+   <ul><li>Market seller serving a customer, or a family at home around one phone.</li><li>Bright, airy, low contrast — it sits under a white gradient.</li></ul>
+  </div>
+  <div class="card">
+   <h2>E · Featured Story — 1 Kigali user</h2>
+   <div class="frame" style="aspect-ratio:0.96/1;width:40%">
+     <div class="z subj" style="left:22%;top:12%;width:56%;height:88%">ONE PERSON<br>with their tools</div>
+     <div class="z safe" style="left:12%;top:16%;width:76%;height:76%"></div>
+     <div class="z" style="left:4%;top:4%;width:30%;height:9%;background:#fff;color:#376C50;border-radius:99px">★ badge</div>
+   </div>
+   <p class="spec">Near-square 0.96:1 · min 1300×1360 px · plain colour wall behind</p>
+   <ul><li>Same style as the DJ Ally Fresh photo: centred, confident, colour backdrop.</li><li>Nyamirambo painted walls; a tailor, coffee roaster, moto rider or creator.</li><li>Record a short interview: it becomes a Rwandan “Money Story” post.</li></ul>
+  </div>
+  <div class="card">
+   <h2>F · Extras from the same day</h2>
+   <ul><li><span class="k">Blog headers</span> (16:9, 2400 px): skyline from Rebero, busy Car Free Zone, MoMo agent kiosk, moto stage.</li><li><span class="k">Review headshots</span> (1:1, 800 px): replace the initials — only with written consent.</li><li><span class="k">Social cut-outs:</span> 3–4 people on a plain wall for poster cut-outs (like the “Your Money, Your Move” posters).</li></ul>
+   <h2 style="margin-top:8px">Brand rules</h2>
+   <ul><li>Phone screens: real Wavvy app (Green theme) or angled away — screens can be replaced in post.</li><li>Wardrobe: neutrals, white, touches of green #376C50 / #4FC385. No big logos.</li><li>Props: Rwandan francs, MTN MoMo; never KES in Rwanda shots.</li><li>Light: golden hour ≈ 17:30–18:15; soft overcast for portraits; avoid noon sun.</li></ul>
+  </div>
+ </div>
+ <div class="foot">Permissions: signed model release for every recognisable person (vendors too) · ask shop owners before shooting · drones need RCAA approval · no government or security buildings · ask KCC before shooting on its grounds.</div>
+</div>
+
+<!-- PAGE 2: mock-up + plan -->
+<div class="page">
+ <h1>How it could look — <span>sample mock-up</span></h1>
+ <p class="sub">Live wavvywallet.com at 1440 px with freely licensed Wikimedia Commons photos of Kigali dropped into each slot (orange “SAMPLE” tags). They stand in for location and mood only; the shoot replaces them with real people using Wavvy.</p>
+ <div class="two">
+  <div><img class="mock" src="mockup/sheet.png"></div>
+  <div>
+   <h2>One-day plan</h2>
+   <table>
+    <tr><th>Time</th><th>Location</th><th>Shots</th></tr>
+    <tr><td>07:30–10:00</td><td>Kimironko Market</td><td><span class="pill">B</span>Understand · <span class="pill">C</span>small business · <span class="pill">D</span>market wide</td></tr>
+    <tr><td>10:30–12:00</td><td>Norrsken House / Inema Arts Center</td><td><span class="pill">C</span>freelancer & creative</td></tr>
+    <tr><td>12:30–14:00</td><td>Café in Kiyovu, then campus</td><td><span class="pill">B</span>Manage · <span class="pill">C</span>young professional, student</td></tr>
+    <tr><td>14:30–16:30</td><td>Nyamirambo</td><td><span class="pill">E</span>Featured Story · <span class="pill">B</span>Decide · moto rider · colour walls</td></tr>
+    <tr><td>16:45–18:15</td><td>Rebero / Kigali Heights terrace</td><td><span class="pill">A</span>Hero + vertical alternate · <span class="pill">F</span>skyline</td></tr>
+   </table>
+   <h2 style="margin-top:10px">Crew & kit</h2>
+   <ul><li>Photographer + assistant, 1 producer for releases and permissions.</li><li>4–6 models (mix of ages/jobs) + 1 Featured Story user.</li><li>2–3 phones with the Wavvy app in Green theme, fully charged; reflector; small LED.</li></ul>
+   <h2 style="margin-top:10px">Delivery</h2>
+   <ul><li>Name files by slot: <b>A-hero-01.jpg</b>, <b>C-student-02.jpg</b>…</li><li>Selects within 48 h; I can drop them straight into this mock-up to choose.</li></ul>
+   <p style="margin-top:10px;font-size:8px;color:#5C5C5C">Sample photo credits (Wikimedia Commons): Kigali Convention Center.jpg (CC0); Kimironko central market, Kigali (CC BY-SA 3.0); Kigali Car free Zone 02.jpg (CC BY-SA 4.0); Nyamirambo.jpg (CC BY-SA 4.0); Bananas @Kimironko Market.jpg (CC BY 2.0); Inema Art Center.jpg (CC BY-SA 4.0); A Moto (motorcycle taxi) in a street in Kigali.jpg (CC BY-SA 4.0); Kigali , Car Free Zone.jpg (CC0); Kimironko central market, Kigali (CC BY-SA 3.0); Kimironko central market, Kigali (CC BY-SA 3.0); Kimironko central market, Kigali (CC BY-SA 3.0)</p>
+  </div>
+ </div>
+</div>
+</body></html>
