@@ -11,7 +11,7 @@ Free on Android and iPhone. Link in bio.
 
 ## 02 · Story (Instagram / WhatsApp Status / Facebook, 1080×1920) — `02-story-payment-lands.png`
 Sticker/link: wavvywallet.com · Text: "New payment? Already sorted. ✅"
-WhatsApp Status: Every payment, sorted the moment it lands 💚 Try Wavvy Wallet: wavvywallet.com
+WhatsApp Status: Every payment, sorted as it lands 💚 Try Wavvy Wallet: wavvywallet.com
 
 ## 03 · Wide (LinkedIn / X / Facebook link, 1200×675) — `03-wide-every-franc.png`
 **LinkedIn**

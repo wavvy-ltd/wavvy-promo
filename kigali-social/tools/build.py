@@ -36,35 +36,36 @@ h1 em { font-style: normal; color: #4FC385; }
 .dots i.on { background: #fff; width: 34px; border-radius: 6px; }
 """ % V
 
-LOGO = '<div class="tile"><img src="%s/brand/logo.png"></div>' % V
+LOGO = '<div class="tile"><img src="%s/brand/wallet-mark.png"></div>' % V
 BADGES = '<div class="badges"><img src="%s/brand/google-play.png"><img src="%s/brand/app-store.png"></div>' % (V, V)
 
 POSTS = {
     # Instagram / Facebook feed, 4:5
     "01-feed-know-your-money": dict(W=1080, H=1350, img="feed", body=f"""
-<div class="shade" style="top:0;height:300px;background:linear-gradient(rgba(14,31,23,.55),rgba(14,31,23,0))"></div>
-<div class="shade" style="bottom:0;height:640px;background:linear-gradient(rgba(14,31,23,0),rgba(14,31,23,.86) 52%,rgba(14,31,23,.95))"></div>
-<div class="brand" style="left:64px;top:60px">{LOGO}<b style="color:#fff">Wavvy Wallet</b></div>
-<div style="position:absolute;left:64px;right:64px;bottom:84px;color:#fff">
+<div class="shade" style="bottom:0;height:760px;background:linear-gradient(rgba(14,31,23,0),rgba(14,31,23,.86) 52%,rgba(14,31,23,.95))"></div>
+<div style="position:absolute;left:64px;right:64px;bottom:190px;color:#fff">
   <span class="pill" style="background:#4FC385;color:#0E1F17;font-size:26px;padding:8px 22px">KIGALI · RWF · MTN MOMO</span>
   <h1 style="font-size:96px;margin-top:26px">Know where<br>your money<br><em>is going.</em></h1>
   <p class="sub" style="font-size:34px;margin-top:24px;color:#E6F2EA">Every payment tracked and tagged, in francs.</p>
-</div>"""),
+</div>
+<div style="position:absolute;left:64px;right:64px;bottom:150px;height:2px;background:rgba(255,255,255,.18)"></div>
+<div class="brand" style="left:64px;bottom:56px">{LOGO}<b style="color:#fff">Wavvy Wallet</b><span style="color:#B7EBC8;font-weight:800;font-size:28px;margin-left:8px">wavvywallet.com</span></div>"""),
 
     # Instagram / WhatsApp / Facebook story, 9:16 (keep 250px top/bottom clear of UI)
     "02-story-payment-lands": dict(W=1080, H=1920, img="story", body=f"""
 <div class="shade" style="top:0;height:520px;background:linear-gradient(rgba(14,31,23,.6),rgba(14,31,23,0))"></div>
-<div class="shade" style="bottom:0;height:860px;background:linear-gradient(rgba(14,31,23,0),rgba(14,31,23,.88) 45%,rgba(14,31,23,.96))"></div>
+<div class="shade" style="bottom:0;height:900px;background:linear-gradient(rgba(14,31,23,0),rgba(14,31,23,.9) 40%,rgba(14,31,23,.96))"></div>
 <div class="brand" style="left:72px;top:250px;display:none">{LOGO}<b style="color:#fff">Wavvy Wallet</b></div>
 <div class="notif" style="left:56px;right:56px;top:270px">
-  <div class="ic"><img src="{V}/brand/logo.png"></div>
+  <div class="ic"><img src="{V}/brand/wallet-mark.png"></div>
   <div><div class="meta">Wavvy Wallet · now</div><div class="t">New payment <span class="amt">+RWF 25,000</span></div><div class="meta" style="font-size:25px;margin-top:2px">from Jean Mugisha · MTN MoMo</div></div>
 </div>
-<div style="position:absolute;left:72px;right:72px;bottom:270px;color:#fff">
-  <h1 style="font-size:92px">Every payment,<br><em>sorted the moment<br>it lands.</em></h1>
+<div style="position:absolute;left:72px;right:72px;bottom:350px;color:#fff">
+  <h1 style="font-size:92px">Every payment,<br><em>sorted as it lands.</em></h1>
   <p class="sub" style="font-size:34px;margin-top:26px;color:#E6F2EA">Download Wavvy Wallet. Free on Android and iPhone.</p>
   <div style="margin-top:34px">{BADGES}</div>
-</div>"""),
+</div>
+<div class="brand" style="left:72px;bottom:255px">{LOGO}<b style="color:#fff">Wavvy Wallet</b></div>"""),
 
     # LinkedIn / X / Facebook link post, 16:9
     "03-wide-every-franc": dict(W=1200, H=675, img="wide", body=f"""
@@ -99,15 +100,16 @@ for i, (name, img, kick, head, sub) in enumerate(SUMMIT):
     dots = "".join('<i class="on"></i>' if j == i else "<i></i>" for j in range(3))
     extra = f'<div style="margin-top:30px">{BADGES}</div>' if i == 2 else ""
     POSTS[name] = dict(W=1080, H=1350, img=img, body=f"""
-<div class="shade" style="top:0;height:300px;background:linear-gradient(rgba(14,31,23,.6),rgba(14,31,23,0))"></div>
-<div class="shade" style="bottom:0;height:720px;background:linear-gradient(rgba(14,31,23,0),rgba(14,31,23,.9) 50%,rgba(14,31,23,.96))"></div>
-<div class="brand" style="left:64px;top:60px">{LOGO}<b style="color:#fff">Wavvy Wallet</b></div>
-<div class="dots" style="right:64px;top:92px">{dots}</div>
-<div style="position:absolute;left:64px;right:64px;bottom:84px;color:#fff">
+<div class="shade" style="top:0;height:160px;background:linear-gradient(rgba(14,31,23,.35),rgba(14,31,23,0))"></div>
+<div class="shade" style="bottom:0;height:800px;background:linear-gradient(rgba(14,31,23,0),rgba(14,31,23,.9) 50%,rgba(14,31,23,.96))"></div>
+<div class="dots" style="right:64px;top:64px">{dots}</div>
+<div style="position:absolute;left:64px;right:64px;bottom:190px;color:#fff">
   <span class="pill" style="background:#4FC385;color:#0E1F17;font-size:24px;padding:8px 22px">{kick}</span>
   <h1 style="font-size:80px;margin-top:24px">{head}</h1>
   <p class="sub" style="font-size:32px;margin-top:22px;color:#E6F2EA">{sub}</p>{extra}
-</div>""")
+</div>
+<div style="position:absolute;left:64px;right:64px;bottom:150px;height:2px;background:rgba(255,255,255,.18)"></div>
+<div class="brand" style="left:64px;bottom:56px">{LOGO}<b style="color:#fff">Wavvy Wallet</b><span style="color:#B7EBC8;font-weight:800;font-size:28px;margin-left:8px">wavvywallet.com</span></div>""")
 
 CHROME = subprocess.check_output("ls -d /root/.cache/hyperframes/chrome/chrome-headless-shell/*/chrome-headless-shell-linux64/chrome-headless-shell | tail -1", shell=True).decode().strip()
 os.makedirs("html", exist_ok=True)
