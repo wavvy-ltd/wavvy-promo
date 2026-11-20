@@ -1,0 +1,81 @@
+"""'Are small daily expenses costing you more than you think?' rebuilt in Wavvy styling.
+Theme: wavvy-landing (Nunito, #111111 / #376C50 / #FAFAFA), transparent wallet mark only.
+    python3 tools/build_spends.py   -> renders/wavvy-small-spends.png (2160x2700)
+"""
+import os, subprocess
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+os.chdir(ROOT)
+
+ICONS = {  # Material icons, 24x24
+    "cup": "M2 21h18v-2H2v2zM20 3H4v10c0 2.21 1.79 4 4 4h6c2.21 0 4-1.79 4-4v-3h2c1.11 0 2-.9 2-2V5c0-1.11-.89-2-2-2zm0 5h-2V5h2v3z",
+    "bag": "M18 6h-2c0-2.21-1.79-4-4-4S8 3.79 8 6H6c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-6-2c1.1 0 2 .9 2 2h-4c0-1.1.9-2 2-2zm6 16H6V8h2v2c0 .55.45 1 1 1s1-.45 1-1V8h4v2c0 .55.45 1 1 1s1-.45 1-1V8h2v12z",
+    "bus": "M4 16c0 .88.39 1.67 1 2.22V20c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h8v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1.78c.61-.55 1-1.34 1-2.22V6c0-3.5-3.58-4-8-4s-8 .5-8 4v10zm3.5 1c-.83 0-1.5-.67-1.5-1.5S6.67 14 7.5 14s1.5.67 1.5 1.5S8.33 17 7.5 17zm9 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm1.5-6H6V6h12v5z",
+}
+CARDS = [  # icon, title, detail, monthly, left, top
+    ("cup", "Daily snacks", "Ksh 150 a day", "Ksh 4,500", 36, 500),
+    ("bag", "Takeaways", "3 times a week", "Ksh 6,000", 36, 790),
+    ("bus", "Transport", "Ksh 200 a day", "Ksh 6,000", 724, 640),
+]
+
+CSS = """
+@font-face { font-family: 'Nunito'; src: url('assets/fonts/Nunito.ttf') format('truetype'); font-weight: 200 1000; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1080px; height: 1350px; overflow: hidden; }
+body { font-family: 'Nunito', sans-serif; background: #FFFFFF; color: #111111; position: relative; -webkit-font-smoothing: antialiased; }
+.mark { position: absolute; left: 48px; top: 44px; width: 84px; height: 84px; }
+.badges { position: absolute; right: 48px; top: 56px; display: flex; gap: 12px; }
+.badges img { height: 56px; display: block; }
+.q { position: absolute; left: 0; right: 0; top: 168px; text-align: center; font-weight: 700; font-size: 42px; color: #5C5C5C; }
+.head { position: absolute; left: 0; right: 0; top: 222px; text-align: center; font-weight: 1000; font-size: 92px; line-height: 1; letter-spacing: -.035em; }
+.head em { font-style: normal; color: #376C50; }
+.glow { position: absolute; left: 540px; top: 830px; width: 900px; height: 900px; margin: -450px 0 0 -450px; border-radius: 50%;
+        background: radial-gradient(closest-side, rgba(55,108,80,.20), rgba(55,108,80,.08) 60%, rgba(55,108,80,0)); }
+.ring { position: absolute; left: 540px; top: 850px; width: 600px; height: 600px; margin: -300px 0 0 -300px; border-radius: 50%; background: rgba(55,108,80,.10); }
+.photo { position: absolute; left: 225px; top: 360px; width: 630px; height: 690px; object-fit: contain; object-position: 50% 100%;
+         -webkit-mask-image: linear-gradient(to bottom, #000 86%, transparent 100%); }
+.card { position: absolute; width: 320px; background: #fff; border: 1px solid rgba(17,17,17,.08); border-radius: 26px; padding: 18px 20px;
+        box-shadow: 0 18px 40px rgba(17,17,17,.10), 0 4px 10px rgba(17,17,17,.06); }
+.card .row { display: flex; align-items: center; gap: 14px; }
+.card .ic { flex: none; width: 56px; height: 56px; border-radius: 16px; background: rgba(55,108,80,.12); display: flex; align-items: center; justify-content: center; }
+.card .ic svg { width: 32px; height: 32px; fill: #376C50; }
+.card .t { font-weight: 800; font-size: 28px; line-height: 1.1; }
+.card .d { font-weight: 600; font-size: 22px; color: #5C5C5C; margin-top: 2px; }
+.card .amt { margin-top: 12px; padding-top: 12px; border-top: 1px dashed rgba(17,17,17,.12); font-weight: 900; font-size: 32px; color: #376C50; }
+.card .amt span { font-weight: 700; font-size: 22px; color: #5C5C5C; }
+.total { position: absolute; left: 50%; top: 1018px; transform: translateX(-50%); white-space: nowrap; background: #376C50; color: #fff; border-radius: 999px;
+         padding: 16px 36px; font-weight: 800; font-size: 30px; box-shadow: 0 14px 34px rgba(55,108,80,.35); }
+.total b { font-weight: 1000; }
+.foot { position: absolute; left: 0; right: 0; bottom: 0; height: 240px; background: #FAFAFA; border-top: 1px solid rgba(17,17,17,.06);
+        display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; text-align: center; }
+.foot .a { font-weight: 900; font-size: 46px; letter-spacing: -.01em; }
+.foot .a em { font-style: normal; color: #376C50; }
+.foot .b { font-weight: 700; font-size: 32px; color: #5C5C5C; }
+.foot .b em { font-style: normal; color: #376C50; font-weight: 900; }
+"""
+
+cards = "\n".join(
+    '<div class="card" style="left:%dpx;top:%dpx"><div class="row"><div class="ic"><svg viewBox="0 0 24 24"><path d="%s"/></svg></div>'
+    '<div><div class="t">%s</div><div class="d">%s</div></div></div><div class="amt">%s <span>/ month</span></div></div>'
+    % (x, y, ICONS[i], t, d, m) for i, t, d, m, x, y in CARDS)
+
+page = """<!doctype html><html><head><meta charset="utf-8"><style>%s</style></head><body>
+<img class="mark" src="assets/brand/wallet-mark.png" alt="Wavvy Wallet">
+<div class="badges"><img src="assets/brand/app-store.png" alt="App Store"><img src="assets/brand/google-play.png" alt="Google Play"></div>
+<div class="q">Are small daily expenses costing you</div>
+<div class="head">more than <em>you think?</em></div>
+<div class="glow"></div>
+<img class="photo" src="assets/cutout/spends-woman.final.png" alt="">
+%s
+<div class="total">Together: <b>Ksh 16,500</b> a month</div>
+<div class="foot"><div class="a">Small spends. Big impact.</div><div class="a">Track today. <em>Save tomorrow.</em></div>
+<div class="b">Download <em>Wavvy Wallet</em> today.</div></div>
+</body></html>""" % (CSS, cards)
+
+open("poster-small-spends.html", "w").write(page)
+chrome = subprocess.check_output("ls -d /root/.cache/hyperframes/chrome/chrome-headless-shell/*/chrome-headless-shell-linux64/chrome-headless-shell | tail -1", shell=True).decode().strip()
+out = os.path.join(ROOT, "renders/wavvy-small-spends.png")
+subprocess.run([chrome, "--headless", "--no-sandbox", "--disable-gpu", "--hide-scrollbars", "--force-device-scale-factor=2", "--window-size=1080,1350",
+                "--virtual-time-budget=4000", "--allow-file-access-from-files", "--screenshot=" + out,
+                "file://" + os.path.join(ROOT, "poster-small-spends.html")], check=True, capture_output=True)
+print(out)
