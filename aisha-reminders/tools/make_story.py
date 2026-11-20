@@ -52,7 +52,6 @@ def ask(q_line, q_off, send_off, screen_after, top=1806, bottom=1930):
     cy = (top + bottom) / 2
     return [
         (q_line, q_off, punch(430, cy, 1.35, 0.5)),
-        (q_line, q_off + 0.4, {"kind": "mark", "box": box, "hold": max(0.8, send_off - q_off - 1.2)}),
         (q_line, send_off, {"kind": "tap", "x": SEND[0], "y": cy, "lead": 0.6}),
         (q_line, send_off + 0.35, {"kind": "show", "screen": screen_after, "settle": True}),
         (q_line, send_off + 0.45, {"kind": "reset", "duration": 0.35}),
@@ -105,7 +104,6 @@ FILM = [
          ("c4c", -0.3, {"kind": "reset", "duration": 0.3}),
          ("c4c", 0.0, {"kind": "show", "screen": A + "r06_q.png"}),
      ] + ask("c4c", 1.4, 4.4, A + "r06_a.png", 1081, 1236) + [
-         ("c4c", 4.9, {"kind": "mark", "box": [79, 1607, 709, 1788], "hold": 1.2}),
          ("c4d", -0.2, {"kind": "reset", "duration": 0.3}),
          ("c4d", 0.1, {"kind": "show", "screen": A + "r_bills.png", "rise": True}),
          ("c4d", 0.6, punch(450, 760, 1.3, 0.5)),

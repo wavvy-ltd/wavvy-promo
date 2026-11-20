@@ -108,6 +108,7 @@ def mark_points(box, shape, seed):
 
 class Build:
     def __init__(self, sb, out):
+        self._last_pencil = -99.0
         self.sb, self.out = sb, out
         self.b = sb["brand"]
         self.c = self.b["colors"]
@@ -499,22 +500,19 @@ class Build:
                 tlj.append('    tl.fromTo("#%s-zoom", { scale: 1, transformOrigin: "%s" }, { scale: 3.4, duration: 0.5, ease: "power3.in" }, %s);' % (sid, m.get("origin", "50% 90%"), t))
                 self.cue(at, "click", 1.4, "tap (zoom-through)"); self.cues.append((at, "%s: zoom through %s" % (sid, m.get("origin"))))
             elif k == "mark":
-                # all tweens are fromTo with absolute values: the renderer seeks frames out of order
-                # (parallel workers), and plain .to()/relative values make the loop blink between frames
-                i_, keys, L = m["_id"], m["_keys"], m["_L"]; d = m.get("duration", 0.75); hold = m.get("hold", 2.4)
-                seg = round(d / (len(keys) - 1), 4)
-                x0, y0 = keys[0]; xe, ye = keys[-1]
-                if m.get("pencil", False): tlj.append('    gsap.set("#%s-pen", { x: %.1f, y: %.1f, opacity: 0 });' % (i_, x0, y0))
-                if m.get("pencil", False): tlj.append('    tl.fromTo("#%s-pen", { opacity: 0 }, { opacity: 1, duration: 0.15, immediateRender: false }, %s);' % (i_, round(t - 0.18, 3)))
-                tlj.append('    tl.fromTo("#%s path", { strokeDashoffset: %.1f }, { strokeDashoffset: 0, duration: %s, ease: "none", immediateRender: false }, %s);' % (i_, L + 2, d, t))
-                for q in (range(1, len(keys)) if m.get("pencil", False) else []):
-                    (ax, ay), (bx, by) = keys[q - 1], keys[q]
-                    if m.get("pencil", False): tlj.append('    tl.fromTo("#%s-pen", { x: %.1f, y: %.1f }, { x: %.1f, y: %.1f, duration: %s, ease: "none", immediateRender: false }, %s);'
-                               % (i_, ax, ay, bx, by, seg, round(t + seg * (q - 1), 4)))
-                if m.get("pencil", False): tlj.append('    tl.fromTo("#%s-pen", { opacity: 1, x: %.1f, y: %.1f }, { opacity: 0, x: %.1f, y: %.1f, duration: 0.3, ease: "power2.in", immediateRender: false }, %s);'
-                           % (i_, xe, ye, xe + 40, ye - 50, round(t + d + 0.05, 3)))
-                tlj.append('    tl.fromTo("#%s", { opacity: 1 }, { opacity: 0, duration: 0.25, immediateRender: false }, %s);' % (i_, round(t + d + hold, 3)))
-                self.cue(at, "pencil", 0.9, "pencil highlight"); self.cues.append((at, "%s: pencil mark" % sid))
+                # Draw once, hold briefly, fade out BEFORE the view changes (next show/reset/punch or
+                # scene end): a mark must never ride a camera move or linger on a new screen.
+                # All tweens are fromTo with absolute values (render workers seek frames out of order).
+                i_, keys, L = m["_id"], m["_keys"], m["_L"]; d = min(m.get("duration", 0.55), 0.55)
+                nxt = [mm["t"] for mm in s["moves"] if mm["t"] > t + 0.05 and mm["kind"] in ("show", "reset", "punch", "scroll", "swipe-h", "zoom-through")]
+                limit = min(nxt + [s["duration"]]) - t - d - 0.25
+                hold = max(0.5, min(m.get("hold", 1.4), 1.4, limit))
+                tlj.append('    gsap.set("#%s", { opacity: 1 });' % i_)
+                tlj.append('    tl.fromTo("#%s path", { strokeDashoffset: %.1f }, { strokeDashoffset: 0, duration: %s, ease: "power1.out", immediateRender: false }, %s);' % (i_, L + 2, d, t))
+                tlj.append('    tl.fromTo("#%s", { opacity: 1 }, { opacity: 0, duration: 0.2, immediateRender: false }, %s);' % (i_, round(t + d + hold, 3)))
+                if at - self._last_pencil > 3.0:      # no back-to-back scribble sounds
+                    self.cue(at, "pencil", 0.35, "pencil highlight"); self._last_pencil = at
+                self.cues.append((at, "%s: pencil mark (hold %.2fs)" % (sid, hold)))
             elif k == "swipe-h":
                 i_, bw = m["_id"], m["_bw"]; d = m.get("duration", 0.55); lead = m.get("lead", 0.7)
                 travel = round(bw * 0.62)
