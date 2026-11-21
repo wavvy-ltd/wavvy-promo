@@ -21,6 +21,7 @@ Every app screen is the real app captured on an emulator; voice and music are ge
 | Aisha voice-over scripts (reminders + chat films), with timings and captions | `aisha-scripts/` | DOCX · MD | [md](aisha-scripts/aisha-voiceover-scripts.md) |
 | "Your Money, Your Move" poster: Kenya / Rwanda / East Africa | `posters/money-move/` | 2160×2700 PNG | [ke](gallery/wavvy-poster-ke.png) · [rw](gallery/wavvy-poster-rw.png) · [ea](gallery/wavvy-poster-ea.png) |
 | What's New poster (hands holding a card) | `posters/whats-new/` | 2640×3260 PNG | [png](gallery/wavvy-whats-new-poster.png) |
+| Partner blog images: Wavvy Wallet × ASU Edson E+I (side by side + stacked), Wavvy Wallet × Plug In Ventures | `partner-logos/` | 1080×1350 PNG | [ASU](partner-logos/posts/wavvy-x-asu-edson.png) · [ASU stacked](partner-logos/posts/wavvy-x-asu-edson-stacked.png) · [Plug In Ventures](partner-logos/posts/wavvy-x-plug-in-ventures.png) |
 
 Videos are attached to the GitHub Release **media-2026-11** (too large for git); posters and contact sheets are in `gallery/`.
 
@@ -50,3 +51,10 @@ Emulator helpers: `tools/m.sh` (Marionette), `tools/login.sh` (reads the app rep
 ## Posters (`posters/`)
 `python3 tools/build.py [ke|rw|ea]` renders the HTML to PNG with headless Chrome.
 Album photos and cut-outs of people are not committed; see `PROMPTS.md` §6 to recreate them.
+
+## Partner blog images (`partner-logos/`)
+Wavvy Wallet on the left, a grey "×", the partner on the right, on a white 1080×1350 canvas.
+`python3 partner-logos/tools/build.py` rebuilds every image in `posts/` from `sources/` (needs Pillow and `rsvg-convert`).
+- Wavvy Wallet logo: cut from the blog's existing `wavvy-x-nvidia-2.png`, so partner posts match.
+- ASU Edson E+I: cut from the institute's funding-page image, without the "Pay it Forward" box. The source is only 564 px wide, so swap in an official high-res file if ASU sends one.
+- Plug In Ventures: the official logo SVG from pluginventures.co.
